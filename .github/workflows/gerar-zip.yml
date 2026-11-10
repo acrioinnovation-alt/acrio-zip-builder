@@ -1,5 +1,9 @@
 name: Gerar ZIP
 on:
+  push:
+    paths:
+      - 'projetos/**'
+      - '.github/workflows/gerar-zip.yml'
   workflow_dispatch:
     inputs:
       pasta:
