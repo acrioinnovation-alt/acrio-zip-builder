@@ -657,29 +657,50 @@ function miniWrong(){if(state.locked)return;if(state.mode==="daily"){state.daily
 function miniCount(d){const e=$("playArea");function draw(){e.innerHTML='<p class="mini-instructions">' + d.prompt + '</p><div class="mini-board" style="grid-template-columns:repeat(' + d.cols + ',minmax(0,1fr))">' + d.cells.map((v,i)=>'<button class="mini-piece ' + (d.selected.includes(i)?"selected":"") + '" data-i="' + i + '" style="min-height:58px;font-size:25px">' + v + '</button>').join("") + '</div><div class="mini-controls"><button class="mini-primary" id="checkCount">' + miniT().confirm + '</button></div><div class="mini-status" id="miniStatus"></div>';e.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{if(state.locked)return;const i=+b.dataset.i;d.selected=d.selected.includes(i)?d.selected.filter(x=>x!==i):d.selected.concat(i);b.classList.toggle("selected",d.selected.includes(i));save()});$("checkCount").onclick=()=>{if(d.selected.length===d.answer.length&&d.answer.every(x=>d.selected.includes(x)))miniWin();else{miniWrong();d.selected=[];draw()}}}draw()}
 function miniIllustration(v){
  const groups={
- flower:"🌷🌻🌼🌸🌺🪷🌿🌱🍄🪴",fruit:"🍎🍐🍇🍓🍉🍌🍍🥭🍊🍋🥕🧀🍞🧁🍰🍩🍭",
- insect:"🐝🦋🐞",animal:"🐶🦊🐼🦉🦔🐌🦁🐉🦖🦕👽🦜🐦",
- sea:"🐠🐙🦀🐬🐚🪸🦑🦈",tool:"⚙️🔧🪛💡🧲🔋🧰📏🪚🧪🔬🧬🧫⚗️",
- transport:"🚀🚲🚗✈️🚂🛶🚢🛸🛰️",space:"🪐🌙☄️⭐🌎",
- book:"📚📕📜📰",crown:"👑🛡️🗡️🗝️💎",music:"🎸🥁🎭🎨✂️🖌️📷🧶🪡",
- home:"🪑🧸🕰️🔑🧦🎈🪙☕🧽🥄🧳🎫🕶️🧭⚓🛟🔭"
+  flower:"🌷🌻🌼🌸🌺🪷🌿🌱🍄🪴🌳🌲🪺🪶",
+  fruit:"🍎🍐🍇🍓🍉🍌🍍🥭🍊🍋🥕🧀🍞🧁🍰🍩🍭🥚🥛🥖🍓🍯",
+  insect:"🐝🦋🐞",
+  animal:"🐶🦊🐼🦉🦔🐌🦁🐉🦖🦕👽🦜🐦🐕🐄🐱",
+  sea:"🐠🐙🦀🐬🐚🪸🦑🦈🐳🌊⚓🛟",
+  tool:"⚙️🔧🪛💡🧲🔋🧰📏🪚🧪🔬🧬🧫⚗️🔌🧯🪜🧮",
+  transport:"🚀🚲🚗✈️🚂🛶🚢🛸🛰️🛫🛬🚦🛤",
+  space:"🪐🌙☄️⭐🌎🌑🌈",
+  book:"📚📕📜📰📋🗂🧾",
+  crown:"👑🛡️🗡️🗝️💎🏰",
+  music:"🎸🥁🎭🎨✂️🖌️📷🧶🪡🎵🎼",
+  home:"🪑🧸🕰️🔑🧦🎈🪙☕🧽🥄🧳🎫🕶️🧭🔭🛏🪞🖼🥤🍳🍽",
+  sport:"⚽🏐🏀🎯🚴",
+  food:"🍿🍲🍳🍽🥤🧁🍰🍩🍭",
+  adventure:"🏖⛱🗺🏴☠🎪🎟🎩⛺🔥🥾🪵🔦🧺🛝🪁",
+  mystery:"🔍🔎🔐🕵️❓🔢🔗🃏",
+  celebration:"🎁🎉🎊🎂🎠🪅🎈",
+  safety:"⚠️🦺🥽🧤",
+  time:"📅🗓⌛🕰"
  };
- let k=Object.keys(groups).find(x=>groups[x].includes(v))||"home";
+ const k=Object.keys(groups).find(x=>groups[x].includes(v))||"mystery";
  const art={
- flower:'<path d="M50 47 C36 62 38 76 50 79 C62 76 64 62 50 47Z" fill="#35a66b"/><path d="M50 50 C20 48 25 18 43 29 C46 8 67 13 61 32 C84 20 91 48 64 53Z" fill="#f36c91" stroke="#bd456d" stroke-width="3"/><circle cx="53" cy="43" r="9" fill="#ffd45b" stroke="#d99a28" stroke-width="3"/><path d="M50 78V94 M50 84L34 76 M50 87L66 77" stroke="#278653" stroke-width="5" stroke-linecap="round"/>',
- fruit:'<path d="M50 29 C20 18 17 53 30 76 C42 98 65 94 76 76 C91 50 77 19 50 29Z" fill="#f36b48" stroke="#b84a36" stroke-width="4"/><path d="M51 29Q50 16 58 9" stroke="#76502f" stroke-width="5" fill="none"/><path d="M55 19Q72 5 83 17Q70 31 55 25Z" fill="#43a76b" stroke="#27794a" stroke-width="3"/>',
- insect:'<ellipse cx="50" cy="55" rx="9" ry="24" fill="#f4c83f" stroke="#6b5421" stroke-width="3"/><path d="M43 48H57 M43 60H57" stroke="#443a29" stroke-width="5"/><ellipse cx="31" cy="40" rx="16" ry="12" fill="#d8f4ff" stroke="#6d9eae" stroke-width="3"/><ellipse cx="69" cy="40" rx="16" ry="12" fill="#d8f4ff" stroke="#6d9eae" stroke-width="3"/><circle cx="50" cy="27" r="10" fill="#f4c83f" stroke="#6b5421" stroke-width="3"/><path d="M44 18L38 9 M56 18L62 9" stroke="#6b5421" stroke-width="3"/>',
- animal:'<path d="M24 43Q20 22 39 30L50 36L62 29Q82 23 78 45L74 72Q50 94 26 72Z" fill="#d99b65" stroke="#805333" stroke-width="4"/><circle cx="40" cy="53" r="4" fill="#25344a"/><circle cx="61" cy="53" r="4" fill="#25344a"/><path d="M44 66Q50 72 57 66" stroke="#704331" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M29 39L19 22L39 31 M71 39L81 22L62 31" fill="#d99b65" stroke="#805333" stroke-width="4"/>',
+ flower:'<path d="M50 48C28 65 37 81 50 80C64 80 73 64 50 48Z" fill="#35a66b"/><path d="M50 50C20 50 25 18 43 29C46 7 68 13 61 32C84 20 91 48 64 53Z" fill="#f36c91" stroke="#bd456d" stroke-width="3"/><circle cx="53" cy="43" r="9" fill="#ffd45b" stroke="#d99a28" stroke-width="3"/><path d="M50 78V96M50 85L33 76M50 87L67 77" stroke="#278653" stroke-width="5" stroke-linecap="round"/>',
+ fruit:'<path d="M50 29C20 18 17 53 30 76C42 98 65 94 76 76C91 50 77 19 50 29Z" fill="#f36b48" stroke="#b84a36" stroke-width="4"/><path d="M51 29Q50 16 58 9" stroke="#76502f" stroke-width="5" fill="none"/><path d="M55 19Q72 5 83 17Q70 31 55 25Z" fill="#43a76b" stroke="#27794a" stroke-width="3"/>',
+ insect:'<ellipse cx="50" cy="55" rx="9" ry="24" fill="#f4c83f" stroke="#6b5421" stroke-width="3"/><path d="M43 48H57M43 60H57" stroke="#443a29" stroke-width="5"/><ellipse cx="31" cy="40" rx="16" ry="12" fill="#d8f4ff" stroke="#6d9eae" stroke-width="3"/><ellipse cx="69" cy="40" rx="16" ry="12" fill="#d8f4ff" stroke="#6d9eae" stroke-width="3"/><circle cx="50" cy="27" r="10" fill="#f4c83f" stroke="#6b5421" stroke-width="3"/>',
+ animal:'<path d="M24 43Q20 22 39 30L50 36L62 29Q82 23 78 45L74 72Q50 94 26 72Z" fill="#d99b65" stroke="#805333" stroke-width="4"/><circle cx="40" cy="53" r="4" fill="#25344a"/><circle cx="61" cy="53" r="4" fill="#25344a"/><path d="M44 66Q50 72 57 66" stroke="#704331" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M29 39L19 22L39 31M71 39L81 22L62 31" fill="#d99b65" stroke="#805333" stroke-width="4"/>',
  sea:'<path d="M15 53Q49 17 82 53Q49 89 15 53Z" fill="#4db8d1" stroke="#236c91" stroke-width="4"/><path d="M80 53L96 38V68Z" fill="#f0a64d" stroke="#9b6332" stroke-width="3"/><circle cx="37" cy="47" r="4" fill="#17354a"/><path d="M22 58Q50 72 75 56" stroke="#d9f7ff" stroke-width="4" fill="none"/>',
  tool:'<path d="M24 26L39 12L52 25L43 34L72 64L62 75L32 45L23 54L12 43Z" fill="#a9bac8" stroke="#536879" stroke-width="4"/><path d="M61 69L76 84" stroke="#b77b48" stroke-width="10" stroke-linecap="round"/>',
  transport:'<path d="M15 61L24 38H68L83 61V75H15Z" fill="#4c9de0" stroke="#285b8b" stroke-width="4"/><path d="M31 42L26 58H70L63 42Z" fill="#d9f4ff" stroke="#285b8b" stroke-width="3"/><circle cx="31" cy="76" r="9" fill="#34485c" stroke="#fff" stroke-width="3"/><circle cx="68" cy="76" r="9" fill="#34485c" stroke="#fff" stroke-width="3"/>',
  space:'<circle cx="50" cy="52" r="29" fill="#9a8be7" stroke="#554a9c" stroke-width="4"/><ellipse cx="50" cy="52" rx="44" ry="13" fill="none" stroke="#e7c66b" stroke-width="7" transform="rotate(-22 50 52)"/><circle cx="39" cy="40" r="5" fill="#fff" opacity=".65"/>',
- book:'<path d="M15 23Q35 15 50 28Q65 15 85 23V79Q65 70 50 84Q35 70 15 79Z" fill="#e8f0fb" stroke="#526b91" stroke-width="4"/><path d="M50 28V84 M25 38Q37 35 43 41 M58 41Q70 35 78 38" stroke="#7791b6" stroke-width="3" fill="none"/>',
+ book:'<path d="M15 23Q35 15 50 28Q65 15 85 23V79Q65 70 50 84Q35 70 15 79Z" fill="#e8f0fb" stroke="#526b91" stroke-width="4"/><path d="M50 28V84M25 38Q37 35 43 41M58 41Q70 35 78 38" stroke="#7791b6" stroke-width="3" fill="none"/>',
  crown:'<path d="M14 35L34 52L49 20L66 52L86 35L78 79H22Z" fill="#f5ca58" stroke="#a87925" stroke-width="4"/><path d="M23 67H77" stroke="#fff0ae" stroke-width="5"/><circle cx="50" cy="61" r="5" fill="#e66d78"/>',
- music:'<path d="M34 23V68Q25 79 16 69Q12 58 34 56 M34 27L76 17V60Q67 72 57 63Q52 52 76 49" stroke="#a75c3e" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M34 28L76 18" stroke="#e6b76a" stroke-width="5"/>',
- home:'<path d="M18 48L50 20L82 48V84H18Z" fill="#8ab5d8" stroke="#466c91" stroke-width="4"/><path d="M42 84V58H59V84" fill="#f4d39b" stroke="#805f3b" stroke-width="3"/><path d="M27 50H40V62H27Z" fill="#eaf7ff"/>'
+ music:'<path d="M34 23V68Q25 79 16 69Q12 58 34 56M34 27L76 17V60Q67 72 57 63Q52 52 76 49" stroke="#a75c3e" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M34 28L76 18" stroke="#e6b76a" stroke-width="5"/>',
+ home:'<path d="M18 48L50 20L82 48V84H18Z" fill="#8ab5d8" stroke="#466c91" stroke-width="4"/><path d="M42 84V58H59V84" fill="#f4d39b" stroke="#805f3b" stroke-width="3"/><path d="M27 50H40V62H27Z" fill="#eaf7ff"/>',
+ sport:'<circle cx="50" cy="50" r="37" fill="#f6f8fb" stroke="#526b91" stroke-width="5"/><path d="M50 13L62 34L87 42L72 62L73 86L50 75L27 86L28 62L13 42L38 34Z" fill="#4b8ed8" stroke="#315e99" stroke-width="3"/>',
+ food:'<path d="M18 45Q50 88 82 45Z" fill="#f0b85d" stroke="#9b6734" stroke-width="4"/><path d="M24 42Q50 18 76 42" fill="#fff1d6" stroke="#c18a4b" stroke-width="4"/><path d="M39 33Q48 19 59 31" fill="none" stroke="#e87568" stroke-width="5" stroke-linecap="round"/>',
+ adventure:'<path d="M12 78L50 18L88 78Z" fill="#74b8e8" stroke="#3b719f" stroke-width="4"/><path d="M50 18V78M31 48H69" stroke="#fff" stroke-width="4"/><path d="M18 82H82" stroke="#4b9a70" stroke-width="6" stroke-linecap="round"/>',
+ mystery:'<circle cx="43" cy="42" r="27" fill="#e6f4ff" stroke="#397eae" stroke-width="7"/><path d="M63 63L87 87" stroke="#397eae" stroke-width="11" stroke-linecap="round"/><path d="M35 34Q39 24 49 30Q58 37 47 45Q42 48 42 54" fill="none" stroke="#2867f0" stroke-width="6" stroke-linecap="round"/><circle cx="42" cy="65" r="3" fill="#2867f0"/>',
+ celebration:'<path d="M18 40H82V86H18Z" fill="#ed7890" stroke="#a94468" stroke-width="4"/><path d="M50 40V86M13 28H87V43H13Z" fill="#ffd45b" stroke="#a94468" stroke-width="4"/><path d="M50 28C17 24 24 1 41 12Q50 18 50 28Q50 11 65 9Q85 14 50 28Z" fill="#6db8ed" stroke="#286b9f" stroke-width="3"/>',
+ safety:'<path d="M50 10L85 24V48Q81 75 50 91Q19 75 15 48V24Z" fill="#f2c65b" stroke="#9d742d" stroke-width="5"/><path d="M32 50L45 63L70 35" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>',
+ time:'<circle cx="50" cy="52" r="36" fill="#f8fbff" stroke="#4b7da9" stroke-width="6"/><path d="M50 29V53L68 64" fill="none" stroke="#2867f0" stroke-width="6" stroke-linecap="round"/><path d="M36 8H64" stroke="#4b7da9" stroke-width="6" stroke-linecap="round"/>'
  };
- return '<span class="object-art" role="img" aria-label="'+String(v).replace(/&/g,"&amp;").replace(/"/g,"&quot;")+'"><svg viewBox="0 0 100 100" aria-hidden="true">'+art[k]+'</svg></span>';
+ const label=String(v).replace(/&/g,"&amp;").replace(/"/g,"&quot;");
+ return '<span class="object-art" role="img" aria-label="'+label+'"><svg viewBox="0 0 100 100" aria-hidden="true">'+(art[k]||art.mystery)+'</svg></span>';
 }
 function miniSceneMarkup(items,selected,sceneName){
  const anchors=[[9,30],[28,18],[48,31],[70,18],[90,34],[17,70],[40,76],[65,70],[85,78]];
