@@ -239,7 +239,7 @@ function renderStageMap(){
  $("mapProgress").textContent=state.phase>1000?"10/10":Math.min(state.phase,10)+"/10";
  const grid=$("stageMapGrid");grid.innerHTML="";
  for(let n=1;n<=10;n++){
-  const unlocked=n<=state.phase,completed=n<state.phase,current=n===state.phase;
+  const completed=n<state.phase,current=n===state.phase,unlocked=current;
   const b=document.createElement("button");b.type="button";b.className="stage-tile"+(completed?" completed":"")+(current?" current":"")+(unlocked?"":" locked");b.disabled=!unlocked;
   const label=en?"STAGE":es?"FASE":"FASE";
   const status=completed?(en?"COMPLETED":es?"COMPLETADA":"CONCLUÍDA"):current?(en?"CURRENT":es?"ACTUAL":"ATUAL"):(en?"LOCKED":es?"BLOQUEADA":"BLOQUEADA");
