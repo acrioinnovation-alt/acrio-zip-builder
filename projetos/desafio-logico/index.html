@@ -1011,6 +1011,7 @@ resetProgress=function(){
  }
  function replaceTextNode(node){
   const value=node.nodeValue;
+  re.lastIndex=0;
   if(!value||!re.test(value))return;
   re.lastIndex=0;
   const frag=document.createDocumentFragment();let last=0,match;
