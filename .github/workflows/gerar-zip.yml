@@ -1,0 +1,55 @@
+name: Gerar ZIP
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: "Pasta dentro de projetos (ex.: desafio-logico)"
+        required: true
+        default: "desafio-logico"
+        type: string
+      nome_zip:
+        description: "Nome do arquivo ZIP, sem .zip"
+        required: true
+        default: "desafio-logico-mia"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  compactar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Validar e compactar projeto
+        env:
+          PASTA: ${{ inputs.pasta }}
+          NOME_ZIP: ${{ inputs.nome_zip }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$PASTA" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+            echo "Nome de pasta inválido."
+            exit 1
+          fi
+          if [[ ! "$NOME_ZIP" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+            echo "Nome do ZIP inválido."
+            exit 1
+          fi
+          ORIGEM="projetos/$PASTA"
+          test -d "$ORIGEM"
+          test -s "$ORIGEM/index.html"
+          mkdir -p dist
+          (cd "$ORIGEM" && zip -qr "$GITHUB_WORKSPACE/dist/$NOME_ZIP.zip" .)
+          test -s "dist/$NOME_ZIP.zip"
+          echo "ZIP gerado:"
+          ls -lh "dist/$NOME_ZIP.zip"
+
+      - name: Disponibilizar ZIP para download
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.nome_zip }}
+          path: dist/${{ inputs.nome_zip }}.zip
+          if-no-files-found: error
+          retention-days: 7
