@@ -971,6 +971,71 @@ resetProgress=function(){
  save();updateHome();toast("✓");
 };
 
+
+/* Camada visual ACRIO: converte pictogramas em ilustrações SVG locais, sem dependência de internet. */
+(function installIllustratedSymbols(){
+ const special={
+  "🧠":'<path d="M50 14c-10-12-27-4-26 9-13 3-15 21-5 27-8 14 2 27 15 25 4 13 19 14 26 5 10 8 25 1 24-12 13-7 9-24 0-29 5-15-9-27-22-20-3-7-8-8-12-5Z" fill="#f59a9a" stroke="#9e526b" stroke-width="4"/><path d="M49 18v60M31 28q13 1 9 15M22 53q14-5 17 8M68 28q-12 2-9 15M78 53q-14-5-17 8" fill="none" stroke="#c96d83" stroke-width="4" stroke-linecap="round"/><path d="M29 45q8-7 15 0M57 45q8-7 15 0" stroke="#173c68" stroke-width="5" fill="none"/><circle cx="37" cy="48" r="3" fill="#173c68"/><circle cx="63" cy="48" r="3" fill="#173c68"/><path d="M40 65q10 10 20 0" stroke="#8a4059" stroke-width="4" fill="none" stroke-linecap="round"/>',
+  "❤️":'<path d="M50 85 14 49C-1 25 28 7 49 31 69 7 100 25 86 49Z" fill="#f36c83" stroke="#b83e5d" stroke-width="5"/><path d="M27 34q5-9 15-5" stroke="#ffdce4" stroke-width="5" fill="none" stroke-linecap="round"/>',
+  "🖤":'<path d="M50 85 14 49C-1 25 28 7 49 31 69 7 100 25 86 49Z" fill="#71809a" stroke="#394b68" stroke-width="5"/>',
+  "🪙":'<circle cx="50" cy="50" r="37" fill="#f5c84f" stroke="#b47a20" stroke-width="6"/><circle cx="50" cy="50" r="27" fill="none" stroke="#ffe9a0" stroke-width="4"/><path d="M58 31q-21-8-23 7-2 10 15 12 17 4 11 17-6 13-26 4M50 24v52" fill="none" stroke="#9c681c" stroke-width="5" stroke-linecap="round"/>',
+  "⭐":'<path d="m50 8 12 27 29 3-22 19 7 29-26-15-26 15 7-29L9 38l29-3Z" fill="#ffd45b" stroke="#c58a22" stroke-width="5" stroke-linejoin="round"/>',
+  "🏆":'<path d="M31 15h38v17q0 26-19 30-19-4-19-30Z" fill="#ffd15b" stroke="#b47b25" stroke-width="5"/><path d="M31 23H13v9q0 20 22 19M69 23h18v9q0 20-22 19M50 62v15M34 84h32" fill="none" stroke="#b47b25" stroke-width="6" stroke-linecap="round"/>',
+  "💡":'<path d="M50 9a28 28 0 0 0-17 50q5 4 6 13h22q1-9 6-13A28 28 0 0 0 50 9Z" fill="#ffe16a" stroke="#bd8b27" stroke-width="5"/><path d="M39 76h22M41 85h18M44 92h12M50 22v20M38 31l8 8M62 31l-8 8" stroke="#bd8b27" stroke-width="5" fill="none" stroke-linecap="round"/>',
+  "🧩":'<path d="M12 18h23q-3 15 11 15t11-15h31v28q-15-3-15 11t15 11v20H59q3-15-11-15t-11 15H12V59q15 3 15-11t-15-11Z" fill="#48a9ed" stroke="#236aab" stroke-width="5" stroke-linejoin="round"/>',
+  "🔊":'<path d="M13 39h18l22-18v58L31 61H13Z" fill="#6db8ee" stroke="#276b9d" stroke-width="5" stroke-linejoin="round"/><path d="M65 35q17 15 0 30M73 24q28 26 0 52" fill="none" stroke="#276b9d" stroke-width="5" stroke-linecap="round"/>',
+  "🔇":'<path d="M13 39h18l22-18v58L31 61H13Z" fill="#9aabc0" stroke="#536a82" stroke-width="5"/><path d="m67 38 20 24m0-24L67 62" stroke="#cf5368" stroke-width="6" stroke-linecap="round"/>',
+  "🎵":'<path d="M42 19v49q-10 12-21 3-7-13 21-17M42 25l42-10v44q-11 12-21 3-7-13 21-17" fill="none" stroke="#367db9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>',
+  "🎼":'<path d="M38 20v48q-10 12-21 3-7-13 21-17M38 26l45-11v43q-11 12-21 3-7-13 21-17" fill="none" stroke="#367db9" stroke-width="7" stroke-linecap="round"/>',
+  "📅":'<rect x="15" y="21" width="70" height="65" rx="9" fill="#f4f8ff" stroke="#4a80b8" stroke-width="5"/><path d="M15 39h70M32 12v19M68 12v19" stroke="#4a80b8" stroke-width="6" stroke-linecap="round"/><path d="M30 53h10m10 0h10m10 0h5M30 68h10m10 0h10" stroke="#63a6df" stroke-width="6" stroke-linecap="round"/>',
+  "🎁":'<path d="M15 39h70v48H15Z" fill="#ed7890" stroke="#a94468" stroke-width="5"/><path d="M50 39v48M12 27h76v16H12Z" fill="#ffd45b" stroke="#a94468" stroke-width="5"/><path d="M50 27C17 24 24 1 41 12q9 7 9 15 0-17 15-17 20 3-15 17Z" fill="#6db8ed" stroke="#286b9f" stroke-width="4"/>',
+  "🔎":'<circle cx="42" cy="40" r="25" fill="#dff3ff" stroke="#367ba9" stroke-width="7"/><path d="m61 60 24 25" stroke="#367ba9" stroke-width="10" stroke-linecap="round"/>',
+  "🔁":'<path d="M20 36a31 31 0 0 1 53-12l8 9M81 18v15H66M80 64a31 31 0 0 1-53 12l-8-9M19 82V67h15" fill="none" stroke="#398bc7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>',
+  "🔐":'<rect x="18" y="42" width="64" height="46" rx="9" fill="#f4c65b" stroke="#986b2b" stroke-width="5"/><path d="M31 42V29a19 19 0 0 1 38 0v13" fill="none" stroke="#527aa0" stroke-width="8"/><circle cx="50" cy="62" r="6" fill="#805b2d"/><path d="M50 67v9" stroke="#805b2d" stroke-width="5"/>'
+ };
+ const re=/[\\p{Extended_Pictographic}\\uFE0F\\u200D]+/gu;
+ function makeVisual(token){
+  const svg=special[token]||null;
+  const holder=document.createElement("span");
+  holder.className="emoji-illustration";
+  holder.setAttribute("aria-hidden","true");
+  holder.style.cssText="display:inline-flex;align-items:center;justify-content:center;width:1.38em;height:1.38em;vertical-align:-.32em;flex:0 0 auto;margin:0 .08em";
+  if(svg) holder.innerHTML='<svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">'+svg+'</svg>';
+  else if(typeof miniIllustration==="function"){
+   holder.innerHTML=miniIllustration(token);
+   const art=holder.firstElementChild;
+   if(art){art.style.width="100%";art.style.height="100%";art.style.display="inline-flex";art.style.margin="0";art.style.verticalAlign="middle";}
+   const inner=holder.querySelector("svg");if(inner){inner.style.width="100%";inner.style.height="100%";}
+  }else holder.textContent="•";
+  return holder;
+ }
+ function replaceTextNode(node){
+  const value=node.nodeValue;
+  if(!value||!re.test(value))return;
+  re.lastIndex=0;
+  const frag=document.createDocumentFragment();let last=0,match;
+  while((match=re.exec(value))){
+   if(match.index>last)frag.appendChild(document.createTextNode(value.slice(last,match.index)));
+   const token=match[0].replace(/[\\uFE0F\\u200D]/g,"");
+   frag.appendChild(makeVisual(token));last=match.index+match[0].length;
+  }
+  if(last<value.length)frag.appendChild(document.createTextNode(value.slice(last)));
+  if(node.parentNode)node.parentNode.replaceChild(frag,node);
+ }
+ function scan(root){
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){
+   const p=n.parentElement;if(!p||p.closest("script,style,textarea,input,select,option"))return NodeFilter.FILTER_REJECT;
+   return /[\\p{Extended_Pictographic}]/u.test(n.nodeValue||"")?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+  }});
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(replaceTextNode);
+ }
+ scan(document.body);
+ const observer=new MutationObserver(records=>records.forEach(record=>{
+  record.addedNodes.forEach(node=>{if(node.nodeType===Node.TEXT_NODE)replaceTextNode(node);else if(node.nodeType===Node.ELEMENT_NODE&&!node.classList.contains("emoji-illustration"))scan(node)});
+ }));
+ observer.observe(document.body,{childList:true,subtree:true});
+})();
+
 load();initLevelProgress();$("language").value=state.lang;translate();renderStats();updateHome();setInterval(renderStats,1000);setInterval(save,60000);
 </script></body></html>
 <!-- ZIP atualizado: 2026-11-10 -->
