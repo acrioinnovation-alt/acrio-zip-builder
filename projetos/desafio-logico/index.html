@@ -607,7 +607,7 @@ function miniCategory35(d){
 function miniRecipe35(d){
  const e=$("playArea"),en=state.lang==="en",es=state.lang==="es";d.pickIndex=d.pickIndex??-1;
  const icons=[ "🧼","🥕","🍳","🍽️" ];
- function draw(){e.innerHTML='<p class="mini-instructions">'+d.prompt+'</p><div class="visual-stage recipe-stage"><div class="recipe-pot">'+miniIllustration("🍲")+'</div><div><div class="visual-kicker">'+(en?"KITCHEN CHALLENGE":es?"RETO DE COCINA":"DESAFIO NA COZINHA")+'</div><strong>'+(en?"Put the recipe in order":es?"Ordena la receta":"Coloque a receita em ordem")+'</strong><p>'+(en?"Select two steps to swap their positions.":es?"Selecciona dos pasos para intercambiar sus posiciones.":"Selecione duas etapas para trocar de posição.")+'</p></div></div><div class="recipe-list">'+d.items.map((v,i)=>'<button class="recipe-step '+(d.pickIndex===i?"is-picked":"")+'" data-i="'+i+'"><span class="recipe-number">'+(i+1)+'</span><span class="recipe-emoji">'+icons[Math.max(0,d.solution.indexOf(v))]+'</span><b>'+v+'</b><span class="recipe-arrows">↕</span></button>').join("")+'</div><div class="mini-controls"><button class="mini-primary" id="checkRecipe">'+miniT().confirm+'</button></div><div class="mini-status" id="miniStatus"></div>';e.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{if(state.locked)return;const i=+b.dataset.i;if(d.pickIndex<0){d.pickIndex=i;draw();return}if(d.pickIndex!==i)[d.items[d.pickIndex],d.items[i]]=[d.items[i],d.items[d.pickIndex]];d.pickIndex=-1;save();draw()});$("checkRecipe").onclick=()=>d.items.every((v,i)=>v===d.solution[i])?miniWin():miniWrong()}
+ function draw(){e.innerHTML='<p class="mini-instructions">'+d.prompt+'</p><div class="visual-stage recipe-stage"><div class="recipe-pot">'+miniIllustration("🍲")+'</div><div><div class="visual-kicker">'+(en?"KITCHEN CHALLENGE":es?"RETO DE COCINA":"DESAFIO NA COZINHA")+'</div><strong>'+(en?"Put the recipe in order":es?"Ordena la receta":"Coloque a receita em ordem")+'</strong><p>'+(en?"Select two steps to swap their positions.":es?"Selecciona dos pasos para intercambiar sus posiciones.":"Selecione duas etapas para trocar de posição.")+'</p></div></div><div class="recipe-list">'+d.items.map((v,i)=>'<button class="recipe-step '+(d.pickIndex===i?"is-picked":"")+'" data-i="'+i+'"><span class="recipe-number">'+(i+1)+'</span><span class="recipe-emoji">'+miniIllustration(icons[Math.max(0,d.solution.indexOf(v))])+'</span><b>'+v+'</b><span class="recipe-arrows">↕</span></button>').join("")+'</div><div class="mini-controls"><button class="mini-primary" id="checkRecipe">'+miniT().confirm+'</button></div><div class="mini-status" id="miniStatus"></div>';e.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{if(state.locked)return;const i=+b.dataset.i;if(d.pickIndex<0){d.pickIndex=i;draw();return}if(d.pickIndex!==i)[d.items[d.pickIndex],d.items[i]]=[d.items[i],d.items[d.pickIndex]];d.pickIndex=-1;save();draw()});$("checkRecipe").onclick=()=>d.items.every((v,i)=>v===d.solution[i])?miniWin():miniWrong()}
  draw();
 }
 function miniInventory35(d){
@@ -675,7 +675,8 @@ function miniIllustration(v){
   mystery:"🔍🔎🔐🕵️❓🔢🔗🃏",
   celebration:"🎁🎉🎊🎂🎠🪅🎈",
   safety:"⚠️🦺🥽🧤",
-  time:"📅🗓⌛🕰"
+  time:"📅🗓⌛🕰",
+  mind:"🧠🧩🧺🧼🖼️🧾🔁🧮🦺🎒🍲🔎"
  };
  const k=Object.keys(groups).find(x=>groups[x].includes(v))||"mystery";
  const art={
