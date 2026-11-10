@@ -53,7 +53,7 @@ jobs:
       - name: Disponibilizar ZIP para download
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.nome_zip }}
-          path: dist/${{ inputs.nome_zip }}.zip
+          name: ${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}
+          path: dist/${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}.zip
           if-no-files-found: error
           retention-days: 7
