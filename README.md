@@ -23,3 +23,6 @@ O compactador apenas reúne os arquivos. Para o jogo funcionar offline, todos os
 ## Privacidade
 
 Este repositório é público. Todo código e arquivo colocado nele poderá ser visto e copiado por qualquer pessoa. Não coloque senhas, chaves, dados pessoais ou conteúdo que não possa ser publicado.
+
+
+Correção de 10/11/2026: corrigida a sintaxe JavaScript do desafio de embaralhar copos, que impedia a execução dos controles do jogo.
