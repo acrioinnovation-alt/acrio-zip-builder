@@ -1,20 +1,15 @@
-name: Gerar ZIP
+name: Gerar ZIP privado
+
 on:
-  push:
-    paths:
-      - 'projetos/**'
-      - '.github/workflows/gerar-zip.yml'
-  workflow_dispatch:
+  workflow_call:
     inputs:
-      pasta:
-        description: "Pasta dentro de projetos (ex.: desafio-logico)"
+      pasta_origem:
+        description: "Pasta do projeto no repositório que chamou este workflow"
         required: true
-        default: "desafio-logico"
         type: string
       nome_zip:
-        description: "Nome do arquivo ZIP, sem .zip"
+        description: "Nome do ZIP, sem .zip"
         required: true
-        default: "desafio-logico-mia"
         type: string
 
 permissions:
@@ -24,36 +19,39 @@ jobs:
   compactar:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar arquivos do repositório
+      - name: Baixar o repositório que solicitou a compactação
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.sha }}
+          persist-credentials: false
 
       - name: Validar e compactar projeto
         env:
-          PASTA: ${{ github.event.inputs.pasta || 'desafio-logico' }}
-          NOME_ZIP: ${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}
+          PASTA: ${{ inputs.pasta_origem }}
+          NOME_ZIP: ${{ inputs.nome_zip }}
         run: |
           set -euo pipefail
-          if [[ ! "$PASTA" =~ ^[a-zA-Z0-9_-]+$ ]]; then
-            echo "Nome de pasta inválido."
+          if [[ ! "$PASTA" =~ ^[a-zA-Z0-9_./-]+$ ]] || [[ "$PASTA" == /* ]] || [[ "$PASTA" == *".."* ]]; then
+            echo "Caminho de pasta inválido."
             exit 1
           fi
           if [[ ! "$NOME_ZIP" =~ ^[a-zA-Z0-9_-]+$ ]]; then
             echo "Nome do ZIP inválido."
             exit 1
           fi
-          ORIGEM="projetos/$PASTA"
-          test -d "$ORIGEM"
-          test -s "$ORIGEM/index.html"
+          test -d "$PASTA"
+          test -s "$PASTA/index.html"
           mkdir -p dist
-          (cd "$ORIGEM" && zip -qr "$GITHUB_WORKSPACE/dist/$NOME_ZIP.zip" .)
+          (cd "$PASTA" && zip -qr "$GITHUB_WORKSPACE/dist/$NOME_ZIP.zip" .)
           test -s "dist/$NOME_ZIP.zip"
           echo "ZIP gerado:"
           ls -lh "dist/$NOME_ZIP.zip"
 
-      - name: Disponibilizar ZIP para download
+      - name: Disponibilizar ZIP no repositório chamador
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}
-          path: dist/${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}.zip
+          name: ${{ inputs.nome_zip }}
+          path: dist/${{ inputs.nome_zip }}.zip
           if-no-files-found: error
           retention-days: 7
