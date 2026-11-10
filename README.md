@@ -1,49 +1,25 @@
 # ACRIO ZIP Builder
 
-Ferramenta reutilizável da ACRIO para compactar projetos web para o MIA.
+Compactador reutilizável de projetos web da ACRIO para importar no MIA.
 
-## Regra de segurança para os próximos projetos
+## Como funciona
 
-**Não envie o código dos jogos ou aplicativos para este repositório público.**
+1. Coloque os arquivos completos de um jogo dentro de `projetos/NOME-DO-JOGO/`.
+2. A página principal deve estar na raiz dessa pasta como `index.html`.
+3. Abra **Actions → Gerar ZIP → Run workflow**.
+4. Informe o nome da pasta e o nome do ZIP (sem `.zip`).
+5. Ao terminar, baixe o arquivo na seção **Artifacts** da execução.
 
-O projeto que será compactado deve permanecer no repositório privado dele. Este repositório público contém apenas o workflow genérico que faz a compactação. O ZIP e o artefato da execução ficam no repositório que chamou o workflow — portanto, mantenha esse repositório privado.
+O ZIP é montado com os arquivos do projeto na raiz, sem a pasta externa, para o MIA localizar o `index.html`.
 
-## Como usar em um repositório privado
+## Projetos incluídos
 
-No repositório privado do jogo/aplicativo, crie o arquivo:
+- `projetos/desafio-logico/`: versão publicada do Desafio Lógico.
 
-`.github/workflows/gerar-zip.yml`
+## Compatibilidade offline
 
-Use este conteúdo como modelo e ajuste apenas a pasta e o nome do ZIP:
+O compactador apenas reúne os arquivos. Para o jogo funcionar offline, todos os recursos usados pelo jogo precisam estar dentro da pasta do projeto e não depender de serviços externos. O APK gerado pelo MIA deve incluir esses arquivos localmente.
 
-```yaml
-name: Gerar ZIP para MIA
+## Privacidade
 
-on:
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
-jobs:
-  gerar:
-    uses: acrioinnovation-alt/acrio-zip-builder/.github/workflows/gerar-zip.yml@main
-    with:
-      pasta_origem: "CAMINHO/DA/PASTA/DO/PROJETO"
-      nome_zip: "nome-do-projeto"
-```
-
-Exemplo: se o `index.html` estiver em `app/src/main/assets/www/`, informe esse caminho em `pasta_origem`.
-
-Depois, no repositório privado, abra **Actions → Gerar ZIP para MIA → Run workflow**. Baixe o ZIP em **Artifacts** dessa execução. Como a execução acontece no repositório privado que chamou a ferramenta, o artefato segue as permissões desse repositório.
-
-## Requisitos do projeto
-
-- A pasta indicada deve conter um `index.html` na raiz.
-- Todos os arquivos necessários ao jogo devem estar dentro dessa pasta.
-- O ZIP será montado com o conteúdo dessa pasta na raiz, sem a pasta externa.
-- Para funcionar offline, o jogo não pode depender de arquivos hospedados apenas em serviços externos.
-
-## Atenção
-
-Não coloque senhas, tokens ou chaves no código. Nunca torne público um repositório que contenha código proprietário. Antes de cada novo projeto, confirme que o repositório de origem está privado e que a execução do workflow foi iniciada nele.
+Este repositório é público. Todo código e arquivo colocado nele poderá ser visto e copiado por qualquer pessoa. Não coloque senhas, chaves, dados pessoais ou conteúdo que não possa ser publicado.
