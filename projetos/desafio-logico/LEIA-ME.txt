@@ -1,0 +1,4 @@
+Desafio Lógico — pacote web para MIA.
+Página principal: index.html
+Ícone: icon.svg
+Os recursos do jogo estão incorporados no index.html. Não remova este arquivo nem altere os caminhos sem testar o pacote.
