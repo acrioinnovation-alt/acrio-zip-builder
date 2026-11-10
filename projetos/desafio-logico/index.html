@@ -1032,9 +1032,10 @@ resetProgress=function(){
  }
  scan(document.body);
  const observer=new MutationObserver(records=>records.forEach(record=>{
+  if(record.type==="characterData"){replaceTextNode(record.target);return}
   record.addedNodes.forEach(node=>{if(node.nodeType===Node.TEXT_NODE)replaceTextNode(node);else if(node.nodeType===Node.ELEMENT_NODE&&!node.classList.contains("emoji-illustration"))scan(node)});
  }));
- observer.observe(document.body,{childList:true,subtree:true});
+ observer.observe(document.body,{childList:true,subtree:true,characterData:true});
 })();
 
 load();initLevelProgress();$("language").value=state.lang;translate();renderStats();updateHome();setInterval(renderStats,1000);setInterval(save,60000);
