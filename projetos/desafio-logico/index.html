@@ -993,7 +993,7 @@ resetProgress=function(){
   "🔁":'<path d="M20 36a31 31 0 0 1 53-12l8 9M81 18v15H66M80 64a31 31 0 0 1-53 12l-8-9M19 82V67h15" fill="none" stroke="#398bc7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>',
   "🔐":'<rect x="18" y="42" width="64" height="46" rx="9" fill="#f4c65b" stroke="#986b2b" stroke-width="5"/><path d="M31 42V29a19 19 0 0 1 38 0v13" fill="none" stroke="#527aa0" stroke-width="8"/><circle cx="50" cy="62" r="6" fill="#805b2d"/><path d="M50 67v9" stroke="#805b2d" stroke-width="5"/>'
  };
- const re=/[\\p{Extended_Pictographic}\\uFE0F\\u200D]+/gu;
+ const re=/[\p{Extended_Pictographic}\uFE0F\u200D]+/gu;
  function makeVisual(token){
   const svg=special[token]||null;
   const holder=document.createElement("span");
@@ -1016,7 +1016,7 @@ resetProgress=function(){
   const frag=document.createDocumentFragment();let last=0,match;
   while((match=re.exec(value))){
    if(match.index>last)frag.appendChild(document.createTextNode(value.slice(last,match.index)));
-   const token=match[0].replace(/[\\uFE0F\\u200D]/g,"");
+   const token=match[0].replace(/[\uFE0F\u200D]/g,"");
    frag.appendChild(makeVisual(token));last=match.index+match[0].length;
   }
   if(last<value.length)frag.appendChild(document.createTextNode(value.slice(last)));
@@ -1025,7 +1025,7 @@ resetProgress=function(){
  function scan(root){
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){
    const p=n.parentElement;if(!p||p.closest("script,style,textarea,input,select,option"))return NodeFilter.FILTER_REJECT;
-   return /[\\p{Extended_Pictographic}]/u.test(n.nodeValue||"")?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+   return /[\p{Extended_Pictographic}]/u.test(n.nodeValue||"")?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
   }});
   const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(replaceTextNode);
  }
