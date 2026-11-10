@@ -29,8 +29,8 @@ jobs:
 
       - name: Validar e compactar projeto
         env:
-          PASTA: ${{ inputs.pasta }}
-          NOME_ZIP: ${{ inputs.nome_zip }}
+          PASTA: ${{ github.event.inputs.pasta || 'desafio-logico' }}
+          NOME_ZIP: ${{ github.event.inputs.nome_zip || 'desafio-logico-mia' }}
         run: |
           set -euo pipefail
           if [[ ! "$PASTA" =~ ^[a-zA-Z0-9_-]+$ ]]; then
