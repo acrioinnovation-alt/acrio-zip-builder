@@ -769,7 +769,7 @@ function miniDetective(d){
  '<svg class="case-threads" viewBox="0 0 400 74" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0 C50 34 105 35 105 74 M150 0 C150 34 145 35 145 74 M250 0 C250 34 255 35 255 74 M350 0 C350 34 295 35 295 74 M50 0 C50 28 350 42 350 74" /><circle cx="50" cy="4" r="4"/><circle cx="150" cy="4" r="4"/><circle cx="250" cy="4" r="4"/><circle cx="350" cy="4" r="4"/></svg>'+
  '<div class="case-section-label">'+clueTitle+'</div>'+
  '<div class="case-clues">'+d.clues.map((clue,i)=>'<article class="case-clue"><span class="case-clue-pin"></span><small>'+clueLabel+' '+String(i+1).padStart(2,"0")+'</small><p>'+escapeText(clue)+'</p></article>').join("")+'</div>'+
- '<aside class="case-hint-card hint-locked"><span class="case-clue-pin"></span><small>'+hintTitle+'</small><p>'+(en?"Unlock the investigation tip to reveal it.":es?"Desbloquea la pista de investigación para verla.":"Desbloqueie a dica de investigação para revelá-la.")+'</p></aside>'+
+ '<aside class="case-hint-card"><span class="case-clue-pin"></span><small>'+hintTitle+'</small><p>'+escapeText(d.hint||"")+'</p></aside>'+
  '<footer class="case-board-foot">'+(en?"CONNECT THE CLUES • ELIMINATE POSSIBILITIES":es?"CONECTA LAS PISTAS • ELIMINA POSIBILIDADES":"CRUZE AS PISTAS • ELIMINE POSSIBILIDADES")+'</footer></section>'+
  '<div class="mini-status" id="miniStatus"></div>';
  e.querySelectorAll(".case-suspect").forEach(b=>b.onclick=()=>{if(state.locked)return;if(+b.dataset.i===d.answer)miniWin();else{b.classList.add("suspect-wrong");miniWrong()}});
