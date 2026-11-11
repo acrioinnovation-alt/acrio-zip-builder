@@ -146,6 +146,7 @@ button:focus-visible{outline:2px solid #5ad6e5;outline-offset:3px}
 .case-clues{position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
 .case-clue{position:relative;min-width:0;min-height:66px;padding:13px 9px 9px;background:linear-gradient(145deg,#f8edcf,#e9d9b4);border:1px solid #d1bd94;box-shadow:2px 3px 6px #37251b55;transform:rotate(-.4deg);color:#382b20}.case-clue:nth-child(2n){transform:rotate(.5deg)}.case-clue small{font-size:8px;letter-spacing:1.2px;font-weight:950;color:#9a3934}.case-clue p{margin:5px 0 0;font-size:11px;line-height:1.35;overflow-wrap:anywhere}
 .case-board-foot{margin-top:12px;padding:7px 5px;border-top:1px dashed #e6c99b;text-align:center;color:#fff0d2;font-size:8px;font-weight:950;letter-spacing:1.2px}
+.case-hint-card{position:relative;z-index:2;margin-top:10px;padding:13px 12px 11px 16px;background:linear-gradient(145deg,#fff4cf,#f1dfaa);border:1px solid #d9bd78;border-left:5px solid #b72b2b;box-shadow:2px 4px 7px #37251b55;color:#382b20;transform:rotate(-.25deg)}.case-hint-card .case-clue-pin{left:auto;right:10px;top:6px}.case-hint-card small{display:block;font-size:9px;letter-spacing:1.4px;font-weight:950;color:#9a302d}.case-hint-card p{margin:6px 0 0;font-size:13px;line-height:1.45;font-weight:750;overflow-wrap:anywhere}
 .case-suspect.suspect-wrong{opacity:.45;filter:grayscale(.7)}.case-suspect:focus-visible{outline:3px solid #f9d46b;outline-offset:2px}
 @media(max-width:360px){.case-board{padding:10px 8px}.case-suspects,.case-clues{gap:7px}.case-suspect{padding-left:29px;min-height:59px}.case-suspect b{font-size:13px}.case-clue{padding:11px 7px 7px}.case-clue p{font-size:10px}}
 </style></head><body><main class="shell">
@@ -756,15 +757,19 @@ function miniDetective(d){
  const title=en?"CASE INVESTIGATION":es?"INVESTIGACIÓN DEL CASO":"QUADRO DE INVESTIGAÇÃO";
  const clueTitle=en?"CLUE CARDS":es?"TARJETAS DE PISTAS":"CARTÕES DE PISTAS";
  const suspectTitle=en?"SUSPECTS":es?"SOSPECHOSOS":"SUSPEITOS";
- const escapeText=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
- e.innerHTML='<p class="mini-instructions">'+d.prompt+'</p>'+
+ const hintTitle=en?"INVESTIGATION TIP":es?"PISTA DE INVESTIGACIÓN":"DICA DE INVESTIGAÇÃO";
+ const clueLabel=en?"CLUE":es?"PISTA":"PISTA";
+ const caseLabel=en?"CASE Nº ":es?"CASO Nº ":"CASO Nº ";
+ const escapeText=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ e.innerHTML='<p class="mini-instructions">'+escapeText(d.prompt)+'</p>'+
  '<section class="case-board" aria-label="'+title+'">'+
- '<header class="case-board-head"><span class="case-stamp">ACRIO • CASE FILE</span><b>'+title+'</b><small>CASE Nº '+String(state.phase||1).padStart(3,"0")+'</small></header>'+
+ '<header class="case-board-head"><span class="case-stamp">ACRIO • CASE FILE</span><b>'+title+'</b><small>'+caseLabel+String(state.phase||1).padStart(3,"0")+'</small></header>'+
  '<div class="case-section-label">'+suspectTitle+'</div>'+
  '<div class="case-suspects">'+d.options.map((name,i)=>'<button class="case-suspect" data-i="'+i+'"><i class="case-pin"></i><span class="case-number">0'+(i+1)+'</span><b>'+escapeText(name)+'</b><small>'+ (en?"SUSPECT":es?"SOSPECHOSO":"SUSPEITO")+'</small></button>').join("")+'</div>'+
  '<svg class="case-threads" viewBox="0 0 400 74" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0 C50 34 105 35 105 74 M150 0 C150 34 145 35 145 74 M250 0 C250 34 255 35 255 74 M350 0 C350 34 295 35 295 74 M50 0 C50 28 350 42 350 74" /><circle cx="50" cy="4" r="4"/><circle cx="150" cy="4" r="4"/><circle cx="250" cy="4" r="4"/><circle cx="350" cy="4" r="4"/></svg>'+
  '<div class="case-section-label">'+clueTitle+'</div>'+
- '<div class="case-clues">'+d.clues.map((clue,i)=>'<article class="case-clue"><span class="case-clue-pin"></span><small>PISTA '+String(i+1).padStart(2,"0")+'</small><p>'+escapeText(clue)+'</p></article>').join("")+'</div>'+
+ '<div class="case-clues">'+d.clues.map((clue,i)=>'<article class="case-clue"><span class="case-clue-pin"></span><small>'+clueLabel+' '+String(i+1).padStart(2,"0")+'</small><p>'+escapeText(clue)+'</p></article>').join("")+'</div>'+
+ '<aside class="case-hint-card"><span class="case-clue-pin"></span><small>'+hintTitle+'</small><p>'+escapeText(d.hint||"")+'</p></aside>'+
  '<footer class="case-board-foot">'+(en?"CONNECT THE CLUES • ELIMINATE POSSIBILITIES":es?"CONECTA LAS PISTAS • ELIMINA POSIBILIDADES":"CRUZE AS PISTAS • ELIMINE POSSIBILIDADES")+'</footer></section>'+
  '<div class="mini-status" id="miniStatus"></div>';
  e.querySelectorAll(".case-suspect").forEach(b=>b.onclick=()=>{if(state.locked)return;if(+b.dataset.i===d.answer)miniWin();else{b.classList.add("suspect-wrong");miniWrong()}});
