@@ -41,7 +41,7 @@ jobs:
             echo "Nome do ZIP inválido."
             exit 1
           fi
-          ORIGEM="projetos/$PASTA"
+          ORIGEM="projetos/$PASTA/app"
           test -d "$ORIGEM"
           test -s "$ORIGEM/index.html"
           mkdir -p dist
