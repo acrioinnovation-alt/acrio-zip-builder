@@ -487,6 +487,2865 @@
       },
       "hintCost": null,
       "solutionCost": null
+    },
+    {
+      "id": 11,
+      "region": 1,
+      "type": "text",
+      "category": "time_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O relógio atrasado",
+          "question": "Um relógio atrasa 5 minutos a cada hora real. Ele foi acertado ao meio-dia. Quando o relógio marcar 15h, quanto tempo terá passado de verdade?",
+          "options": [
+            "3 horas e 15 minutos",
+            "Aproximadamente 3 horas e 16 minutos",
+            "3 horas e 30 minutos"
+          ],
+          "answerIndex": 1,
+          "hint": "O relógio mostra 3 horas passadas, mas perdeu 5 minutos em cada hora real.",
+          "explanation": "O relógio precisa avançar 180 minutos no mostrador. Como ele avança apenas 55 minutos a cada 60 minutos reais, o tempo real é 180 × 60 ÷ 55 = 196,36 minutos, aproximadamente 3 horas, 16 minutos e 22 segundos. Portanto, a alternativa correta é aproximadamente 3 horas e 16 minutos."
+        },
+        "en": {
+          "title": "The slow clock",
+          "question": "A clock loses 5 minutes for every real hour. It was set correctly at noon. When the clock shows 3:00 p.m., how much real time has passed?",
+          "options": [
+            "3 hours and 15 minutes",
+            "About 3 hours and 16 minutes",
+            "3 hours and 30 minutes"
+          ],
+          "answerIndex": 1,
+          "hint": "The clock advances only 55 minutes for every 60 real minutes.",
+          "explanation": "The clock must advance 180 displayed minutes. At a rate of 55 displayed minutes per 60 real minutes, the elapsed real time is 180 × 60/55, about 196.36 minutes, or 3 hours and 16 minutes."
+        },
+        "es": {
+          "title": "El reloj atrasado",
+          "question": "Un reloj pierde 5 minutos por cada hora real. Se ajustó correctamente al mediodía. Cuando marque las 15:00, ¿cuánto tiempo real habrá pasado?",
+          "options": [
+            "3 horas y 15 minutos",
+            "Aproximadamente 3 horas y 16 minutos",
+            "3 horas y 30 minutos"
+          ],
+          "answerIndex": 1,
+          "hint": "El reloj avanza solo 55 minutos por cada 60 minutos reales.",
+          "explanation": "El reloj debe avanzar 180 minutos. A un ritmo de 55 minutos indicados por cada 60 reales, el tiempo transcurrido es 180 × 60/55, aproximadamente 196 minutos, es decir, 3 horas y 16 minutos."
+        }
+      }
+    },
+    {
+      "id": 12,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A travessia da ponte",
+          "question": "Quatro pessoas precisam atravessar uma ponte à noite. Elas levam 1, 2, 7 e 10 minutos. Só há uma lanterna, e no máximo duas pessoas podem atravessar juntas. Quando duas vão juntas, caminham no ritmo da mais lenta. Qual é o menor tempo possível para todos atravessarem?",
+          "options": [
+            "17 minutos",
+            "19 minutos",
+            "20 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Use as duas pessoas mais rápidas para transportar a lanterna e evite fazer as mais lentas atravessarem juntas mais de uma vez.",
+          "explanation": "Atravessam 1 e 2 (2 min); volta 1 (1); atravessam 7 e 10 (10); volta 2 (2); atravessam 1 e 2 (2). Total: 2 + 1 + 10 + 2 + 2 = 17 minutos."
+        },
+        "en": {
+          "title": "Crossing the bridge",
+          "question": "Four people must cross a bridge at night. They take 1, 2, 7 and 10 minutes. There is only one flashlight, and at most two people can cross together. A pair moves at the slower person's pace. What is the minimum total time?",
+          "options": [
+            "17 minutes",
+            "19 minutes",
+            "20 minutes"
+          ],
+          "answerIndex": 0,
+          "hint": "Use the two fastest people to carry the flashlight and avoid making the slowest pair cross more than once.",
+          "explanation": "The 1- and 2-minute walkers cross (2); the 1-minute walker returns (1); the 7- and 10-minute walkers cross (10); the 2-minute walker returns (2); then the two fastest cross again (2). Total: 17 minutes."
+        },
+        "es": {
+          "title": "El cruce del puente",
+          "question": "Cuatro personas deben cruzar un puente de noche. Tardan 1, 2, 7 y 10 minutos. Solo hay una linterna y pueden cruzar como máximo dos personas a la vez. Si cruzan juntas, avanzan al ritmo de la más lenta. ¿Cuál es el tiempo mínimo?",
+          "options": [
+            "17 minutos",
+            "19 minutos",
+            "20 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Usa a las dos personas más rápidas para transportar la linterna y evita que las dos más lentas crucen juntas más de una vez.",
+          "explanation": "Cruzan las personas de 1 y 2 minutos (2); vuelve la de 1 (1); cruzan las de 7 y 10 (10); vuelve la de 2 (2); y cruzan de nuevo las dos más rápidas (2). Total: 17 minutos."
+        }
+      }
+    },
+    {
+      "id": 13,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As três caixas",
+          "question": "Há três caixas: uma contém apenas lápis, outra apenas canetas e a terceira contém lápis e canetas. As três etiquetas estão trocadas. Você pode retirar um único objeto de uma caixa. De qual caixa deve retirar para identificar corretamente todas?",
+          "options": [
+            "Da caixa etiquetada “Lápis e canetas”",
+            "Da caixa etiquetada “Lápis”",
+            "Da caixa etiquetada “Canetas”"
+          ],
+          "answerIndex": 0,
+          "hint": "A caixa com a etiqueta de mistura certamente não contém os dois tipos.",
+          "explanation": "Retire um objeto da caixa etiquetada “Lápis e canetas”. Como a etiqueta está errada, ela contém apenas lápis ou apenas canetas. O objeto retirado identifica seu conteúdo; as outras duas caixas são descobertas por exclusão, pois todas as etiquetas estão erradas."
+        },
+        "en": {
+          "title": "The three boxes",
+          "question": "There are three boxes: one contains only pencils, one only pens, and one contains both. All three labels are wrong. You may take one object from one box. Which labeled box should you choose to identify all three?",
+          "options": [
+            "The box labeled “Pencils and pens”",
+            "The box labeled “Pencils”",
+            "The box labeled “Pens”"
+          ],
+          "answerIndex": 0,
+          "hint": "The box labeled as a mixture cannot actually contain both types.",
+          "explanation": "Take one object from the box labeled “Pencils and pens”. Since its label is wrong, it contains only pencils or only pens. The object identifies its contents; the other two boxes can then be identified by elimination because every label is wrong."
+        },
+        "es": {
+          "title": "Las tres cajas",
+          "question": "Hay tres cajas: una contiene solo lápices, otra solo bolígrafos y la tercera contiene ambos. Las tres etiquetas están equivocadas. Puedes sacar un solo objeto de una caja. ¿De cuál debes sacarlo para identificar las tres?",
+          "options": [
+            "De la caja etiquetada “Lápices y bolígrafos”",
+            "De la caja etiquetada “Lápices”",
+            "De la caja etiquetada “Bolígrafos”"
+          ],
+          "answerIndex": 0,
+          "hint": "La caja etiquetada como mezcla no puede contener realmente los dos tipos.",
+          "explanation": "Saca un objeto de la caja etiquetada “Lápices y bolígrafos”. Como la etiqueta es incorrecta, contiene solo lápices o solo bolígrafos. El objeto revela su contenido y las otras dos cajas se identifican por descarte, ya que todas las etiquetas están equivocadas."
+        }
+      }
+    },
+    {
+      "id": 14,
+      "region": 1,
+      "type": "text",
+      "category": "word_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A palavra intrusa",
+          "question": "Qual palavra não pertence ao mesmo grupo das outras?",
+          "options": [
+            "Minuto",
+            "Hora",
+            "Quilômetro"
+          ],
+          "answerIndex": 2,
+          "hint": "Duas palavras medem duração; a outra mede distância.",
+          "explanation": "Minuto e hora são unidades de tempo. Quilômetro é uma unidade de distância, portanto é a palavra intrusa."
+        },
+        "en": {
+          "title": "The odd word out",
+          "question": "Which word does not belong with the others?",
+          "options": [
+            "Minute",
+            "Hour",
+            "Kilometer"
+          ],
+          "answerIndex": 2,
+          "hint": "Two words measure duration; the other measures distance.",
+          "explanation": "Minute and hour are units of time. Kilometer is a unit of distance, so it is the odd word out."
+        },
+        "es": {
+          "title": "La palabra intrusa",
+          "question": "¿Qué palabra no pertenece al mismo grupo que las demás?",
+          "options": [
+            "Minuto",
+            "Hora",
+            "Kilómetro"
+          ],
+          "answerIndex": 2,
+          "hint": "Dos palabras miden duración; la otra mide distancia.",
+          "explanation": "Minuto y hora son unidades de tiempo. Kilómetro es una unidad de distancia, por eso es la palabra intrusa."
+        }
+      }
+    },
+    {
+      "id": 15,
+      "region": 1,
+      "type": "text",
+      "category": "truth_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A frase impossível",
+          "question": "Em uma sala, alguém afirma: “Todos nesta sala estão mentindo agora”. Se a pessoa que disse isso também está na sala, qual é o problema lógico da afirmação?",
+          "options": [
+            "Ela cria uma contradição se for verdadeira",
+            "Ela prova que todos dizem a verdade",
+            "Ela não pode ser entendida"
+          ],
+          "answerIndex": 0,
+          "hint": "Se a frase for verdadeira, quem a disse também está mentindo?",
+          "explanation": "Se a afirmação for verdadeira, então a pessoa que a pronunciou também está mentindo, o que torna a afirmação falsa. Se for falsa, nem todos estão mentindo. A frase gera um paradoxo autorreferente."
+        },
+        "en": {
+          "title": "The impossible statement",
+          "question": "In a room, someone says: “Everyone in this room is lying right now.” If the speaker is also in the room, what is the logical problem with the statement?",
+          "options": [
+            "It creates a contradiction if it is true",
+            "It proves everyone tells the truth",
+            "It cannot be understood"
+          ],
+          "answerIndex": 0,
+          "hint": "If the sentence is true, is its speaker also lying?",
+          "explanation": "If the statement is true, the speaker is also lying, which makes the statement false. If it is false, then not everyone is lying. The self-referential sentence creates a paradox."
+        },
+        "es": {
+          "title": "La afirmación imposible",
+          "question": "En una sala, alguien afirma: «Todos en esta sala están mintiendo ahora». Si quien lo dice también está en la sala, ¿cuál es el problema lógico?",
+          "options": [
+            "Crea una contradicción si es verdadera",
+            "Demuestra que todos dicen la verdad",
+            "No se puede entender"
+          ],
+          "answerIndex": 0,
+          "hint": "Si la frase es verdadera, ¿también está mintiendo quien la pronuncia?",
+          "explanation": "Si la afirmación es verdadera, quien la pronuncia también miente, lo que la vuelve falsa. Si es falsa, entonces no todos están mintiendo. La frase autorreferente crea una paradoja."
+        }
+      }
+    },
+    {
+      "id": 16,
+      "region": 1,
+      "type": "text",
+      "category": "spatial_reasoning",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os livros na estante",
+          "question": "Quatro livros estão em uma fila. O azul está à esquerda do vermelho. O verde está à direita do vermelho. O amarelo está à esquerda do azul. Qual livro está mais à esquerda?",
+          "options": [
+            "Azul",
+            "Verde",
+            "Amarelo"
+          ],
+          "answerIndex": 2,
+          "hint": "Junte as relações em uma única ordem, da esquerda para a direita.",
+          "explanation": "As pistas formam a ordem amarelo, azul, vermelho, verde. Portanto, o amarelo está mais à esquerda."
+        },
+        "en": {
+          "title": "The books on the shelf",
+          "question": "Four books are in a row. The blue one is to the left of the red one. The green one is to the right of the red one. The yellow one is to the left of the blue one. Which book is farthest left?",
+          "options": [
+            "Blue",
+            "Green",
+            "Yellow"
+          ],
+          "answerIndex": 2,
+          "hint": "Combine the clues into one order from left to right.",
+          "explanation": "The clues give the order yellow, blue, red, green. Therefore, the yellow book is farthest left."
+        },
+        "es": {
+          "title": "Los libros en la estantería",
+          "question": "Hay cuatro libros en fila. El azul está a la izquierda del rojo. El verde está a la derecha del rojo. El amarillo está a la izquierda del azul. ¿Qué libro está más a la izquierda?",
+          "options": [
+            "Azul",
+            "Verde",
+            "Amarillo"
+          ],
+          "answerIndex": 2,
+          "hint": "Une las pistas en un solo orden, de izquierda a derecha.",
+          "explanation": "Las pistas forman el orden amarillo, azul, rojo, verde. Por lo tanto, el libro amarillo está más a la izquierda."
+        }
+      }
+    },
+    {
+      "id": 17,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A senha de três algarismos",
+          "question": "Uma senha tem três algarismos diferentes. O primeiro é 2. O segundo é o dobro do primeiro. O terceiro é a soma dos dois primeiros. Qual é a senha?",
+          "options": [
+            "246",
+            "248",
+            "264"
+          ],
+          "answerIndex": 0,
+          "hint": "Calcule o segundo algarismo e depois some os dois primeiros para obter o terceiro.",
+          "explanation": "O primeiro algarismo é 2. O segundo é 4. O terceiro é 2 + 4 = 6. A senha é 246."
+        },
+        "en": {
+          "title": "The three-digit code",
+          "question": "A code has three different digits. The first is 2. The second is twice the first. The third is the sum of the first two. What is the code?",
+          "options": [
+            "246",
+            "248",
+            "264"
+          ],
+          "answerIndex": 0,
+          "hint": "Find the second digit, then add the first two to get the third.",
+          "explanation": "The first digit is 2. The second is 4. The third is 2 + 4 = 6. The code is 246."
+        },
+        "es": {
+          "title": "La clave de tres cifras",
+          "question": "Una clave tiene tres cifras diferentes. La primera es 2. La segunda es el doble de la primera. La tercera es la suma de las dos primeras. ¿Cuál es la clave?",
+          "options": [
+            "246",
+            "248",
+            "264"
+          ],
+          "answerIndex": 0,
+          "hint": "Calcula la segunda cifra y luego suma las dos primeras para obtener la tercera.",
+          "explanation": "La primera cifra es 2. La segunda es 4. La tercera es 2 + 4 = 6. La clave es 246."
+        }
+      }
+    },
+    {
+      "id": 18,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Quem pegou o guarda-chuva?",
+          "question": "Três colegas — Lia, Caio e Rui — pegaram objetos diferentes: guarda-chuva, livro e mochila. Caio não pegou o guarda-chuva nem a mochila. Lia não pegou o livro. Rui não pegou o guarda-chuva. Quem pegou o guarda-chuva?",
+          "options": [
+            "Lia",
+            "Caio",
+            "Rui"
+          ],
+          "answerIndex": 0,
+          "hint": "Descubra primeiro qual objeto ficou com Caio.",
+          "explanation": "Caio ficou com o livro, pois não pegou o guarda-chuva nem a mochila. Rui não pegou o guarda-chuva e, como o livro já ficou com Caio, Rui ficou com a mochila. Portanto, Lia pegou o guarda-chuva."
+        },
+        "en": {
+          "title": "Who took the umbrella?",
+          "question": "Three classmates — Lia, Caio and Rui — took different items: an umbrella, a book and a backpack. Caio did not take the umbrella or the backpack. Lia did not take the book. Rui did not take the umbrella. Who took the umbrella?",
+          "options": [
+            "Lia",
+            "Caio",
+            "Rui"
+          ],
+          "answerIndex": 0,
+          "hint": "First determine which item Caio took.",
+          "explanation": "Caio took the book because he did not take the umbrella or backpack. Rui did not take the umbrella and, since Caio already has the book, Rui took the backpack. Therefore, Lia took the umbrella."
+        },
+        "es": {
+          "title": "¿Quién tomó el paraguas?",
+          "question": "Tres compañeros — Lia, Caio y Rui — tomaron objetos diferentes: un paraguas, un libro y una mochila. Caio no tomó el paraguas ni la mochila. Lia no tomó el libro. Rui no tomó el paraguas. ¿Quién tomó el paraguas?",
+          "options": [
+            "Lia",
+            "Caio",
+            "Rui"
+          ],
+          "answerIndex": 0,
+          "hint": "Primero determina qué objeto tomó Caio.",
+          "explanation": "Caio tomó el libro, ya que no tomó el paraguas ni la mochila. Rui no tomó el paraguas y, como Caio ya tiene el libro, Rui tomó la mochila. Por lo tanto, Lia tomó el paraguas."
+        }
+      }
+    },
+    {
+      "id": 19,
+      "region": 1,
+      "type": "text",
+      "category": "proportions",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As máquinas e as peças",
+          "question": "Duas máquinas iguais produzem duas peças em dois minutos. Mantendo o mesmo ritmo, quanto tempo cinco máquinas levam para produzir cinco peças?",
+          "options": [
+            "2 minutos",
+            "5 minutos",
+            "10 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada máquina produz uma peça no mesmo intervalo.",
+          "explanation": "Se duas máquinas produzem duas peças em dois minutos, cada máquina produz uma peça em dois minutos. Assim, cinco máquinas produzem cinco peças simultaneamente em dois minutos."
+        },
+        "en": {
+          "title": "Machines and parts",
+          "question": "Two identical machines make two parts in two minutes. At the same rate, how long do five machines take to make five parts?",
+          "options": [
+            "2 minutes",
+            "5 minutes",
+            "10 minutes"
+          ],
+          "answerIndex": 0,
+          "hint": "Each machine produces one part in the same time interval.",
+          "explanation": "If two machines make two parts in two minutes, each machine makes one part in two minutes. Therefore, five machines can make five parts simultaneously in two minutes."
+        },
+        "es": {
+          "title": "Las máquinas y las piezas",
+          "question": "Dos máquinas iguales producen dos piezas en dos minutos. Al mismo ritmo, ¿cuánto tardan cinco máquinas en producir cinco piezas?",
+          "options": [
+            "2 minutos",
+            "5 minutos",
+            "10 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada máquina produce una pieza en el mismo intervalo.",
+          "explanation": "Si dos máquinas producen dos piezas en dos minutos, cada máquina produce una pieza en dos minutos. Por tanto, cinco máquinas producen cinco piezas simultáneamente en dos minutos."
+        }
+      }
+    },
+    {
+      "id": 20,
+      "region": 1,
+      "type": "text",
+      "category": "observation",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A sequência das formas",
+          "question": "Observe a sequência: círculo, quadrado, triângulo, círculo, quadrado, triângulo, círculo... Qual é a 11ª forma?",
+          "options": [
+            "Círculo",
+            "Quadrado",
+            "Triângulo"
+          ],
+          "answerIndex": 1,
+          "hint": "O padrão se repete a cada três posições. Divida 11 por 3 e observe o resto.",
+          "explanation": "A sequência repete grupos de três formas. A posição 1 é círculo, 2 é quadrado e 3 é triângulo. Como 11 dividido por 3 deixa resto 2, a 11ª forma é quadrado."
+        },
+        "en": {
+          "title": "The shape sequence",
+          "question": "Look at the sequence: circle, square, triangle, circle, square, triangle, circle... What is the 11th shape?",
+          "options": [
+            "Circle",
+            "Square",
+            "Triangle"
+          ],
+          "answerIndex": 1,
+          "hint": "The pattern repeats every three positions. Divide 11 by 3 and check the remainder.",
+          "explanation": "The sequence repeats in groups of three. Position 1 is circle, 2 is square and 3 is triangle. Since 11 divided by 3 leaves remainder 2, the 11th shape is square."
+        },
+        "es": {
+          "title": "La secuencia de formas",
+          "question": "Observa la secuencia: círculo, cuadrado, triángulo, círculo, cuadrado, triángulo, círculo... ¿Cuál es la forma número 11?",
+          "options": [
+            "Círculo",
+            "Cuadrado",
+            "Triángulo"
+          ],
+          "answerIndex": 1,
+          "hint": "El patrón se repite cada tres posiciones. Divide 11 entre 3 y observa el resto.",
+          "explanation": "La secuencia se repite en grupos de tres. La posición 1 es círculo, la 2 es cuadrado y la 3 es triángulo. Como 11 dividido entre 3 deja resto 2, la forma número 11 es cuadrado."
+        }
+      }
+    },
+    {
+      "id": 21,
+      "region": 1,
+      "type": "text",
+      "category": "time_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As badaladas",
+          "question": "Um relógio leva 5 segundos entre uma badalada e outra. Quanto tempo leva para dar 6 badaladas?",
+          "options": [
+            "25 segundos",
+            "30 segundos",
+            "35 segundos"
+          ],
+          "answerIndex": 0,
+          "hint": "Conte os intervalos entre as badaladas, não o número de badaladas.",
+          "explanation": "Entre 6 badaladas existem 5 intervalos. Cada intervalo dura 5 segundos: 5 × 5 = 25 segundos."
+        },
+        "en": {
+          "title": "The clock chimes",
+          "question": "A clock takes 5 seconds between one chime and the next. How long does it take to strike 6 times?",
+          "options": [
+            "25 seconds",
+            "30 seconds",
+            "35 seconds"
+          ],
+          "answerIndex": 0,
+          "hint": "Count the gaps between chimes, not the number of chimes.",
+          "explanation": "There are 5 intervals between 6 chimes. Each interval lasts 5 seconds: 5 × 5 = 25 seconds."
+        },
+        "es": {
+          "title": "Las campanadas",
+          "question": "Un reloj tarda 5 segundos entre una campanada y la siguiente. ¿Cuánto tarda en dar 6 campanadas?",
+          "options": [
+            "25 segundos",
+            "30 segundos",
+            "35 segundos"
+          ],
+          "answerIndex": 0,
+          "hint": "Cuenta los intervalos entre campanadas, no la cantidad de campanadas.",
+          "explanation": "Entre 6 campanadas hay 5 intervalos. Cada uno dura 5 segundos: 5 × 5 = 25 segundos."
+        }
+      }
+    },
+    {
+      "id": 22,
+      "region": 1,
+      "type": "text",
+      "category": "combinatorics",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os cumprimentos",
+          "question": "Cinco pessoas se encontram. Cada pessoa cumprimenta todas as outras uma única vez. Quantos cumprimentos acontecem?",
+          "options": [
+            "10",
+            "15",
+            "20"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada par de pessoas se cumprimenta uma vez. Não conte o mesmo par duas vezes.",
+          "explanation": "O número de pares entre 5 pessoas é 5 × 4 ÷ 2 = 10. Portanto, acontecem 10 cumprimentos."
+        },
+        "en": {
+          "title": "The greetings",
+          "question": "Five people meet. Each person greets every other person exactly once. How many greetings take place?",
+          "options": [
+            "10",
+            "15",
+            "20"
+          ],
+          "answerIndex": 0,
+          "hint": "Each pair of people greets once. Do not count the same pair twice.",
+          "explanation": "The number of pairs among 5 people is 5 × 4 ÷ 2 = 10. Therefore, there are 10 greetings."
+        },
+        "es": {
+          "title": "Los saludos",
+          "question": "Cinco personas se encuentran. Cada una saluda a todas las demás una sola vez. ¿Cuántos saludos se producen?",
+          "options": [
+            "10",
+            "15",
+            "20"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada pareja se saluda una vez. No cuentes la misma pareja dos veces.",
+          "explanation": "El número de parejas entre 5 personas es 5 × 4 ÷ 2 = 10. Por lo tanto, hay 10 saludos."
+        }
+      }
+    },
+    {
+      "id": 23,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Dois pais e dois filhos",
+          "question": "Dois pais e dois filhos foram pescar. Cada um pescou um peixe, mas voltaram com apenas três peixes. Como isso é possível?",
+          "options": [
+            "Um peixe foi dividido",
+            "Eram três pessoas: avô, pai e filho",
+            "Uma pessoa não pescou"
+          ],
+          "answerIndex": 1,
+          "hint": "Uma mesma pessoa pode ser pai e filho ao mesmo tempo.",
+          "explanation": "Eram três pessoas: um avô, seu filho e seu neto. O avô e o pai são dois pais; o pai e o filho são dois filhos. Cada um pescou um peixe, totalizando três."
+        },
+        "en": {
+          "title": "Two fathers and two sons",
+          "question": "Two fathers and two sons went fishing. Each caught one fish, but they returned with only three fish. How is that possible?",
+          "options": [
+            "One fish was shared",
+            "There were three people: grandfather, father and son",
+            "One person did not fish"
+          ],
+          "answerIndex": 1,
+          "hint": "The same person can be both a father and a son.",
+          "explanation": "There were three people: a grandfather, his son and his grandson. The grandfather and father are two fathers; the father and son are two sons. Each caught one fish, making three."
+        },
+        "es": {
+          "title": "Dos padres y dos hijos",
+          "question": "Dos padres y dos hijos fueron a pescar. Cada uno pescó un pez, pero regresaron con solo tres peces. ¿Cómo es posible?",
+          "options": [
+            "Compartieron un pez",
+            "Eran tres personas: abuelo, padre e hijo",
+            "Una persona no pescó"
+          ],
+          "answerIndex": 1,
+          "hint": "Una misma persona puede ser padre e hijo al mismo tiempo.",
+          "explanation": "Eran tres personas: un abuelo, su hijo y su nieto. El abuelo y el padre son dos padres; el padre y el hijo son dos hijos. Cada uno pescó un pez, en total tres."
+        }
+      }
+    },
+    {
+      "id": 24,
+      "region": 1,
+      "type": "text",
+      "category": "probability",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As meias no escuro",
+          "question": "Uma gaveta tem meias pretas, brancas e azuis. Está escuro e você não consegue distinguir as cores. Qual é o menor número de meias que deve retirar para garantir um par da mesma cor?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "No pior caso, as três primeiras meias podem ser de cores diferentes.",
+          "explanation": "Com três meias, ainda é possível ter uma de cada cor. A quarta meia necessariamente repetirá uma das três cores. Portanto, são necessárias 4 meias."
+        },
+        "en": {
+          "title": "Socks in the dark",
+          "question": "A drawer contains black, white and blue socks. It is dark and you cannot tell the colors apart. What is the smallest number of socks you must take to guarantee a matching pair?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "In the worst case, the first three socks could all be different colors.",
+          "explanation": "With three socks, you could have one of each color. The fourth sock must match one of those colors. Therefore, you need 4 socks."
+        },
+        "es": {
+          "title": "Los calcetines a oscuras",
+          "question": "Un cajón contiene calcetines negros, blancos y azules. Está oscuro y no puedes distinguir los colores. ¿Cuál es el menor número de calcetines que debes sacar para garantizar un par del mismo color?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "En el peor caso, los tres primeros calcetines pueden ser de colores diferentes.",
+          "explanation": "Con tres calcetines podrías tener uno de cada color. El cuarto necesariamente repetirá uno de esos colores. Por lo tanto, necesitas 4 calcetines."
+        }
+      }
+    },
+    {
+      "id": 25,
+      "region": 1,
+      "type": "text",
+      "category": "race_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A posição na corrida",
+          "question": "Você está em uma corrida e ultrapassa a pessoa que está em segundo lugar. Em que posição você fica?",
+          "options": [
+            "Primeiro",
+            "Segundo",
+            "Terceiro"
+          ],
+          "answerIndex": 1,
+          "hint": "Ao ultrapassar alguém, você ocupa a posição dessa pessoa.",
+          "explanation": "Você passa a ocupar o lugar de quem estava em segundo. Portanto, fica em segundo lugar, não em primeiro."
+        },
+        "en": {
+          "title": "The race position",
+          "question": "You are in a race and overtake the person in second place. What position are you in now?",
+          "options": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "answerIndex": 1,
+          "hint": "When you overtake someone, you take that person's position.",
+          "explanation": "You take the place of the person who was in second place. Therefore, you are now second, not first."
+        },
+        "es": {
+          "title": "La posición en la carrera",
+          "question": "Estás en una carrera y adelantas a la persona que va en segundo lugar. ¿En qué posición quedas?",
+          "options": [
+            "Primero",
+            "Segundo",
+            "Tercero"
+          ],
+          "answerIndex": 1,
+          "hint": "Al adelantar a alguien, ocupas su posición.",
+          "explanation": "Pasas a ocupar el lugar de quien estaba en segundo lugar. Por lo tanto, quedas segundo, no primero."
+        }
+      }
+    },
+    {
+      "id": 26,
+      "region": 1,
+      "type": "text",
+      "category": "calendar_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os dias dos meses",
+          "question": "Quantos meses do ano têm pelo menos 28 dias?",
+          "options": [
+            "1",
+            "6",
+            "12"
+          ],
+          "answerIndex": 2,
+          "hint": "A pergunta diz “pelo menos” 28 dias, não exatamente 28.",
+          "explanation": "Todos os 12 meses têm pelo menos 28 dias. Alguns têm 30 ou 31, mas todos chegam ao dia 28."
+        },
+        "en": {
+          "title": "Days in the months",
+          "question": "How many months of the year have at least 28 days?",
+          "options": [
+            "1",
+            "6",
+            "12"
+          ],
+          "answerIndex": 2,
+          "hint": "The question says “at least” 28 days, not exactly 28.",
+          "explanation": "All 12 months have at least 28 days. Some have 30 or 31, but every month reaches day 28."
+        },
+        "es": {
+          "title": "Los días de los meses",
+          "question": "¿Cuántos meses del año tienen al menos 28 días?",
+          "options": [
+            "1",
+            "6",
+            "12"
+          ],
+          "answerIndex": 2,
+          "hint": "La pregunta dice «al menos» 28 días, no exactamente 28.",
+          "explanation": "Los 12 meses tienen al menos 28 días. Algunos tienen 30 o 31, pero todos llegan al día 28."
+        }
+      }
+    },
+    {
+      "id": 27,
+      "region": 1,
+      "type": "text",
+      "category": "careful_reading",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As ovelhas do fazendeiro",
+          "question": "Um fazendeiro tinha 15 ovelhas. Todas, exceto 8, fugiram. Quantas ficaram?",
+          "options": [
+            "7",
+            "8",
+            "15"
+          ],
+          "answerIndex": 1,
+          "hint": "Leia com atenção a expressão “todas, exceto 8”.",
+          "explanation": "Se todas, exceto 8, fugiram, isso significa que 8 não fugiram. Portanto, ficaram 8 ovelhas."
+        },
+        "en": {
+          "title": "The farmer's sheep",
+          "question": "A farmer had 15 sheep. All but 8 ran away. How many were left?",
+          "options": [
+            "7",
+            "8",
+            "15"
+          ],
+          "answerIndex": 1,
+          "hint": "Pay close attention to the phrase “all but 8”.",
+          "explanation": "If all but 8 ran away, that means 8 did not run away. Therefore, 8 sheep were left."
+        },
+        "es": {
+          "title": "Las ovejas del granjero",
+          "question": "Un granjero tenía 15 ovejas. Todas, excepto 8, escaparon. ¿Cuántas quedaron?",
+          "options": [
+            "7",
+            "8",
+            "15"
+          ],
+          "answerIndex": 1,
+          "hint": "Presta atención a la expresión «todas, excepto 8».",
+          "explanation": "Si todas excepto 8 escaparon, significa que 8 no escaparon. Por lo tanto, quedaron 8 ovejas."
+        }
+      }
+    },
+    {
+      "id": 28,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As velas apagadas",
+          "question": "Há 5 velas acesas sobre uma mesa. Você apaga 2 e deixa as outras queimando até o fim. Quantas velas sobram no final?",
+          "options": [
+            "2",
+            "3",
+            "5"
+          ],
+          "answerIndex": 0,
+          "hint": "As velas que continuam acesas vão derreter; as apagadas permanecem.",
+          "explanation": "As três velas que ficaram acesas queimam até acabar. As duas apagadas permanecem. Portanto, sobram 2 velas."
+        },
+        "en": {
+          "title": "The extinguished candles",
+          "question": "There are 5 lit candles on a table. You blow out 2 and let the others burn down completely. How many candles are left at the end?",
+          "options": [
+            "2",
+            "3",
+            "5"
+          ],
+          "answerIndex": 0,
+          "hint": "The candles that keep burning will melt away; the extinguished ones remain.",
+          "explanation": "The three candles left burning melt away completely. The two extinguished candles remain. Therefore, 2 candles are left."
+        },
+        "es": {
+          "title": "Las velas apagadas",
+          "question": "Hay 5 velas encendidas sobre una mesa. Apagas 2 y dejas que las otras se consuman por completo. ¿Cuántas velas quedan al final?",
+          "options": [
+            "2",
+            "3",
+            "5"
+          ],
+          "answerIndex": 0,
+          "hint": "Las velas que siguen encendidas se consumen; las apagadas permanecen.",
+          "explanation": "Las tres velas que siguen encendidas se consumen por completo. Las dos apagadas permanecen. Por lo tanto, quedan 2 velas."
+        }
+      }
+    },
+    {
+      "id": 29,
+      "region": 1,
+      "type": "text",
+      "category": "word_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A palavra de trás para frente",
+          "question": "Qual destas palavras continua igual quando lida da esquerda para a direita ou da direita para a esquerda?",
+          "options": [
+            "Casa",
+            "Arara",
+            "Janela"
+          ],
+          "answerIndex": 1,
+          "hint": "Procure uma palavra que forme a mesma sequência de letras nos dois sentidos.",
+          "explanation": "ARARA é um palíndromo: lida de trás para frente, continua sendo ARARA."
+        },
+        "en": {
+          "title": "The word backwards",
+          "question": "Which of these words stays the same when read from left to right or from right to left?",
+          "options": [
+            "House",
+            "Level",
+            "Window"
+          ],
+          "answerIndex": 1,
+          "hint": "Look for a word that has the same sequence of letters in both directions.",
+          "explanation": "LEVEL is a palindrome: read backwards, it is still LEVEL."
+        },
+        "es": {
+          "title": "La palabra al revés",
+          "question": "¿Cuál de estas palabras se mantiene igual al leerla de izquierda a derecha o de derecha a izquierda?",
+          "options": [
+            "Casa",
+            "Radar",
+            "Ventana"
+          ],
+          "answerIndex": 1,
+          "hint": "Busca una palabra que tenga la misma secuencia de letras en ambos sentidos.",
+          "explanation": "RADAR es un palíndromo: al leerlo al revés, sigue siendo RADAR."
+        }
+      }
+    },
+    {
+      "id": 30,
+      "region": 1,
+      "type": "text",
+      "category": "careful_reading",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O ônibus",
+          "question": "Um ônibus saiu do terminal com 8 passageiros. Na primeira parada, 3 desceram e 2 subiram. Na segunda, 1 desceu e 4 subiram. Quantos passageiros estão no ônibus agora?",
+          "options": [
+            "9",
+            "10",
+            "12"
+          ],
+          "answerIndex": 1,
+          "hint": "Comece com 8 e aplique cada entrada e saída na ordem.",
+          "explanation": "O ônibus começa com 8. Na primeira parada: 8 − 3 + 2 = 7. Na segunda: 7 − 1 + 4 = 10. Agora há 10 passageiros."
+        },
+        "en": {
+          "title": "The bus",
+          "question": "A bus leaves the terminal with 8 passengers. At the first stop, 3 get off and 2 get on. At the second stop, 1 gets off and 4 get on. How many passengers are on the bus now?",
+          "options": [
+            "9",
+            "10",
+            "12"
+          ],
+          "answerIndex": 1,
+          "hint": "Start with 8 and apply each boarding and exit in order.",
+          "explanation": "The bus starts with 8. At the first stop: 8 − 3 + 2 = 7. At the second: 7 − 1 + 4 = 10. There are now 10 passengers."
+        },
+        "es": {
+          "title": "El autobús",
+          "question": "Un autobús sale de la terminal con 8 pasajeros. En la primera parada, bajan 3 y suben 2. En la segunda, baja 1 y suben 4. ¿Cuántos pasajeros hay ahora en el autobús?",
+          "options": [
+            "9",
+            "10",
+            "12"
+          ],
+          "answerIndex": 1,
+          "hint": "Empieza con 8 y aplica cada entrada y salida en orden.",
+          "explanation": "El autobús empieza con 8. En la primera parada: 8 − 3 + 2 = 7. En la segunda: 7 − 1 + 4 = 10. Ahora hay 10 pasajeros."
+        }
+      }
+    },
+    {
+      "id": 31,
+      "region": 1,
+      "type": "text",
+      "interaction": "order_items",
+      "category": "ordering",
+      "difficulty": 3,
+      "visual": null,
+      "expectedOrder": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "content": {
+        "pt": {
+          "title": "A ordem da chegada",
+          "question": "Quatro colegas terminaram uma prova em posições diferentes. Diego chegou antes de Ana. Ana chegou antes de Bruno. Carla chegou depois de Bruno. Organize os quatro da primeira pessoa a chegar até a última.",
+          "items": [
+            "Carla",
+            "Diego",
+            "Bruno",
+            "Ana"
+          ],
+          "answerIndex": 0,
+          "hint": "Transforme as pistas em uma sequência: Diego vem antes de Ana, Ana antes de Bruno e Bruno antes de Carla.",
+          "explanation": "As pistas formam uma única ordem: Diego, Ana, Bruno e Carla. Diego chegou primeiro e Carla por último."
+        },
+        "en": {
+          "title": "The finishing order",
+          "question": "Four classmates finished a race in different positions. Diego finished before Ana. Ana finished before Bruno. Carla finished after Bruno. Arrange them from first to last.",
+          "items": [
+            "Carla",
+            "Diego",
+            "Bruno",
+            "Ana"
+          ],
+          "answerIndex": 0,
+          "hint": "Turn the clues into a sequence: Diego before Ana, Ana before Bruno, and Bruno before Carla.",
+          "explanation": "The clues give one unique order: Diego, Ana, Bruno, Carla. Diego finished first and Carla last."
+        },
+        "es": {
+          "title": "El orden de llegada",
+          "question": "Cuatro compañeros terminaron una carrera en posiciones diferentes. Diego llegó antes que Ana. Ana llegó antes que Bruno. Carla llegó después de Bruno. Ordénalos desde el primero hasta el último.",
+          "items": [
+            "Carla",
+            "Diego",
+            "Bruno",
+            "Ana"
+          ],
+          "answerIndex": 0,
+          "hint": "Convierte las pistas en una secuencia: Diego antes que Ana, Ana antes que Bruno y Bruno antes que Carla.",
+          "explanation": "Las pistas forman un único orden: Diego, Ana, Bruno y Carla. Diego llegó primero y Carla al final."
+        }
+      }
+    },
+    {
+      "id": 32,
+      "region": 1,
+      "type": "text",
+      "interaction": "multi_select",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "content": {
+        "pt": {
+          "title": "O que as regras garantem?",
+          "question": "Uma caixa-forte contém apenas objetos de metal. Nenhum objeto de metal é feito de madeira. A chave A está dentro da caixa-forte. Marque todas as conclusões que obrigatoriamente são verdadeiras.",
+          "options": [
+            "A chave A é feita de metal.",
+            "A chave A não é feita de madeira.",
+            "Todo objeto de metal está dentro da caixa-forte.",
+            "A chave A é feita de madeira."
+          ],
+          "answerIndex": 0,
+          "hint": "Use as duas regras em sequência: estar na caixa-forte implica ser de metal; ser de metal implica não ser de madeira.",
+          "explanation": "A chave está na caixa-forte, então é de metal. Como nenhum objeto de metal é de madeira, a chave não é de madeira. As regras não dizem que todo objeto de metal precisa estar na caixa-forte."
+        },
+        "en": {
+          "title": "What do the rules guarantee?",
+          "question": "A safe contains only metal objects. No metal object is made of wood. Key A is inside the safe. Select every conclusion that must be true.",
+          "options": [
+            "Key A is made of metal.",
+            "Key A is not made of wood.",
+            "Every metal object is inside the safe.",
+            "Key A is made of wood."
+          ],
+          "answerIndex": 0,
+          "hint": "Apply the two rules in order: being inside the safe means being metal; being metal means not being wooden.",
+          "explanation": "Key A is inside the safe, so it is metal. Since no metal object is wooden, the key is not wooden. The rules do not say that every metal object must be inside the safe."
+        },
+        "es": {
+          "title": "¿Qué garantizan las reglas?",
+          "question": "Una caja fuerte contiene únicamente objetos de metal. Ningún objeto de metal está hecho de madera. La llave A está dentro de la caja fuerte. Marca todas las conclusiones que necesariamente son verdaderas.",
+          "options": [
+            "La llave A es de metal.",
+            "La llave A no es de madera.",
+            "Todos los objetos de metal están dentro de la caja fuerte.",
+            "La llave A es de madera."
+          ],
+          "answerIndex": 0,
+          "hint": "Aplica las dos reglas en orden: estar dentro de la caja fuerte implica ser de metal; ser de metal implica no ser de madera.",
+          "explanation": "La llave A está dentro de la caja fuerte, por lo tanto es de metal. Como ningún objeto de metal es de madera, la llave no es de madera. Las reglas no dicen que todos los objetos de metal deban estar dentro de la caja fuerte."
+        }
+      }
+    },
+    {
+      "id": 33,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O código do cadeado",
+          "question": "Um cadeado usa três algarismos diferentes. As pistas são: 682 — um algarismo está correto e na posição certa; 614 — um algarismo está correto, mas na posição errada; 206 — dois algarismos estão corretos, ambos em posições erradas; 738 — nenhum algarismo está correto; 780 — um algarismo está correto, mas na posição errada. Qual é o código?",
+          "options": [
+            "042",
+            "204",
+            "420"
+          ],
+          "answerIndex": 0,
+          "hint": "Comece pela pista 738 para eliminar três algarismos. Depois use 780 para descobrir que o zero faz parte do código.",
+          "explanation": "Os algarismos 7, 3 e 8 não aparecem. Na pista 780, o zero é correto, mas não está na terceira posição. A pista 206 mostra que 0 e 2 fazem parte do código, mas estão em posições diferentes das mostradas; assim, 0 fica na primeira posição e 2 na terceira. A pista 682 confirma o 2 na terceira posição. Pela pista 614, o algarismo restante é 4 no meio. O código é 042."
+        },
+        "en": {
+          "title": "The lock code",
+          "question": "A lock uses three different digits. Clues: 682 — one digit is correct and in the right position; 614 — one digit is correct but in the wrong position; 206 — two digits are correct, both in the wrong positions; 738 — no digit is correct; 780 — one digit is correct but in the wrong position. What is the code?",
+          "options": [
+            "042",
+            "204",
+            "420"
+          ],
+          "answerIndex": 0,
+          "hint": "Start with clue 738 to eliminate three digits. Then use 780 to discover that zero is part of the code.",
+          "explanation": "Digits 7, 3 and 8 are absent. In clue 780, zero is correct but not in the third position. Clue 206 shows that 0 and 2 belong to the code but are not in the shown positions; therefore 0 is first and 2 is third. Clue 682 confirms 2 in the third position. From clue 614, the remaining digit is 4 in the middle. The code is 042."
+        },
+        "es": {
+          "title": "El código del candado",
+          "question": "Un candado usa tres cifras diferentes. Pistas: 682 — una cifra es correcta y está en la posición correcta; 614 — una cifra es correcta, pero está en la posición equivocada; 206 — dos cifras son correctas, ambas en posiciones equivocadas; 738 — ninguna cifra es correcta; 780 — una cifra es correcta, pero está en la posición equivocada. ¿Cuál es el código?",
+          "options": [
+            "042",
+            "204",
+            "420"
+          ],
+          "answerIndex": 0,
+          "hint": "Empieza con la pista 738 para eliminar tres cifras. Después usa 780 para descubrir que el cero forma parte del código.",
+          "explanation": "Las cifras 7, 3 y 8 no aparecen. En la pista 780, el cero es correcto, pero no está en la tercera posición. La pista 206 muestra que 0 y 2 forman parte del código, pero no están en las posiciones indicadas; por eso, 0 va primero y 2 tercero. La pista 682 confirma el 2 en la tercera posición. Según la pista 614, la cifra restante es 4 en el medio. El código es 042."
+        }
+      }
+    },
+    {
+      "id": 34,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O número escondido",
+          "question": "Pense em um número de dois algarismos. A soma dos algarismos é 11. O algarismo das dezenas é exatamente uma unidade maior que o das unidades. Qual é o número?",
+          "options": [
+            "56",
+            "65",
+            "74"
+          ],
+          "answerIndex": 1,
+          "hint": "Se o algarismo das unidades é 5, o das dezenas precisa ser 6. Verifique a soma.",
+          "explanation": "Se a unidade vale 5 e a dezena vale 6, a soma é 11 e a dezena é uma unidade maior. O número é 65."
+        },
+        "en": {
+          "title": "The hidden number",
+          "question": "Think of a two-digit number. Its digits add up to 11. The tens digit is exactly one greater than the units digit. What is the number?",
+          "options": [
+            "56",
+            "65",
+            "74"
+          ],
+          "answerIndex": 1,
+          "hint": "If the units digit is 5, the tens digit must be 6. Check the sum.",
+          "explanation": "If the units digit is 5 and the tens digit is 6, their sum is 11 and the tens digit is one greater. The number is 65."
+        },
+        "es": {
+          "title": "El número escondido",
+          "question": "Piensa en un número de dos cifras. La suma de sus cifras es 11. La cifra de las decenas es exactamente una unidad mayor que la de las unidades. ¿Cuál es el número?",
+          "options": [
+            "56",
+            "65",
+            "74"
+          ],
+          "answerIndex": 1,
+          "hint": "Si la cifra de las unidades es 5, la de las decenas debe ser 6. Comprueba la suma.",
+          "explanation": "Si la unidad vale 5 y la decena vale 6, la suma es 11 y la decena es una unidad mayor. El número es 65."
+        }
+      }
+    },
+    {
+      "id": 35,
+      "region": 1,
+      "type": "text",
+      "category": "planning_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A travessia do rio",
+          "question": "Uma pessoa precisa atravessar um rio levando uma raposa, uma galinha e um saco de milho. O barco leva a pessoa e apenas um dos três itens. Sem a pessoa, a raposa não pode ficar sozinha com a galinha, e a galinha não pode ficar sozinha com o milho. Qual é o menor número de travessias para levar tudo em segurança?",
+          "options": [
+            "5 travessias",
+            "7 travessias",
+            "9 travessias"
+          ],
+          "answerIndex": 1,
+          "hint": "A galinha precisa atravessar primeiro. Em alguns momentos, a pessoa terá de trazê-la de volta.",
+          "explanation": "A sequência mínima é: leva a galinha; volta sozinha; leva a raposa; traz a galinha de volta; leva o milho; volta sozinha; leva a galinha novamente. São 7 travessias."
+        },
+        "en": {
+          "title": "Crossing the river",
+          "question": "A person must cross a river with a fox, a chicken and a bag of grain. The boat carries the person and only one of the three items. Without the person, the fox cannot be left alone with the chicken, and the chicken cannot be left alone with the grain. What is the minimum number of crossings to get everything across safely?",
+          "options": [
+            "5 crossings",
+            "7 crossings",
+            "9 crossings"
+          ],
+          "answerIndex": 1,
+          "hint": "The chicken must cross first. At one point, the person will need to bring it back.",
+          "explanation": "The minimum sequence is: take the chicken across; return alone; take the fox across; bring the chicken back; take the grain across; return alone; take the chicken across again. That is 7 crossings."
+        },
+        "es": {
+          "title": "El cruce del río",
+          "question": "Una persona debe cruzar un río con un zorro, una gallina y un saco de grano. La barca lleva a la persona y solo uno de los tres elementos. Sin la persona, el zorro no puede quedarse a solas con la gallina, y la gallina no puede quedarse a solas con el grano. ¿Cuál es el número mínimo de cruces para llevar todo con seguridad?",
+          "options": [
+            "5 cruces",
+            "7 cruces",
+            "9 cruces"
+          ],
+          "answerIndex": 1,
+          "hint": "La gallina debe cruzar primero. En algún momento, la persona tendrá que traerla de vuelta.",
+          "explanation": "La secuencia mínima es: llevar la gallina; volver solo; llevar el zorro; traer la gallina de vuelta; llevar el grano; volver solo; llevar la gallina otra vez. Son 7 cruces."
+        }
+      }
+    },
+    {
+      "id": 36,
+      "region": 1,
+      "type": "text",
+      "category": "truth_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Onde está a chave?",
+          "question": "Uma chave está escondida em uma das caixas A, B ou C. Apenas uma destas frases é verdadeira: Caixa A: “A chave está na caixa B.” Caixa B: “A chave não está na caixa B.” Caixa C: “A chave não está na caixa A.” Em qual caixa está a chave?",
+          "options": [
+            "Caixa A",
+            "Caixa B",
+            "Caixa C"
+          ],
+          "answerIndex": 0,
+          "hint": "Teste cada caixa como possível esconderijo e conte quantas frases ficam verdadeiras.",
+          "explanation": "Se a chave estiver na caixa A, as frases A e C são falsas e a frase B é verdadeira: exatamente uma. Se estiver em B, duas frases serão verdadeiras. Se estiver em C, também duas serão verdadeiras. Portanto, a chave está na caixa A."
+        },
+        "en": {
+          "title": "Where is the key?",
+          "question": "A key is hidden in one of boxes A, B or C. Only one of these statements is true: Box A: “The key is in box B.” Box B: “The key is not in box B.” Box C: “The key is not in box A.” Which box contains the key?",
+          "options": [
+            "Box A",
+            "Box B",
+            "Box C"
+          ],
+          "answerIndex": 0,
+          "hint": "Test each box as the possible hiding place and count how many statements become true.",
+          "explanation": "If the key is in box A, statements A and C are false and statement B is true: exactly one. If it is in B, two statements are true. If it is in C, two are also true. Therefore, the key is in box A."
+        },
+        "es": {
+          "title": "¿Dónde está la llave?",
+          "question": "Una llave está escondida en una de las cajas A, B o C. Solo una de estas frases es verdadera: Caja A: «La llave está en la caja B». Caja B: «La llave no está en la caja B». Caja C: «La llave no está en la caja A». ¿En qué caja está la llave?",
+          "options": [
+            "Caja A",
+            "Caja B",
+            "Caja C"
+          ],
+          "answerIndex": 0,
+          "hint": "Prueba cada caja como posible escondite y cuenta cuántas frases resultan verdaderas.",
+          "explanation": "Si la llave está en la caja A, las frases A y C son falsas y la frase B es verdadera: exactamente una. Si está en B, dos frases son verdaderas. Si está en C, también dos son verdaderas. Por lo tanto, la llave está en la caja A."
+        }
+      }
+    },
+    {
+      "id": 37,
+      "region": 1,
+      "type": "text",
+      "category": "weighing_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As nove moedas",
+          "question": "Você tem 9 moedas visualmente idênticas. Uma delas é mais pesada. Usando uma balança de dois pratos, qual é o menor número de pesagens necessário para garantir que você encontre a moeda mais pesada?",
+          "options": [
+            "1 pesagem",
+            "2 pesagens",
+            "3 pesagens"
+          ],
+          "answerIndex": 1,
+          "hint": "Divida as moedas em três grupos iguais e compare dois grupos por vez.",
+          "explanation": "Separe as moedas em três grupos de três. Pese um grupo contra outro. Se forem iguais, a moeda pesada está no terceiro grupo; se não, está no grupo mais pesado. Depois pese uma moeda contra outra do grupo suspeito: se forem iguais, a terceira é a mais pesada; caso contrário, a mais pesada na balança é a procurada. São 2 pesagens."
+        },
+        "en": {
+          "title": "The nine coins",
+          "question": "You have 9 visually identical coins. One is heavier. Using a two-pan balance scale, what is the smallest number of weighings needed to guarantee finding the heavier coin?",
+          "options": [
+            "1 weighing",
+            "2 weighings",
+            "3 weighings"
+          ],
+          "answerIndex": 1,
+          "hint": "Divide the coins into three equal groups and compare two groups at a time.",
+          "explanation": "Split the coins into three groups of three. Weigh one group against another. If they balance, the heavier coin is in the third group; otherwise, it is in the heavier group. Then weigh one coin against another from that group: if they balance, the third is heavier; otherwise, the heavier one on the scale is the target. Two weighings are enough."
+        },
+        "es": {
+          "title": "Las nueve monedas",
+          "question": "Tienes 9 monedas visualmente idénticas. Una pesa más. Usando una balanza de dos platos, ¿cuál es el menor número de pesajes necesario para garantizar que encuentres la moneda más pesada?",
+          "options": [
+            "1 pesaje",
+            "2 pesajes",
+            "3 pesajes"
+          ],
+          "answerIndex": 1,
+          "hint": "Divide las monedas en tres grupos iguales y compara dos grupos a la vez.",
+          "explanation": "Separa las monedas en tres grupos de tres. Pesa un grupo contra otro. Si se equilibran, la moneda pesada está en el tercer grupo; si no, está en el grupo más pesado. Después pesa una moneda contra otra de ese grupo: si se equilibran, la tercera es la más pesada; si no, la más pesada en la balanza es la buscada. Bastan 2 pesajes."
+        }
+      }
+    },
+    {
+      "id": 38,
+      "region": 1,
+      "type": "text",
+      "category": "sequence_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A sequência que descreve a si mesma",
+          "question": "Observe a sequência: 1, 11, 21, 1211, 111221... Cada termo descreve a quantidade de algarismos do termo anterior. Qual é o próximo termo?",
+          "options": [
+            "312211",
+            "13112221",
+            "211221"
+          ],
+          "answerIndex": 0,
+          "hint": "Leia o último termo em grupos: 111221 significa três algarismos 1, dois algarismos 2 e um algarismo 1.",
+          "explanation": "O termo 111221 é lido como “três 1, dois 2, um 1”. Escrevendo as quantidades e os algarismos nessa ordem, obtemos 31 22 11, ou 312211."
+        },
+        "en": {
+          "title": "The self-describing sequence",
+          "question": "Look at the sequence: 1, 11, 21, 1211, 111221... Each term describes the digits in the previous term. What is the next term?",
+          "options": [
+            "312211",
+            "13112221",
+            "211221"
+          ],
+          "answerIndex": 0,
+          "hint": "Read the last term in groups: 111221 means three 1s, two 2s and one 1.",
+          "explanation": "The term 111221 is read as “three 1s, two 2s, one 1”. Writing the counts followed by the digits gives 31 22 11, or 312211."
+        },
+        "es": {
+          "title": "La secuencia que se describe a sí misma",
+          "question": "Observa la secuencia: 1, 11, 21, 1211, 111221... Cada término describe las cifras del término anterior. ¿Cuál es el siguiente?",
+          "options": [
+            "312211",
+            "13112221",
+            "211221"
+          ],
+          "answerIndex": 0,
+          "hint": "Lee el último término por grupos: 111221 significa tres unos, dos doses y un uno.",
+          "explanation": "El término 111221 se lee como «tres unos, dos doses, un uno». Al escribir las cantidades seguidas de las cifras, obtenemos 31 22 11, es decir, 312211."
+        }
+      }
+    },
+    {
+      "id": 39,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A idade das três irmãs",
+          "question": "Três irmãs têm idades inteiras. O produto das três idades é 36 e a soma é 13. Sabendo que existe uma irmã mais velha que as outras duas (sem empate na maior idade), quais são as idades?",
+          "options": [
+            "1, 6 e 6 anos",
+            "2, 2 e 9 anos",
+            "3, 3 e 4 anos"
+          ],
+          "answerIndex": 1,
+          "hint": "Compare as combinações de três números inteiros cujo produto é 36 e cuja soma é 13.",
+          "explanation": "As combinações que atendem ao produto 36 e à soma 13 são 1, 6, 6 e 2, 2, 9. A primeira tem duas irmãs empatadas como mais velhas. Como existe uma única irmã mais velha, as idades são 2, 2 e 9."
+        },
+        "en": {
+          "title": "The three sisters' ages",
+          "question": "Three sisters have whole-number ages. The product of their ages is 36 and their sum is 13. Knowing that one sister is older than both others (there is no tie for oldest), what are their ages?",
+          "options": [
+            "1, 6 and 6 years",
+            "2, 2 and 9 years",
+            "3, 3 and 4 years"
+          ],
+          "answerIndex": 1,
+          "hint": "Compare combinations of three whole numbers whose product is 36 and whose sum is 13.",
+          "explanation": "The combinations that have product 36 and sum 13 are 1, 6, 6 and 2, 2, 9. The first has two sisters tied for oldest. Since there is one unique oldest sister, the ages are 2, 2 and 9."
+        },
+        "es": {
+          "title": "La edad de las tres hermanas",
+          "question": "Tres hermanas tienen edades enteras. El producto de sus edades es 36 y la suma es 13. Sabiendo que hay una hermana mayor que las otras dos (sin empate en la edad mayor), ¿cuáles son sus edades?",
+          "options": [
+            "1, 6 y 6 años",
+            "2, 2 y 9 años",
+            "3, 3 y 4 años"
+          ],
+          "answerIndex": 1,
+          "hint": "Compara las combinaciones de tres números enteros cuyo producto sea 36 y cuya suma sea 13.",
+          "explanation": "Las combinaciones que cumplen el producto 36 y la suma 13 son 1, 6, 6 y 2, 2, 9. La primera tiene dos hermanas empatadas como mayores. Como hay una única hermana mayor, las edades son 2, 2 y 9."
+        }
+      }
+    },
+    {
+      "id": 40,
+      "region": 1,
+      "type": "text",
+      "category": "observation",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Quantas vezes aparece o algarismo 9?",
+          "question": "Um livro tem páginas numeradas de 1 a 100. Quantas vezes o algarismo 9 aparece na numeração dessas páginas?",
+          "options": [
+            "10 vezes",
+            "19 vezes",
+            "20 vezes"
+          ],
+          "answerIndex": 2,
+          "hint": "Conte separadamente as aparições na casa das unidades e na casa das dezenas.",
+          "explanation": "Na casa das unidades, o 9 aparece em 9, 19, 29, ..., 99: 10 vezes. Na casa das dezenas, aparece em 90 a 99: outras 10 vezes. Na página 99, há dois algarismos 9, que devem ser contados separadamente. Total: 20."
+        },
+        "en": {
+          "title": "How many times does the digit 9 appear?",
+          "question": "A book has pages numbered from 1 to 100. How many times does the digit 9 appear in the page numbers?",
+          "options": [
+            "10 times",
+            "19 times",
+            "20 times"
+          ],
+          "answerIndex": 2,
+          "hint": "Count the appearances in the units place and the tens place separately.",
+          "explanation": "In the units place, 9 appears in 9, 19, 29, ..., 99: 10 times. In the tens place, it appears from 90 to 99: another 10 times. Page 99 contains two 9s, which are counted separately. Total: 20."
+        },
+        "es": {
+          "title": "¿Cuántas veces aparece el dígito 9?",
+          "question": "Un libro tiene páginas numeradas del 1 al 100. ¿Cuántas veces aparece el dígito 9 en la numeración de esas páginas?",
+          "options": [
+            "10 veces",
+            "19 veces",
+            "20 veces"
+          ],
+          "answerIndex": 2,
+          "hint": "Cuenta por separado las apariciones en las unidades y en las decenas.",
+          "explanation": "En las unidades, el 9 aparece en 9, 19, 29, ..., 99: 10 veces. En las decenas, aparece del 90 al 99: otras 10 veces. La página 99 contiene dos nueves, que se cuentan por separado. Total: 20."
+        }
+      }
+    },
+    {
+      "id": 41,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Quantos filhos?",
+          "question": "Um pai tem quatro filhas, e as quatro compartilham o mesmo irmão. Quantos filhos esse pai tem ao todo?",
+          "options": [
+            "4",
+            "5",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "As quatro filhas compartilham o mesmo irmão.",
+          "explanation": "As quatro filhas têm o mesmo irmão. Portanto, são quatro meninas e um menino: cinco filhos."
+        },
+        "en": {
+          "title": "How many children?",
+          "question": "A father has four daughters, and all four share the same brother. How many children does he have in total?",
+          "options": [
+            "4",
+            "5",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "All four daughters share the same brother.",
+          "explanation": "The four daughters have the same brother. So there are four girls and one boy: five children."
+        },
+        "es": {
+          "title": "¿Cuántos hijos?",
+          "question": "Un padre tiene cuatro hijas y las cuatro comparten al mismo hermano. ¿Cuántos hijos tiene en total?",
+          "options": [
+            "4",
+            "5",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "Las cuatro hijas comparten al mismo hermano.",
+          "explanation": "Las cuatro hijas tienen el mismo hermano. Por lo tanto, son cuatro niñas y un niño: cinco hijos."
+        }
+      }
+    },
+    {
+      "id": 42,
+      "region": 1,
+      "type": "text",
+      "category": "sequence_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A sequência crescente",
+          "question": "Qual número completa a sequência: 2, 6, 12, 20, 30, ...?",
+          "options": [
+            "36",
+            "40",
+            "42"
+          ],
+          "answerIndex": 2,
+          "hint": "Observe quanto aumenta de um termo para o seguinte.",
+          "explanation": "As diferenças são 4, 6, 8 e 10. A próxima diferença é 12; então 30 + 12 = 42."
+        },
+        "en": {
+          "title": "The growing sequence",
+          "question": "Which number completes the sequence: 2, 6, 12, 20, 30, ...?",
+          "options": [
+            "36",
+            "40",
+            "42"
+          ],
+          "answerIndex": 2,
+          "hint": "Look at how much each term increases.",
+          "explanation": "The differences are 4, 6, 8 and 10. The next difference is 12, so 30 + 12 = 42."
+        },
+        "es": {
+          "title": "La secuencia creciente",
+          "question": "¿Qué número completa la secuencia: 2, 6, 12, 20, 30, ...?",
+          "options": [
+            "36",
+            "40",
+            "42"
+          ],
+          "answerIndex": 2,
+          "hint": "Observa cuánto aumenta cada término.",
+          "explanation": "Las diferencias son 4, 6, 8 y 10. La siguiente diferencia es 12; entonces 30 + 12 = 42."
+        }
+      }
+    },
+    {
+      "id": 43,
+      "region": 1,
+      "type": "text",
+      "category": "spatial_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os ponteiros do relógio",
+          "question": "Em um relógio analógico, que menor ângulo os ponteiros formam exatamente às 3h15?",
+          "options": [
+            "0°",
+            "7,5°",
+            "15°"
+          ],
+          "answerIndex": 1,
+          "hint": "O ponteiro dos minutos está no 3, mas o das horas já avançou um quarto do caminho até o 4.",
+          "explanation": "Às 3h15, o ponteiro dos minutos está a 90° do 12. O ponteiro das horas avançou 15 minutos além das 3h, ficando a 97,5°. A diferença é 7,5°."
+        },
+        "en": {
+          "title": "The clock hands",
+          "question": "On an analog clock, what is the smaller angle between the hands at exactly 3:15?",
+          "options": [
+            "0°",
+            "7.5°",
+            "15°"
+          ],
+          "answerIndex": 1,
+          "hint": "The minute hand is at 3, but the hour hand has moved one quarter of the way toward 4.",
+          "explanation": "At 3:15, the minute hand is at 90° from 12. The hour hand has moved 15 minutes past 3, reaching 97.5°. The difference is 7.5°."
+        },
+        "es": {
+          "title": "Las agujas del reloj",
+          "question": "En un reloj analógico, ¿qué ángulo menor forman las agujas exactamente a las 3:15?",
+          "options": [
+            "0°",
+            "7,5°",
+            "15°"
+          ],
+          "answerIndex": 1,
+          "hint": "El minutero está en el 3, pero la aguja horaria ya avanzó una cuarta parte hacia el 4.",
+          "explanation": "A las 3:15, el minutero está a 90° del 12. La aguja horaria avanzó 15 minutos después de las 3 y está a 97,5°. La diferencia es 7,5°."
+        }
+      }
+    },
+    {
+      "id": 44,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O número escondido",
+          "question": "Um número de dois algarismos tem soma igual a 9. O algarismo das dezenas é o dobro do algarismo das unidades. Qual é o número?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Procure dois algarismos cuja soma seja 9 e em que o primeiro seja o dobro do segundo.",
+          "explanation": "Os algarismos 6 e 3 somam 9, e 6 é o dobro de 3. Portanto, o número é 63."
+        },
+        "en": {
+          "title": "The hidden number",
+          "question": "A two-digit number has digits that add up to 9. Its tens digit is twice its units digit. What is the number?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Find two digits that add up to 9, with the first twice the second.",
+          "explanation": "The digits 6 and 3 add up to 9, and 6 is twice 3. Therefore, the number is 63."
+        },
+        "es": {
+          "title": "El número oculto",
+          "question": "Un número de dos cifras tiene dígitos cuya suma es 9. La cifra de las decenas es el doble de la cifra de las unidades. ¿Cuál es el número?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Busca dos cifras que sumen 9 y en las que la primera sea el doble de la segunda.",
+          "explanation": "Las cifras 6 y 3 suman 9, y 6 es el doble de 3. Por lo tanto, el número es 63."
+        }
+      }
+    },
+    {
+      "id": 45,
+      "region": 1,
+      "type": "text",
+      "category": "lateral_thinking",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A ultrapassagem",
+          "question": "Você está em uma corrida e ultrapassa a pessoa que está em segundo lugar. Em qual posição você fica?",
+          "options": [
+            "Em primeiro",
+            "Em segundo",
+            "Em terceiro"
+          ],
+          "answerIndex": 1,
+          "hint": "Ao ultrapassar quem está em segundo, você ocupa o lugar dessa pessoa.",
+          "explanation": "Você assume a posição do corredor que ultrapassou. Portanto, fica em segundo lugar, não em primeiro."
+        },
+        "en": {
+          "title": "The overtake",
+          "question": "You are in a race and overtake the person in second place. What position are you in now?",
+          "options": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "answerIndex": 1,
+          "hint": "When you pass the person in second place, you take that person's position.",
+          "explanation": "You take the position of the runner you passed. So you are now in second place, not first."
+        },
+        "es": {
+          "title": "El adelantamiento",
+          "question": "Estás en una carrera y adelantas a la persona que va en segundo lugar. ¿En qué posición quedas?",
+          "options": [
+            "Primero",
+            "Segundo",
+            "Tercero"
+          ],
+          "answerIndex": 1,
+          "hint": "Al adelantar a quien va segundo, ocupas su lugar.",
+          "explanation": "Tomas la posición de la persona que adelantaste. Por lo tanto, quedas en segundo lugar, no en primero."
+        }
+      }
+    },
+    {
+      "id": 46,
+      "region": 1,
+      "type": "text",
+      "category": "lateral_thinking",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As ovelhas",
+          "question": "Um fazendeiro tinha 17 ovelhas. Todas, menos 9, fugiram. Quantas ovelhas ficaram?",
+          "options": [
+            "8",
+            "9",
+            "17"
+          ],
+          "answerIndex": 1,
+          "hint": "Leia com atenção a expressão “todas, menos 9”.",
+          "explanation": "Se todas menos 9 fugiram, significa que 9 não fugiram. Portanto, ficaram 9 ovelhas."
+        },
+        "en": {
+          "title": "The sheep",
+          "question": "A farmer had 17 sheep. All but 9 ran away. How many sheep were left?",
+          "options": [
+            "8",
+            "9",
+            "17"
+          ],
+          "answerIndex": 1,
+          "hint": "Pay close attention to the phrase “all but 9”.",
+          "explanation": "If all but 9 ran away, 9 did not run away. Therefore, 9 sheep were left."
+        },
+        "es": {
+          "title": "Las ovejas",
+          "question": "Un granjero tenía 17 ovejas. Todas, menos 9, se escaparon. ¿Cuántas ovejas quedaron?",
+          "options": [
+            "8",
+            "9",
+            "17"
+          ],
+          "answerIndex": 1,
+          "hint": "Presta atención a la expresión «todas, menos 9».",
+          "explanation": "Si todas menos 9 se escaparon, significa que 9 no se escaparon. Por lo tanto, quedaron 9 ovejas."
+        }
+      }
+    },
+    {
+      "id": 47,
+      "region": 1,
+      "type": "text",
+      "category": "rate_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os gatos e os ratos",
+          "question": "Três gatos caçam três ratos em três minutos. Mantendo o mesmo ritmo, quanto tempo 100 gatos levariam para caçar 100 ratos?",
+          "options": [
+            "3 minutos",
+            "30 minutos",
+            "100 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada gato caça um rato no mesmo intervalo de tempo.",
+          "explanation": "Se três gatos caçam três ratos em três minutos, cada gato caça um rato em três minutos. Trabalhando ao mesmo tempo, 100 gatos caçam 100 ratos em três minutos."
+        },
+        "en": {
+          "title": "Cats and mice",
+          "question": "Three cats catch three mice in three minutes. At the same rate, how long would 100 cats take to catch 100 mice?",
+          "options": [
+            "3 minutes",
+            "30 minutes",
+            "100 minutes"
+          ],
+          "answerIndex": 0,
+          "hint": "Each cat catches one mouse in the same amount of time.",
+          "explanation": "If three cats catch three mice in three minutes, each cat catches one mouse in three minutes. Working simultaneously, 100 cats catch 100 mice in three minutes."
+        },
+        "es": {
+          "title": "Los gatos y los ratones",
+          "question": "Tres gatos cazan tres ratones en tres minutos. Al mismo ritmo, ¿cuánto tardarían 100 gatos en cazar 100 ratones?",
+          "options": [
+            "3 minutos",
+            "30 minutos",
+            "100 minutos"
+          ],
+          "answerIndex": 0,
+          "hint": "Cada gato caza un ratón en el mismo intervalo de tiempo.",
+          "explanation": "Si tres gatos cazan tres ratones en tres minutos, cada gato caza un ratón en tres minutos. Trabajando al mismo tiempo, 100 gatos cazan 100 ratones en tres minutos."
+        }
+      }
+    },
+    {
+      "id": 48,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As badaladas",
+          "question": "Um sino leva 5 segundos para dar 6 badaladas, mantendo intervalos iguais entre elas. Quanto tempo levará para dar 12 badaladas?",
+          "options": [
+            "10 segundos",
+            "11 segundos",
+            "12 segundos"
+          ],
+          "answerIndex": 1,
+          "hint": "Entre 6 badaladas existem 5 intervalos. Entre 12 badaladas existem quantos?",
+          "explanation": "Seis badaladas formam 5 intervalos, cada um de 1 segundo. Doze badaladas formam 11 intervalos. Portanto, o sino leva 11 segundos."
+        },
+        "en": {
+          "title": "The bell chimes",
+          "question": "A bell takes 5 seconds to strike 6 times, with equal intervals between strikes. How long will it take to strike 12 times?",
+          "options": [
+            "10 seconds",
+            "11 seconds",
+            "12 seconds"
+          ],
+          "answerIndex": 1,
+          "hint": "There are 5 intervals between 6 strikes. How many intervals are there between 12 strikes?",
+          "explanation": "Six strikes create 5 intervals, each lasting 1 second. Twelve strikes create 11 intervals. Therefore, the bell takes 11 seconds."
+        },
+        "es": {
+          "title": "Las campanadas",
+          "question": "Una campana tarda 5 segundos en sonar 6 veces, con intervalos iguales entre campanadas. ¿Cuánto tardará en sonar 12 veces?",
+          "options": [
+            "10 segundos",
+            "11 segundos",
+            "12 segundos"
+          ],
+          "answerIndex": 1,
+          "hint": "Entre 6 campanadas hay 5 intervalos. ¿Cuántos intervalos hay entre 12 campanadas?",
+          "explanation": "Seis campanadas forman 5 intervalos de 1 segundo cada uno. Doce campanadas forman 11 intervalos. Por lo tanto, la campana tarda 11 segundos."
+        }
+      }
+    },
+    {
+      "id": 49,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Três gerações",
+          "question": "Dois pais e dois filhos foram pescar. Cada um pescou um peixe, mas apenas três pessoas foram pescar. Como isso é possível?",
+          "options": [
+            "Um deles pescou os outros dois peixes",
+            "Eram apenas três pessoas: avô, pai e filho",
+            "Um peixe foi dividido em três partes"
+          ],
+          "answerIndex": 1,
+          "hint": "Pense em três gerações: uma pessoa pode ser pai e filho ao mesmo tempo.",
+          "explanation": "São três pessoas e três gerações. O avô é pai do homem do meio, que é ao mesmo tempo filho do avô e pai do neto. Cada um pescou um peixe."
+        },
+        "en": {
+          "title": "Three generations",
+          "question": "Two fathers and two sons went fishing. Each caught one fish, but only three people went fishing. How is this possible?",
+          "options": [
+            "One of them caught the other two fish",
+            "There were only three people: grandfather, father and son",
+            "One fish was divided into three pieces"
+          ],
+          "answerIndex": 1,
+          "hint": "Think of three generations: one person can be both a father and a son.",
+          "explanation": "There are three people from three generations. The grandfather is the father of the middle man, who is both the grandfather's son and the grandson's father. Each caught one fish."
+        },
+        "es": {
+          "title": "Tres generaciones",
+          "question": "Dos padres y dos hijos fueron a pescar. Cada uno pescó un pez, pero solo fueron tres personas. ¿Cómo es posible?",
+          "options": [
+            "Uno de ellos pescó los otros dos peces",
+            "Solo eran tres personas: abuelo, padre e hijo",
+            "Un pez se dividió en tres partes"
+          ],
+          "answerIndex": 1,
+          "hint": "Piensa en tres generaciones: una persona puede ser padre e hijo al mismo tiempo.",
+          "explanation": "Son tres personas de tres generaciones. El abuelo es padre del hombre del medio, que es hijo del abuelo y padre del nieto. Cada uno pescó un pez."
+        }
+      }
+    },
+    {
+      "id": 50,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O número misterioso",
+          "question": "Pense em um número. Multiplique-o por 4 e depois subtraia 8. O resultado é 20. Qual era o número?",
+          "options": [
+            "5",
+            "7",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "Faça as operações ao contrário: primeiro some 8 ao resultado e depois divida por 4.",
+          "explanation": "Desfazendo as operações: 20 + 8 = 28; 28 ÷ 4 = 7. O número inicial era 7."
+        },
+        "en": {
+          "title": "The mystery number",
+          "question": "Think of a number. Multiply it by 4 and then subtract 8. The result is 20. What was the number?",
+          "options": [
+            "5",
+            "7",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "Reverse the operations: first add 8 to the result, then divide by 4.",
+          "explanation": "Reverse the operations: 20 + 8 = 28; 28 ÷ 4 = 7. The original number was 7."
+        },
+        "es": {
+          "title": "El número misterioso",
+          "question": "Piensa en un número. Multiplícalo por 4 y después réstale 8. El resultado es 20. ¿Cuál era el número?",
+          "options": [
+            "5",
+            "7",
+            "8"
+          ],
+          "answerIndex": 1,
+          "hint": "Invierte las operaciones: primero suma 8 al resultado y luego divide entre 4.",
+          "explanation": "Deshaciendo las operaciones: 20 + 8 = 28; 28 ÷ 4 = 7. El número inicial era 7."
+        }
+      }
+    },
+    {
+      "id": 51,
+      "region": 1,
+      "type": "text",
+      "category": "measurement",
+      "difficulty": 2,
+      "interaction": "numeric_input",
+      "expectedAnswer": 26,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O perímetro do jardim",
+          "question": "Um jardim retangular mede 8 metros de comprimento e 5 metros de largura. Qual é o perímetro do jardim, em metros?",
+          "options": [
+            "22",
+            "26",
+            "40"
+          ],
+          "answerIndex": 1,
+          "hint": "Some os quatro lados: dois comprimentos e duas larguras.",
+          "explanation": "O perímetro é 8 + 5 + 8 + 5 = 26 metros."
+        },
+        "en": {
+          "title": "The garden perimeter",
+          "question": "A rectangular garden is 8 meters long and 5 meters wide. What is its perimeter, in meters?",
+          "options": [
+            "22",
+            "26",
+            "40"
+          ],
+          "answerIndex": 1,
+          "hint": "Add all four sides: two lengths and two widths.",
+          "explanation": "The perimeter is 8 + 5 + 8 + 5 = 26 meters."
+        },
+        "es": {
+          "title": "El perímetro del jardín",
+          "question": "Un jardín rectangular mide 8 metros de largo y 5 metros de ancho. ¿Cuál es su perímetro, en metros?",
+          "options": [
+            "22",
+            "26",
+            "40"
+          ],
+          "answerIndex": 1,
+          "hint": "Suma los cuatro lados: dos largos y dos anchos.",
+          "explanation": "El perímetro es 8 + 5 + 8 + 5 = 26 metros."
+        }
+      }
+    },
+    {
+      "id": 52,
+      "region": 1,
+      "type": "text",
+      "category": "ordering_logic",
+      "difficulty": 3,
+      "interaction": "order_items",
+      "expectedOrder": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "expectedAnswer": "",
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Frações em ordem",
+          "question": "Selecione as frações da menor para a maior.",
+          "items": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "options": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "answerIndex": 0,
+          "hint": "Transforme mentalmente as frações em partes de oito.",
+          "explanation": "A ordem crescente é 1/8, 1/4, 1/2 e 3/4."
+        },
+        "en": {
+          "title": "Fractions in order",
+          "question": "Select the fractions from smallest to largest.",
+          "items": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "options": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "answerIndex": 0,
+          "hint": "Mentally convert the fractions into eighths.",
+          "explanation": "The ascending order is 1/8, 1/4, 1/2 and 3/4."
+        },
+        "es": {
+          "title": "Fracciones en orden",
+          "question": "Selecciona las fracciones de menor a mayor.",
+          "items": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "options": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/8"
+          ],
+          "answerIndex": 0,
+          "hint": "Convierte mentalmente las fracciones en partes de ocho.",
+          "explanation": "El orden ascendente es 1/8, 1/4, 1/2 y 3/4."
+        }
+      }
+    },
+    {
+      "id": 53,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "interaction": "multi_select",
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os números primos",
+          "question": "Marque todos os números primos desta lista.",
+          "options": [
+            "2",
+            "9",
+            "7",
+            "15"
+          ],
+          "answerIndex": 0,
+          "hint": "Um número primo tem exatamente dois divisores positivos: 1 e ele mesmo.",
+          "explanation": "2 e 7 são primos. 9 é divisível por 3, e 15 é divisível por 3 e 5."
+        },
+        "en": {
+          "title": "Prime numbers",
+          "question": "Select all the prime numbers in this list.",
+          "options": [
+            "2",
+            "9",
+            "7",
+            "15"
+          ],
+          "answerIndex": 0,
+          "hint": "A prime number has exactly two positive divisors: 1 and itself.",
+          "explanation": "2 and 7 are prime. 9 is divisible by 3, and 15 is divisible by 3 and 5."
+        },
+        "es": {
+          "title": "Los números primos",
+          "question": "Marca todos los números primos de esta lista.",
+          "options": [
+            "2",
+            "9",
+            "7",
+            "15"
+          ],
+          "answerIndex": 0,
+          "hint": "Un número primo tiene exactamente dos divisores positivos: 1 y él mismo.",
+          "explanation": "2 y 7 son primos. 9 es divisible por 3, y 15 es divisible por 3 y 5."
+        }
+      }
+    },
+    {
+      "id": 54,
+      "region": 1,
+      "type": "text",
+      "category": "calendar_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O dia da semana",
+          "question": "Se hoje é segunda-feira, que dia da semana será daqui a 100 dias?",
+          "options": [
+            "Terça-feira",
+            "Quarta-feira",
+            "Quinta-feira"
+          ],
+          "answerIndex": 1,
+          "hint": "A semana se repete a cada 7 dias. Divida 100 por 7 e observe o resto.",
+          "explanation": "100 dividido por 7 tem resto 2. Dois dias depois de segunda-feira é quarta-feira."
+        },
+        "en": {
+          "title": "The day of the week",
+          "question": "If today is Monday, what day of the week will it be 100 days from now?",
+          "options": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "answerIndex": 1,
+          "hint": "The week repeats every 7 days. Divide 100 by 7 and look at the remainder.",
+          "explanation": "100 divided by 7 leaves a remainder of 2. Two days after Monday is Wednesday."
+        },
+        "es": {
+          "title": "El día de la semana",
+          "question": "Si hoy es lunes, ¿qué día de la semana será dentro de 100 días?",
+          "options": [
+            "Martes",
+            "Miércoles",
+            "Jueves"
+          ],
+          "answerIndex": 1,
+          "hint": "La semana se repite cada 7 días. Divide 100 entre 7 y observa el resto.",
+          "explanation": "100 dividido entre 7 deja un resto de 2. Dos días después del lunes es miércoles."
+        }
+      }
+    },
+    {
+      "id": 55,
+      "region": 1,
+      "type": "text",
+      "category": "spatial_number_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os quadrados escondidos",
+          "question": "Imagine uma grade quadrada formada por 3 linhas e 3 colunas de quadradinhos iguais. Quantos quadrados de todos os tamanhos existem ao todo?",
+          "options": [
+            "9",
+            "13",
+            "14"
+          ],
+          "answerIndex": 2,
+          "hint": "Conte os quadrados 1×1, depois os 2×2 e, por fim, o quadrado grande 3×3.",
+          "explanation": "Há 9 quadrados de 1×1, 4 quadrados de 2×2 e 1 quadrado de 3×3. Total: 9 + 4 + 1 = 14."
+        },
+        "en": {
+          "title": "The hidden squares",
+          "question": "Imagine a square grid made of 3 rows and 3 columns of equal small squares. How many squares of all sizes are there in total?",
+          "options": [
+            "9",
+            "13",
+            "14"
+          ],
+          "answerIndex": 2,
+          "hint": "Count the 1×1 squares, then the 2×2 squares, and finally the large 3×3 square.",
+          "explanation": "There are 9 squares of size 1×1, 4 squares of size 2×2 and 1 square of size 3×3. Total: 9 + 4 + 1 = 14."
+        },
+        "es": {
+          "title": "Los cuadrados ocultos",
+          "question": "Imagina una cuadrícula cuadrada formada por 3 filas y 3 columnas de cuadrados pequeños iguales. ¿Cuántos cuadrados de todos los tamaños hay en total?",
+          "options": [
+            "9",
+            "13",
+            "14"
+          ],
+          "answerIndex": 2,
+          "hint": "Cuenta los cuadrados de 1×1, luego los de 2×2 y, por último, el cuadrado grande de 3×3.",
+          "explanation": "Hay 9 cuadrados de 1×1, 4 cuadrados de 2×2 y 1 cuadrado de 3×3. Total: 9 + 4 + 1 = 14."
+        }
+      }
+    },
+    {
+      "id": 56,
+      "region": 1,
+      "type": "text",
+      "category": "sequence_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O quadrado seguinte",
+          "question": "Qual número vem a seguir na sequência: 1, 4, 9, 16, 25, ...?",
+          "options": [
+            "30",
+            "36",
+            "49"
+          ],
+          "answerIndex": 1,
+          "hint": "Observe que cada termo é o quadrado de um número natural.",
+          "explanation": "A sequência é formada por 1², 2², 3², 4² e 5². O próximo termo é 6² = 36."
+        },
+        "en": {
+          "title": "The next square",
+          "question": "Which number comes next in the sequence: 1, 4, 9, 16, 25, ...?",
+          "options": [
+            "30",
+            "36",
+            "49"
+          ],
+          "answerIndex": 1,
+          "hint": "Notice that each term is the square of a natural number.",
+          "explanation": "The sequence is 1², 2², 3², 4² and 5². The next term is 6² = 36."
+        },
+        "es": {
+          "title": "El siguiente cuadrado",
+          "question": "¿Qué número sigue en la secuencia: 1, 4, 9, 16, 25, ...?",
+          "options": [
+            "30",
+            "36",
+            "49"
+          ],
+          "answerIndex": 1,
+          "hint": "Observa que cada término es el cuadrado de un número natural.",
+          "explanation": "La secuencia es 1², 2², 3², 4² y 5². El siguiente término es 6² = 36."
+        }
+      }
+    },
+    {
+      "id": 57,
+      "region": 1,
+      "type": "text",
+      "category": "lateral_thinking",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O aniversário",
+          "question": "Duas pessoas nasceram no mesmo dia, mês e ano, mas não são gêmeas. Como isso é possível?",
+          "options": [
+            "Uma delas foi adotada",
+            "Elas fazem parte de um grupo de trigêmeos ou mais",
+            "Os registros estão errados"
+          ],
+          "answerIndex": 1,
+          "hint": "Pense em uma família com mais de dois bebês no mesmo parto.",
+          "explanation": "Elas podem ser trigêmeas, quadrigêmeas ou parte de um parto múltiplo. Portanto, não precisam ser gêmeas."
+        },
+        "en": {
+          "title": "The birthday",
+          "question": "Two people were born on the same day, month and year, but they are not twins. How is that possible?",
+          "options": [
+            "One was adopted",
+            "They are part of a set of triplets or more",
+            "Their records are wrong"
+          ],
+          "answerIndex": 1,
+          "hint": "Think of a family with more than two babies in the same birth.",
+          "explanation": "They can be triplets, quadruplets or part of a multiple birth. So they do not have to be twins."
+        },
+        "es": {
+          "title": "El cumpleaños",
+          "question": "Dos personas nacieron el mismo día, mes y año, pero no son gemelas. ¿Cómo es posible?",
+          "options": [
+            "Una fue adoptada",
+            "Forman parte de un grupo de trillizos o más",
+            "Los registros están equivocados"
+          ],
+          "answerIndex": 1,
+          "hint": "Piensa en una familia con más de dos bebés en el mismo parto.",
+          "explanation": "Pueden ser trillizos, cuatrillizos o parte de un parto múltiple. Por eso no tienen que ser gemelos."
+        }
+      }
+    },
+    {
+      "id": 58,
+      "region": 1,
+      "type": "text",
+      "category": "rate_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os trabalhadores",
+          "question": "Oito trabalhadores constroem oito muros em oito dias, trabalhando no mesmo ritmo. Quanto tempo 16 trabalhadores levariam para construir 16 muros?",
+          "options": [
+            "4 dias",
+            "8 dias",
+            "16 dias"
+          ],
+          "answerIndex": 1,
+          "hint": "Compare a quantidade de trabalho por trabalhador, não apenas o total de muros.",
+          "explanation": "Cada trabalhador constrói um muro em oito dias. Com 16 trabalhadores, os 16 muros são construídos ao mesmo tempo em oito dias."
+        },
+        "en": {
+          "title": "The workers",
+          "question": "Eight workers build eight walls in eight days, working at the same rate. How long would 16 workers take to build 16 walls?",
+          "options": [
+            "4 days",
+            "8 days",
+            "16 days"
+          ],
+          "answerIndex": 1,
+          "hint": "Compare the work done by each worker, not just the total number of walls.",
+          "explanation": "Each worker builds one wall in eight days. With 16 workers, all 16 walls are built simultaneously in eight days."
+        },
+        "es": {
+          "title": "Los trabajadores",
+          "question": "Ocho trabajadores construyen ocho muros en ocho días, trabajando al mismo ritmo. ¿Cuánto tardarían 16 trabajadores en construir 16 muros?",
+          "options": [
+            "4 días",
+            "8 días",
+            "16 días"
+          ],
+          "answerIndex": 1,
+          "hint": "Compara el trabajo de cada trabajador, no solo la cantidad total de muros.",
+          "explanation": "Cada trabajador construye un muro en ocho días. Con 16 trabajadores, los 16 muros se construyen al mismo tiempo en ocho días."
+        }
+      }
+    },
+    {
+      "id": 59,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A fração de um número",
+          "question": "Quanto é a metade de dois terços de 90?",
+          "options": [
+            "20",
+            "30",
+            "45"
+          ],
+          "answerIndex": 1,
+          "hint": "Calcule primeiro dois terços de 90 e depois divida o resultado por 2.",
+          "explanation": "Dois terços de 90 são 60. A metade de 60 é 30."
+        },
+        "en": {
+          "title": "A fraction of a number",
+          "question": "What is half of two-thirds of 90?",
+          "options": [
+            "20",
+            "30",
+            "45"
+          ],
+          "answerIndex": 1,
+          "hint": "First calculate two-thirds of 90, then divide the result by 2.",
+          "explanation": "Two-thirds of 90 is 60. Half of 60 is 30."
+        },
+        "es": {
+          "title": "Una fracción de un número",
+          "question": "¿Cuánto es la mitad de dos tercios de 90?",
+          "options": [
+            "20",
+            "30",
+            "45"
+          ],
+          "answerIndex": 1,
+          "hint": "Calcula primero dos tercios de 90 y luego divide el resultado entre 2.",
+          "explanation": "Dos tercios de 90 son 60. La mitad de 60 es 30."
+        }
+      }
+    },
+    {
+      "id": 60,
+      "region": 1,
+      "type": "text",
+      "category": "time_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O relógio adiantado",
+          "question": "Um relógio adianta 10 minutos a cada hora real. Ao meio-dia ele está certo. Depois de 6 horas reais, que horário ele mostrará?",
+          "options": [
+            "18h",
+            "19h",
+            "20h"
+          ],
+          "answerIndex": 1,
+          "hint": "A cada hora real, o relógio avança 70 minutos.",
+          "explanation": "Em 6 horas reais, o relógio avança 6 × 70 = 420 minutos, ou 7 horas. Portanto, mostrará 19h."
+        },
+        "en": {
+          "title": "The fast clock",
+          "question": "A clock gains 10 minutes every real hour. It is correct at noon. What time will it show after 6 real hours?",
+          "options": [
+            "6 p.m.",
+            "7 p.m.",
+            "8 p.m."
+          ],
+          "answerIndex": 1,
+          "hint": "For every real hour, the clock advances 70 minutes.",
+          "explanation": "In 6 real hours, the clock advances 6 × 70 = 420 minutes, or 7 hours. Therefore, it will show 7 p.m."
+        },
+        "es": {
+          "title": "El reloj adelantado",
+          "question": "Un reloj adelanta 10 minutos por cada hora real. Está correcto al mediodía. ¿Qué hora marcará después de 6 horas reales?",
+          "options": [
+            "18:00",
+            "19:00",
+            "20:00"
+          ],
+          "answerIndex": 1,
+          "hint": "Por cada hora real, el reloj avanza 70 minutos.",
+          "explanation": "En 6 horas reales, el reloj avanza 6 × 70 = 420 minutos, es decir, 7 horas. Por lo tanto, marcará las 19:00."
+        }
+      }
+    },
+    {
+      "id": 61,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A conclusão apressada",
+          "question": "Todas as rosas são flores. Algumas flores murcham rapidamente. O que podemos concluir com certeza?",
+          "options": [
+            "Algumas rosas murcham rapidamente",
+            "Todas as flores são rosas",
+            "Não é possível afirmar que alguma rosa murcha rapidamente"
+          ],
+          "answerIndex": 2,
+          "hint": "As flores que murcham podem ser de outro tipo, não necessariamente rosas.",
+          "explanation": "As informações não dizem se as flores que murcham rapidamente são rosas. Portanto, não podemos concluir que alguma rosa murcha rapidamente."
+        },
+        "en": {
+          "title": "The rushed conclusion",
+          "question": "All roses are flowers. Some flowers wilt quickly. What can we conclude for certain?",
+          "options": [
+            "Some roses wilt quickly",
+            "All flowers are roses",
+            "We cannot say that any rose wilts quickly"
+          ],
+          "answerIndex": 2,
+          "hint": "The flowers that wilt may be another kind, not necessarily roses.",
+          "explanation": "The statements do not tell us whether the flowers that wilt quickly are roses. So we cannot conclude that any rose wilts quickly."
+        },
+        "es": {
+          "title": "La conclusión apresurada",
+          "question": "Todas las rosas son flores. Algunas flores se marchitan rápidamente. ¿Qué podemos concluir con certeza?",
+          "options": [
+            "Algunas rosas se marchitan rápidamente",
+            "Todas las flores son rosas",
+            "No podemos afirmar que alguna rosa se marchite rápidamente"
+          ],
+          "answerIndex": 2,
+          "hint": "Las flores que se marchitan pueden ser de otro tipo, no necesariamente rosas.",
+          "explanation": "La información no dice si las flores que se marchitan rápidamente son rosas. Por lo tanto, no podemos concluir que alguna rosa se marchite rápidamente."
+        }
+      }
+    },
+    {
+      "id": 62,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As caixas azuis",
+          "question": "Todas as caixas vermelhas são pesadas. Algumas caixas pesadas são azuis. Isso prova que todas as caixas azuis são vermelhas?",
+          "options": [
+            "Sim, todas",
+            "Não, as informações não permitem essa conclusão",
+            "Sim, se forem grandes"
+          ],
+          "answerIndex": 1,
+          "hint": "A informação sobre algumas caixas azuis não descreve todas as caixas azuis.",
+          "explanation": "Não. Sabemos apenas que algumas caixas pesadas são azuis. Isso não prova que todas as caixas azuis sejam vermelhas."
+        },
+        "en": {
+          "title": "The blue boxes",
+          "question": "All red boxes are heavy. Some heavy boxes are blue. Does this prove that all blue boxes are red?",
+          "options": [
+            "Yes, all of them",
+            "No, the information does not support that conclusion",
+            "Yes, if they are large"
+          ],
+          "answerIndex": 1,
+          "hint": "The statement about some blue boxes does not describe every blue box.",
+          "explanation": "No. We only know that some heavy boxes are blue. This does not prove that all blue boxes are red."
+        },
+        "es": {
+          "title": "Las cajas azules",
+          "question": "Todas las cajas rojas son pesadas. Algunas cajas pesadas son azules. ¿Esto demuestra que todas las cajas azules son rojas?",
+          "options": [
+            "Sí, todas",
+            "No, la información no permite esa conclusión",
+            "Sí, si son grandes"
+          ],
+          "answerIndex": 1,
+          "hint": "La información sobre algunas cajas azules no describe todas las cajas azules.",
+          "explanation": "No. Solo sabemos que algunas cajas pesadas son azules. Esto no demuestra que todas las cajas azules sean rojas."
+        }
+      }
+    },
+    {
+      "id": 63,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As meias no escuro",
+          "question": "Uma gaveta tem meias de três cores: vermelha, azul e verde. Está completamente escuro. Quantas meias você precisa retirar, no mínimo, para garantir um par da mesma cor?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "No pior caso, as três primeiras meias podem ter cores diferentes.",
+          "explanation": "Com três meias, você pode retirar uma de cada cor. A quarta meia necessariamente repetirá uma das três cores, garantindo um par."
+        },
+        "en": {
+          "title": "The socks in the dark",
+          "question": "A drawer contains socks in three colors: red, blue and green. It is completely dark. What is the minimum number of socks you must take to guarantee a matching pair?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "In the worst case, the first three socks can all be different colors.",
+          "explanation": "With three socks, you might get one of each color. The fourth must match one of those three colors, guaranteeing a pair."
+        },
+        "es": {
+          "title": "Los calcetines a oscuras",
+          "question": "Un cajón contiene calcetines de tres colores: rojo, azul y verde. Está completamente oscuro. ¿Cuál es el mínimo de calcetines que debes sacar para garantizar un par del mismo color?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 1,
+          "hint": "En el peor caso, los tres primeros calcetines pueden ser de colores diferentes.",
+          "explanation": "Con tres calcetines, podrías sacar uno de cada color. El cuarto necesariamente repetirá uno de esos colores y garantizará un par."
+        }
+      }
+    },
+    {
+      "id": 64,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os três interruptores",
+          "question": "Você está diante de três interruptores. Em outro cômodo fechado há uma lâmpada incandescente, controlada por apenas um deles. Você pode mexer nos interruptores como quiser, mas só pode entrar no cômodo uma vez. Como descobrir qual interruptor controla a lâmpada?",
+          "options": [
+            "Ligue um, espere, desligue; ligue outro e entre: luz acesa indica o segundo, apagada e quente indica o primeiro, apagada e fria indica o terceiro",
+            "Ligue os três e entre rapidamente",
+            "Alterne todos ao mesmo tempo e observe a porta"
+          ],
+          "answerIndex": 0,
+          "hint": "A lâmpada incandescente guarda calor mesmo depois de ser desligada.",
+          "explanation": "Ligue o primeiro interruptor por alguns minutos e depois desligue-o. Ligue o segundo e entre no cômodo. Se a lâmpada estiver acesa, é o segundo; se estiver apagada e quente, é o primeiro; se estiver apagada e fria, é o terceiro."
+        },
+        "en": {
+          "title": "The three switches",
+          "question": "You face three switches. In another closed room there is an incandescent bulb controlled by only one of them. You may operate the switches as you wish, but you can enter the room only once. How can you identify the correct switch?",
+          "options": [
+            "Turn one on for a while, turn it off; turn another on and enter: lit means the second, off and warm means the first, off and cold means the third",
+            "Turn all three on and enter quickly",
+            "Toggle them all at the same time and watch the door"
+          ],
+          "answerIndex": 0,
+          "hint": "An incandescent bulb retains heat for a while after being switched off.",
+          "explanation": "Turn the first switch on for a few minutes, then turn it off. Turn on the second and enter the room. If the bulb is lit, it is the second; if it is off and warm, it is the first; if it is off and cold, it is the third."
+        },
+        "es": {
+          "title": "Los tres interruptores",
+          "question": "Tienes tres interruptores. En otra habitación cerrada hay una bombilla incandescente controlada por solo uno de ellos. Puedes accionar los interruptores como quieras, pero solo puedes entrar una vez. ¿Cómo descubres cuál controla la bombilla?",
+          "options": [
+            "Enciende uno, espera y apágalo; enciende otro y entra: encendida indica el segundo, apagada y caliente el primero, apagada y fría el tercero",
+            "Enciende los tres y entra rápidamente",
+            "Alterna todos a la vez y observa la puerta"
+          ],
+          "answerIndex": 0,
+          "hint": "La bombilla incandescente conserva el calor durante un tiempo después de apagarse.",
+          "explanation": "Enciende el primer interruptor durante unos minutos y luego apágalo. Enciende el segundo y entra. Si la bombilla está encendida, es el segundo; si está apagada y caliente, es el primero; si está apagada y fría, es el tercero."
+        }
+      }
+    },
+    {
+      "id": 65,
+      "region": 1,
+      "type": "text",
+      "category": "sequence_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A sequência multiplicadora",
+          "question": "Qual número completa a sequência: 1, 2, 6, 24, 120, ...?",
+          "options": [
+            "240",
+            "600",
+            "720"
+          ],
+          "answerIndex": 2,
+          "hint": "Cada termo é o anterior multiplicado pelo próximo número natural.",
+          "explanation": "A sequência multiplica por 2, depois 3, 4 e 5. O próximo passo é multiplicar 120 por 6: 720."
+        },
+        "en": {
+          "title": "The multiplying sequence",
+          "question": "Which number completes the sequence: 1, 2, 6, 24, 120, ...?",
+          "options": [
+            "240",
+            "600",
+            "720"
+          ],
+          "answerIndex": 2,
+          "hint": "Each term is the previous one multiplied by the next natural number.",
+          "explanation": "The sequence multiplies by 2, then 3, 4 and 5. The next step is 120 × 6 = 720."
+        },
+        "es": {
+          "title": "La secuencia multiplicadora",
+          "question": "¿Qué número completa la secuencia: 1, 2, 6, 24, 120, ...?",
+          "options": [
+            "240",
+            "600",
+            "720"
+          ],
+          "answerIndex": 2,
+          "hint": "Cada término es el anterior multiplicado por el siguiente número natural.",
+          "explanation": "La secuencia multiplica por 2, luego por 3, 4 y 5. El siguiente paso es 120 × 6 = 720."
+        }
+      }
+    },
+    {
+      "id": 66,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os três números",
+          "question": "Três números inteiros consecutivos somam 72. Qual é o maior deles?",
+          "options": [
+            "23",
+            "24",
+            "25"
+          ],
+          "answerIndex": 2,
+          "hint": "Some os três números como se fossem o número do meio menos 1, o número do meio e o número do meio mais 1.",
+          "explanation": "A média dos três números é 72 ÷ 3 = 24. Eles são 23, 24 e 25. O maior é 25."
+        },
+        "en": {
+          "title": "The three numbers",
+          "question": "Three consecutive whole numbers add up to 72. What is the largest?",
+          "options": [
+            "23",
+            "24",
+            "25"
+          ],
+          "answerIndex": 2,
+          "hint": "Think of the numbers as the middle number minus 1, the middle number, and the middle number plus 1.",
+          "explanation": "The average is 72 ÷ 3 = 24. The numbers are 23, 24 and 25. The largest is 25."
+        },
+        "es": {
+          "title": "Los tres números",
+          "question": "Tres números enteros consecutivos suman 72. ¿Cuál es el mayor?",
+          "options": [
+            "23",
+            "24",
+            "25"
+          ],
+          "answerIndex": 2,
+          "hint": "Piensa en los números como el número del medio menos 1, el número del medio y el número del medio más 1.",
+          "explanation": "El promedio es 72 ÷ 3 = 24. Los números son 23, 24 y 25. El mayor es 25."
+        }
+      },
+      "interaction": "numeric_input",
+      "expectedAnswer": 25
+    },
+    {
+      "id": 67,
+      "region": 1,
+      "type": "text",
+      "category": "problem_solving",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O caracol no poço",
+          "question": "Um caracol sobe 3 metros durante o dia e escorrega 2 metros durante a noite. O poço tem 10 metros de profundidade. Em quantos dias ele alcança a saída?",
+          "options": [
+            "7 dias",
+            "8 dias",
+            "9 dias"
+          ],
+          "answerIndex": 1,
+          "hint": "Não desconte a escorregada da última noite: quando chega ao topo durante o dia, ele já saiu.",
+          "explanation": "A cada ciclo completo de dia e noite, o caracol avança 1 metro. Após 7 noites, está a 7 metros. No oitavo dia, sobe 3 metros e chega a 10, saindo antes de escorregar. São 8 dias."
+        },
+        "en": {
+          "title": "The snail in the well",
+          "question": "A snail climbs 3 meters during the day and slips 2 meters at night. The well is 10 meters deep. How many days will it take to reach the top?",
+          "options": [
+            "7 days",
+            "8 days",
+            "9 days"
+          ],
+          "answerIndex": 1,
+          "hint": "Do not subtract the final night's slide: once it reaches the top during the day, it is already out.",
+          "explanation": "After each full day and night, the snail gains 1 meter. After 7 nights it is at 7 meters. On the eighth day it climbs 3 meters and reaches 10, escaping before it can slide back. It takes 8 days."
+        },
+        "es": {
+          "title": "El caracol en el pozo",
+          "question": "Un caracol sube 3 metros durante el día y resbala 2 metros durante la noche. El pozo tiene 10 metros de profundidad. ¿En cuántos días llegará a la salida?",
+          "options": [
+            "7 días",
+            "8 días",
+            "9 días"
+          ],
+          "answerIndex": 1,
+          "hint": "No restes el resbalón de la última noche: cuando llega arriba durante el día, ya ha salido.",
+          "explanation": "Después de cada ciclo completo de día y noche, el caracol avanza 1 metro. Tras 7 noches está a 7 metros. El octavo día sube 3 metros y llega a 10, saliendo antes de resbalar. Tarda 8 días."
+        }
+      }
+    },
+    {
+      "id": 68,
+      "region": 1,
+      "type": "text",
+      "category": "rate_logic",
+      "difficulty": 3,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os dois trens",
+          "question": "Dois trens partem ao mesmo tempo de cidades que ficam a 300 km uma da outra e seguem um em direção ao outro. Um viaja a 80 km/h e o outro a 70 km/h. Quantas horas levam para se encontrar?",
+          "options": [
+            "1 hora",
+            "2 horas",
+            "3 horas"
+          ],
+          "answerIndex": 1,
+          "hint": "Como seguem um em direção ao outro, some as velocidades para descobrir quanto a distância diminui por hora.",
+          "explanation": "A distância entre eles diminui 80 + 70 = 150 km por hora. Para percorrer 300 km de distância relativa, levam 300 ÷ 150 = 2 horas."
+        },
+        "en": {
+          "title": "The two trains",
+          "question": "Two trains leave at the same time from cities 300 km apart and travel toward each other. One travels at 80 km/h and the other at 70 km/h. How many hours will it take them to meet?",
+          "options": [
+            "1 hour",
+            "2 hours",
+            "3 hours"
+          ],
+          "answerIndex": 1,
+          "hint": "Because they travel toward each other, add their speeds to find how quickly the gap closes.",
+          "explanation": "The distance between them decreases by 80 + 70 = 150 km each hour. To close a 300 km gap, they need 300 ÷ 150 = 2 hours."
+        },
+        "es": {
+          "title": "Los dos trenes",
+          "question": "Dos trenes salen al mismo tiempo de ciudades separadas por 300 km y viajan uno hacia el otro. Uno va a 80 km/h y el otro a 70 km/h. ¿Cuántas horas tardarán en encontrarse?",
+          "options": [
+            "1 hora",
+            "2 horas",
+            "3 horas"
+          ],
+          "answerIndex": 1,
+          "hint": "Como viajan uno hacia el otro, suma sus velocidades para saber cuánto disminuye la distancia cada hora.",
+          "explanation": "La distancia entre ellos disminuye 80 + 70 = 150 km por hora. Para cubrir 300 km de distancia relativa, tardan 300 ÷ 150 = 2 horas."
+        }
+      }
+    },
+    {
+      "id": 69,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Múltiplos de três",
+          "question": "Selecione todos os números divisíveis por 3 sem deixar resto.",
+          "options": [
+            "12",
+            "14",
+            "21",
+            "25",
+            "30"
+          ],
+          "answerIndex": 0,
+          "hint": "A soma dos algarismos de um múltiplo de 3 também é divisível por 3.",
+          "explanation": "12, 21 e 30 são divisíveis por 3. As somas dos algarismos são 3, 3 e 3. 14 e 25 não atendem à regra."
+        },
+        "en": {
+          "title": "Multiples of three",
+          "question": "Select all numbers that are divisible by 3 with no remainder.",
+          "options": [
+            "12",
+            "14",
+            "21",
+            "25",
+            "30"
+          ],
+          "answerIndex": 0,
+          "hint": "The sum of the digits of a multiple of 3 is also divisible by 3.",
+          "explanation": "12, 21 and 30 are divisible by 3. Their digit sums are 3, 3 and 3. 14 and 25 do not meet the rule."
+        },
+        "es": {
+          "title": "Múltiplos de tres",
+          "question": "Selecciona todos los números divisibles por 3 sin dejar resto.",
+          "options": [
+            "12",
+            "14",
+            "21",
+            "25",
+            "30"
+          ],
+          "answerIndex": 0,
+          "hint": "La suma de las cifras de un múltiplo de 3 también es divisible por 3.",
+          "explanation": "12, 21 y 30 son divisibles por 3. Las sumas de sus cifras son 3, 3 y 3. 14 y 25 no cumplen la regla."
+        }
+      },
+      "interaction": "multi_select",
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 70,
+      "region": 1,
+      "type": "text",
+      "category": "ordering_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "A transformação da borboleta",
+          "question": "Organize as etapas do ciclo de vida de uma borboleta, da primeira à última.",
+          "items": [
+            "Ovo",
+            "Lagarta",
+            "Crisálida",
+            "Borboleta adulta"
+          ],
+          "options": [
+            "Ovo",
+            "Lagarta",
+            "Crisálida",
+            "Borboleta adulta"
+          ],
+          "answerIndex": 0,
+          "hint": "Pense na transformação desde o nascimento até a fase adulta.",
+          "explanation": "A ordem correta é: ovo, lagarta, crisálida e borboleta adulta."
+        },
+        "en": {
+          "title": "The butterfly transformation",
+          "question": "Arrange the stages of a butterfly's life cycle, from first to last.",
+          "items": [
+            "Egg",
+            "Caterpillar",
+            "Chrysalis",
+            "Adult butterfly"
+          ],
+          "options": [
+            "Egg",
+            "Caterpillar",
+            "Chrysalis",
+            "Adult butterfly"
+          ],
+          "answerIndex": 0,
+          "hint": "Think about the transformation from the beginning to adulthood.",
+          "explanation": "The correct order is: egg, caterpillar, chrysalis and adult butterfly."
+        },
+        "es": {
+          "title": "La transformación de la mariposa",
+          "question": "Ordena las etapas del ciclo de vida de una mariposa, de la primera a la última.",
+          "items": [
+            "Huevo",
+            "Oruga",
+            "Crisálida",
+            "Mariposa adulta"
+          ],
+          "options": [
+            "Huevo",
+            "Oruga",
+            "Crisálida",
+            "Mariposa adulta"
+          ],
+          "answerIndex": 0,
+          "hint": "Piensa en la transformación desde el nacimiento hasta la etapa adulta.",
+          "explanation": "El orden correcto es: huevo, oruga, crisálida y mariposa adulta."
+        }
+      },
+      "interaction": "order_items",
+      "expectedOrder": [
+        0,
+        1,
+        2,
+        3
+      ]
     }
   ]
 }
