@@ -1,0 +1,492 @@
+{
+  "version": 1,
+  "phaseCount": 1000,
+  "regions": 10,
+  "rewardPolicy": {
+    "completionCoins": 10,
+    "oncePerPhase": true
+  },
+  "phases": [
+    {
+      "id": 1,
+      "region": 1,
+      "type": "text",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O que sou?",
+          "question": "Tenho ruas, mas não carros. Tenho cidades, mas não casas. Tenho rios, mas não água. O que sou?",
+          "options": [
+            "Um mapa",
+            "Uma fotografia",
+            "Um livro"
+          ],
+          "answerIndex": 0,
+          "hint": "Pense em algo que representa lugares e caminhos, sem ser o próprio lugar.",
+          "explanation": "Um mapa representa ruas, cidades e rios por meio de símbolos e desenhos. Ele mostra esses elementos, mas não contém carros, casas ou água de verdade."
+        },
+        "en": {
+          "title": "What am I?",
+          "question": "I have streets, but no cars. I have cities, but no houses. I have rivers, but no water. What am I?",
+          "options": [
+            "A map",
+            "A photograph",
+            "A book"
+          ],
+          "answerIndex": 0,
+          "hint": "Think of something that represents places and routes without being the place itself.",
+          "explanation": "A map represents streets, cities and rivers using symbols and drawings. It shows these elements but does not contain real cars, houses or water."
+        },
+        "es": {
+          "title": "¿Qué soy?",
+          "question": "Tengo calles, pero no coches. Tengo ciudades, pero no casas. Tengo ríos, pero no agua. ¿Qué soy?",
+          "options": [
+            "Un mapa",
+            "Una fotografía",
+            "Un libro"
+          ],
+          "answerIndex": 0,
+          "hint": "Piensa en algo que representa lugares y caminos sin ser el lugar mismo.",
+          "explanation": "Un mapa representa calles, ciudades y ríos mediante símbolos y dibujos. Muestra esos elementos, pero no contiene coches, casas ni agua reales."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 2,
+      "region": 1,
+      "type": "text",
+      "category": "sequence",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Qual é o próximo número?",
+          "question": "3, 6, 12, 24, ...",
+          "options": [
+            "30",
+            "36",
+            "48"
+          ],
+          "answerIndex": 2,
+          "hint": "Observe como cada número se transforma no seguinte.",
+          "explanation": "A sequência dobra a cada passo: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24. Portanto, 24 × 2 = 48."
+        },
+        "en": {
+          "title": "What is the next number?",
+          "question": "3, 6, 12, 24, ...",
+          "options": [
+            "30",
+            "36",
+            "48"
+          ],
+          "answerIndex": 2,
+          "hint": "Look at how each number changes into the next one.",
+          "explanation": "The sequence doubles each time: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24. So 24 × 2 = 48."
+        },
+        "es": {
+          "title": "¿Cuál es el siguiente número?",
+          "question": "3, 6, 12, 24, ...",
+          "options": [
+            "30",
+            "36",
+            "48"
+          ],
+          "answerIndex": 2,
+          "hint": "Observa cómo cada número se transforma en el siguiente.",
+          "explanation": "La secuencia se duplica cada vez: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24. Por eso, 24 × 2 = 48."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null,
+      "interaction": "numeric_input",
+      "expectedAnswer": "48"
+    },
+    {
+      "id": 3,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os interruptores",
+          "question": "Há três interruptores do lado de fora de um quarto fechado. Apenas um acende a lâmpada lá dentro. Você pode mexer nos interruptores como quiser, mas só pode entrar no quarto uma vez. Como descobrir qual é o interruptor certo?",
+          "options": [
+            "Ligar um e entrar imediatamente",
+            "Ligar um por alguns minutos, desligá-lo, ligar outro e entrar",
+            "Ligar os três ao mesmo tempo"
+          ],
+          "answerIndex": 1,
+          "hint": "A lâmpada pode dar uma pista mesmo depois de ser desligada: o calor.",
+          "explanation": "Ligue o primeiro interruptor por alguns minutos e depois desligue-o. Ligue o segundo e entre no quarto. Se a lâmpada estiver acesa, é o segundo. Se estiver apagada, mas quente, é o primeiro. Se estiver apagada e fria, é o terceiro."
+        },
+        "en": {
+          "title": "The switches",
+          "question": "There are three switches outside a closed room. Only one turns on the light bulb inside. You may operate the switches as you wish, but you can enter the room only once. How can you identify the correct switch?",
+          "options": [
+            "Turn one on and enter immediately",
+            "Turn one on for a few minutes, turn it off, turn another on, then enter",
+            "Turn all three on at the same time"
+          ],
+          "answerIndex": 1,
+          "hint": "The bulb can give you a clue even after it is switched off: its warmth.",
+          "explanation": "Turn the first switch on for a few minutes, then turn it off. Turn on the second and enter. If the bulb is lit, it is the second. If it is off but warm, it is the first. If it is off and cold, it is the third."
+        },
+        "es": {
+          "title": "Los interruptores",
+          "question": "Hay tres interruptores fuera de una habitación cerrada. Solo uno enciende la bombilla del interior. Puedes usar los interruptores como quieras, pero solo puedes entrar una vez. ¿Cómo identificas el correcto?",
+          "options": [
+            "Encender uno y entrar inmediatamente",
+            "Encender uno unos minutos, apagarlo, encender otro y entrar",
+            "Encender los tres al mismo tiempo"
+          ],
+          "answerIndex": 1,
+          "hint": "La bombilla puede dar una pista incluso apagada: su temperatura.",
+          "explanation": "Enciende el primer interruptor durante unos minutos y luego apágalo. Enciende el segundo y entra. Si la bombilla está encendida, es el segundo. Si está apagada pero caliente, es el primero. Si está apagada y fría, es el tercero."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 4,
+      "region": 1,
+      "type": "text",
+      "category": "ordering",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Quem chegou em segundo?",
+          "question": "Em uma corrida, Ana chegou antes de Bruno. Carla chegou depois de Bruno. Quem ficou em segundo lugar?",
+          "options": [
+            "Ana",
+            "Bruno",
+            "Carla"
+          ],
+          "answerIndex": 1,
+          "hint": "Organize os três nomes na ordem em que chegaram.",
+          "explanation": "Ana chegou antes de Bruno, e Carla depois de Bruno. A ordem é Ana, Bruno e Carla. Portanto, Bruno ficou em segundo."
+        },
+        "en": {
+          "title": "Who came second?",
+          "question": "In a race, Ana finished before Bruno. Carla finished after Bruno. Who came in second?",
+          "options": [
+            "Ana",
+            "Bruno",
+            "Carla"
+          ],
+          "answerIndex": 1,
+          "hint": "Put the three names in finishing order.",
+          "explanation": "Ana finished before Bruno, and Carla after Bruno. The order is Ana, Bruno, Carla. Therefore, Bruno came second."
+        },
+        "es": {
+          "title": "¿Quién llegó segundo?",
+          "question": "En una carrera, Ana llegó antes que Bruno. Carla llegó después de Bruno. ¿Quién quedó en segundo lugar?",
+          "options": [
+            "Ana",
+            "Bruno",
+            "Carla"
+          ],
+          "answerIndex": 1,
+          "hint": "Ordena los tres nombres según su llegada.",
+          "explanation": "Ana llegó antes que Bruno y Carla después de Bruno. El orden es Ana, Bruno y Carla. Por lo tanto, Bruno quedó segundo."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 5,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Quem é a mais nova?",
+          "question": "Nina é mais velha que Leo. Leo é mais velho que Bia. Quem é a pessoa mais nova?",
+          "options": [
+            "Nina",
+            "Leo",
+            "Bia"
+          ],
+          "answerIndex": 2,
+          "hint": "Compare as idades em duas etapas.",
+          "explanation": "Nina é mais velha que Leo, e Leo é mais velho que Bia. Assim, Bia é a mais nova."
+        },
+        "en": {
+          "title": "Who is the youngest?",
+          "question": "Nina is older than Leo. Leo is older than Bia. Who is the youngest?",
+          "options": [
+            "Nina",
+            "Leo",
+            "Bia"
+          ],
+          "answerIndex": 2,
+          "hint": "Compare the ages in two steps.",
+          "explanation": "Nina is older than Leo, and Leo is older than Bia. Therefore, Bia is the youngest."
+        },
+        "es": {
+          "title": "¿Quién es la menor?",
+          "question": "Nina es mayor que Leo. Leo es mayor que Bia. ¿Quién es la persona más joven?",
+          "options": [
+            "Nina",
+            "Leo",
+            "Bia"
+          ],
+          "answerIndex": 2,
+          "hint": "Compara las edades en dos pasos.",
+          "explanation": "Nina es mayor que Leo y Leo es mayor que Bia. Por lo tanto, Bia es la menor."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 6,
+      "region": 1,
+      "type": "text",
+      "category": "riddle",
+      "difficulty": 1,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "O que fica mais molhado?",
+          "question": "O que fica cada vez mais molhado enquanto seca?",
+          "options": [
+            "Uma toalha",
+            "Uma esponja seca",
+            "Uma nuvem"
+          ],
+          "answerIndex": 0,
+          "hint": "Pense no objeto usado depois do banho.",
+          "explanation": "A toalha absorve a água do corpo e, por isso, fica mais molhada enquanto seca a pessoa."
+        },
+        "en": {
+          "title": "What gets wetter?",
+          "question": "What gets wetter the more it dries?",
+          "options": [
+            "A towel",
+            "A dry sponge",
+            "A cloud"
+          ],
+          "answerIndex": 0,
+          "hint": "Think of the object used after a shower.",
+          "explanation": "A towel absorbs water from the body, so it gets wetter while drying the person."
+        },
+        "es": {
+          "title": "¿Qué se moja más?",
+          "question": "¿Qué se moja cada vez más mientras seca?",
+          "options": [
+            "Una toalla",
+            "Una esponja seca",
+            "Una nube"
+          ],
+          "answerIndex": 0,
+          "hint": "Piensa en el objeto que se usa después de bañarse.",
+          "explanation": "La toalla absorbe el agua del cuerpo y, por eso, se moja más mientras seca a la persona."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 7,
+      "region": 1,
+      "type": "text",
+      "category": "proportions",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Os gatos e os ratos",
+          "question": "Quatro gatos caçam quatro ratos em quatro minutos. Mantendo o mesmo ritmo, quanto tempo um gato leva para caçar um rato?",
+          "options": [
+            "1 minuto",
+            "4 minutos",
+            "16 minutos"
+          ],
+          "answerIndex": 1,
+          "hint": "Pense na quantidade de trabalho feita por cada gato no mesmo intervalo.",
+          "explanation": "Se quatro gatos caçam quatro ratos em quatro minutos, cada gato caça um rato nesse mesmo período. A resposta é quatro minutos."
+        },
+        "en": {
+          "title": "Cats and mice",
+          "question": "Four cats catch four mice in four minutes. At the same rate, how long does one cat take to catch one mouse?",
+          "options": [
+            "1 minute",
+            "4 minutes",
+            "16 minutes"
+          ],
+          "answerIndex": 1,
+          "hint": "Think about how much work each cat does during the same interval.",
+          "explanation": "If four cats catch four mice in four minutes, each cat catches one mouse in that same period. The answer is four minutes."
+        },
+        "es": {
+          "title": "Gatos y ratones",
+          "question": "Cuatro gatos cazan cuatro ratones en cuatro minutos. Al mismo ritmo, ¿cuánto tarda un gato en cazar un ratón?",
+          "options": [
+            "1 minuto",
+            "4 minutos",
+            "16 minutos"
+          ],
+          "answerIndex": 1,
+          "hint": "Piensa en el trabajo que hace cada gato durante el mismo intervalo.",
+          "explanation": "Si cuatro gatos cazan cuatro ratones en cuatro minutos, cada gato caza un ratón en ese mismo tiempo. La respuesta es cuatro minutos."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 8,
+      "region": 1,
+      "type": "text",
+      "category": "classification",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Qual é o diferente?",
+          "question": "Três figuras são planas e uma tem volume. Qual delas pertence a um grupo diferente?",
+          "options": [
+            "Quadrado",
+            "Triângulo",
+            "Cubo"
+          ],
+          "answerIndex": 2,
+          "hint": "Pense na diferença entre figuras de duas dimensões e objetos de três dimensões.",
+          "explanation": "Quadrado e triângulo são figuras planas, com duas dimensões. O cubo tem três dimensões e ocupa volume, por isso é o diferente."
+        },
+        "en": {
+          "title": "Which one is different?",
+          "question": "Three shapes are flat and one has volume. Which belongs to a different group?",
+          "options": [
+            "Square",
+            "Triangle",
+            "Cube"
+          ],
+          "answerIndex": 2,
+          "hint": "Think about the difference between two-dimensional shapes and three-dimensional objects.",
+          "explanation": "A square and a triangle are flat, two-dimensional shapes. A cube has three dimensions and occupies volume, so it is the different one."
+        },
+        "es": {
+          "title": "¿Cuál es diferente?",
+          "question": "Tres figuras son planas y una tiene volumen. ¿Cuál pertenece a un grupo distinto?",
+          "options": [
+            "Cuadrado",
+            "Triángulo",
+            "Cubo"
+          ],
+          "answerIndex": 2,
+          "hint": "Piensa en la diferencia entre figuras de dos dimensiones y objetos de tres dimensiones.",
+          "explanation": "El cuadrado y el triángulo son figuras planas de dos dimensiones. El cubo tiene tres dimensiones y ocupa volumen, por eso es el diferente."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 9,
+      "region": 1,
+      "type": "text",
+      "category": "number_logic",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "Descubra o número",
+          "question": "Sou um número de dois algarismos. O algarismo das dezenas é o dobro do algarismo das unidades, e a soma dos dois algarismos é 9. Quem sou?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Procure dois algarismos cuja soma seja 9 e em que o primeiro seja o dobro do segundo.",
+          "explanation": "Em 63, o algarismo das dezenas é 6 e o das unidades é 3. Seis é o dobro de três, e 6 + 3 = 9."
+        },
+        "en": {
+          "title": "Find the number",
+          "question": "I am a two-digit number. My tens digit is twice my units digit, and the sum of my digits is 9. What am I?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Find two digits that add up to 9, with the first twice the second.",
+          "explanation": "In 63, the tens digit is 6 and the units digit is 3. Six is twice three, and 6 + 3 = 9."
+        },
+        "es": {
+          "title": "Descubre el número",
+          "question": "Soy un número de dos cifras. La cifra de las decenas es el doble de la cifra de las unidades, y la suma de ambas es 9. ¿Cuál soy?",
+          "options": [
+            "36",
+            "63",
+            "72"
+          ],
+          "answerIndex": 1,
+          "hint": "Busca dos cifras que sumen 9 y en las que la primera sea el doble de la segunda.",
+          "explanation": "En 63, la cifra de las decenas es 6 y la de las unidades es 3. Seis es el doble de tres y 6 + 3 = 9."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    },
+    {
+      "id": 10,
+      "region": 1,
+      "type": "text",
+      "category": "deduction",
+      "difficulty": 2,
+      "visual": null,
+      "content": {
+        "pt": {
+          "title": "As caixas etiquetadas",
+          "question": "Três caixas estão identificadas como “Maçãs”, “Laranjas” e “Misturadas”. Todas as etiquetas estão erradas. Você pode retirar apenas uma fruta de uma caixa, sem olhar dentro. De qual caixa deve retirar para descobrir corretamente todas as etiquetas?",
+          "options": [
+            "Da caixa “Maçãs”",
+            "Da caixa “Laranjas”",
+            "Da caixa “Misturadas”"
+          ],
+          "answerIndex": 2,
+          "hint": "Como todas as etiquetas estão erradas, a caixa chamada “Misturadas” não pode conter mistura.",
+          "explanation": "Retire uma fruta da caixa etiquetada “Misturadas”. Como a etiqueta está errada, ela contém apenas um tipo de fruta. A fruta retirada revela qual é esse tipo; depois, por exclusão e sabendo que as outras duas etiquetas também estão erradas, é possível identificar as outras caixas."
+        },
+        "en": {
+          "title": "The mislabeled boxes",
+          "question": "Three boxes are labeled “Apples”, “Oranges” and “Mixed”. Every label is wrong. You may take just one fruit from one box without looking inside. From which box should you take a fruit to correctly identify all labels?",
+          "options": [
+            "The “Apples” box",
+            "The “Oranges” box",
+            "The “Mixed” box"
+          ],
+          "answerIndex": 2,
+          "hint": "Since every label is wrong, the box labeled “Mixed” cannot contain a mixture.",
+          "explanation": "Take a fruit from the box labeled “Mixed”. Because its label is wrong, it contains only one kind of fruit. The fruit you draw reveals which kind; then, using the fact that the other two labels are also wrong, you can identify the remaining boxes by elimination."
+        },
+        "es": {
+          "title": "Las cajas mal etiquetadas",
+          "question": "Hay tres cajas etiquetadas como “Manzanas”, “Naranjas” y “Mezcladas”. Todas las etiquetas son incorrectas. Puedes sacar una sola fruta de una caja sin mirar dentro. ¿De qué caja debes sacar una fruta para identificar correctamente todas las etiquetas?",
+          "options": [
+            "De la caja “Manzanas”",
+            "De la caja “Naranjas”",
+            "De la caja “Mezcladas”"
+          ],
+          "answerIndex": 2,
+          "hint": "Como todas las etiquetas son incorrectas, la caja llamada “Mezcladas” no puede contener una mezcla.",
+          "explanation": "Saca una fruta de la caja etiquetada “Mezcladas”. Como su etiqueta es incorrecta, contiene un solo tipo de fruta. La fruta que saques revela cuál es; después, sabiendo que las otras dos etiquetas también son incorrectas, puedes identificar las cajas restantes por eliminación."
+        }
+      },
+      "hintCost": null,
+      "solutionCost": null
+    }
+  ]
+}
