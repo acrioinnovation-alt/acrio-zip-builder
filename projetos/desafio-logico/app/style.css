@@ -289,3 +289,53 @@ body{background:radial-gradient(ellipse at 50% -8%,#3979a5 0,transparent 42%),li
   body{min-height:100svh}
   .game-topbar{backdrop-filter:blur(18px)}
 }
+
+
+/* IDENTIDADE VISUAL AZUL TECNOLÓGICA — ACRIO GAMES */
+:root{--game-aqua:#55d9f2;--game-blue:#2478d2;--game-gold:#55d9f2}
+body{background:radial-gradient(ellipse at 50% -12%,#164d83 0,transparent 43%),linear-gradient(180deg,#071a35 0%,#061226 70%,#0a1d39 100%)}
+.game-shell{background:linear-gradient(180deg,#081b35e8,#06152beF)}
+.game-topbar{background:linear-gradient(90deg,#06152df7,#0b2443f7);border-bottom:1px solid #368ac455}
+.brand-icon{background:linear-gradient(145deg,#9cecff,#3b9de8 58%,#245bc1);color:#061b35;box-shadow:0 4px 0 #174b85,0 8px 20px #0007}
+.brand-name b{color:#65caff}
+.mini-stat{border-color:#356b9a;background:linear-gradient(180deg,#173d68,#0c2749)}
+.round-button{border-color:#3b78a7;background:linear-gradient(145deg,#1b4d7b,#10325a)}
+.game-hero{border:1px solid #3c9bd477;background:radial-gradient(ellipse at 78% 44%,#1b75b8 0,#124c83 28%,transparent 59%),linear-gradient(145deg,#123e70,#0c2c53 58%,#081c39);box-shadow:0 8px 0 #06152b,0 17px 30px #020a1b99,inset 0 1px #a7eaff33}
+.game-hero:before{border-color:#74dfff55;box-shadow:0 0 0 16px #4bb8f015,0 0 0 38px #4bb8f00d,0 0 0 64px #4bb8f009}
+.eyebrow,.world-kicker{color:#76e6ff}
+.game-hero h1 em{color:#8de8ff;text-shadow:0 2px 14px #37baff55}
+.play-button,.primary-button{border:1px solid #a8eeff;background:linear-gradient(180deg,#b8f3ff 0%,#62d8f2 48%,#348fdc 100%);color:#062344;box-shadow:0 5px 0 #14538e,0 10px 18px #06152b88,inset 0 1px #fff}
+.play-button:active{box-shadow:0 2px 0 #14538e}
+.primary-button{box-shadow:0 4px 0 #14538e}
+.hero-art .float-symbol,.symbol-b{color:#a8edff;text-shadow:0 0 13px #39bfff}
+.orbit{border-color:#71dfff77;box-shadow:0 0 18px #39bfff33}
+.quick-card{border-color:#326d9d;background:linear-gradient(150deg,#174775,#0b2749);box-shadow:0 5px 0 #06152a,inset 0 1px #ffffff20}
+.quick-icon{background:linear-gradient(145deg,#246da4,#123d69);box-shadow:0 3px 0 #092342,inset 0 1px #ffffff44}
+.quick-arrow{color:#79e4ff}
+.map-section{background:linear-gradient(180deg,#07182f,#0b2443 45%,#07182f);border-color:#368ac444}
+.map-progress{background:linear-gradient(145deg,#155d91,#103b68);border-color:#3c9bd4;color:#b9f3ff}
+.region-tab{border-color:#2d5f8c;background:linear-gradient(180deg,#14375e,#0b2545);box-shadow:0 3px 0 #06152b}
+.region-tab.active{background:linear-gradient(180deg,#67dfff,#258bd5);border-color:#b8f3ff;color:#062344;box-shadow:0 4px 0 #15558e,inset 0 1px #fff}
+.world-card{border-color:#326c9c;background:radial-gradient(ellipse at 50% 0%,#164d7b,#10345b 52%,#0a2342);box-shadow:0 7px 0 #06152a,inset 0 1px #ffffff20}
+.world-card:before{background-image:radial-gradient(#80dfff 1.1px,transparent 1.1px)}
+.phase-button.available{border-color:#b5f3ff;background:linear-gradient(145deg,#c2f6ff,#54c9ee 55%,#2785d2);color:#062748;box-shadow:0 5px 0 #15558b,0 0 18px #39bfff66,inset 0 2px #fff;animation:readyPulse 2.2s ease-in-out infinite}
+.phase-button.done{border-color:#9be8ff;background:linear-gradient(145deg,#5fc9f0,#247bc0);color:#052a4b;box-shadow:0 4px 0 #124b7d,inset 0 2px #ffffff99}
+.phase-grid:before{background:repeating-linear-gradient(to bottom,#4dbcf0 0 10px,transparent 10px 19px)}
+.ad-banner{border-color:#2b5e8b;background:#06152def}
+.modal{border-color:#3c83b4;background:radial-gradient(ellipse at 50% 0%,#174b75,#0a203d 72%)}
+.question-type{background:linear-gradient(120deg,#124f7b,#10345b);border-color:#318ac0;color:#9cecff}
+.question-text{border-color:#326e9d;background:linear-gradient(145deg,#153e65,#0d2a4c)}
+.answer-option{border-color:#356f9e;background:linear-gradient(145deg,#19466e,#102d50)}
+.answer-option.selected{border-color:#75e3ff;background:linear-gradient(145deg,#1b5c85,#123b61);box-shadow:0 4px 0 #092b49,inset 0 0 0 1px #75e3ff}
+.ghost-button{border-color:#356f9e;background:linear-gradient(145deg,#173f65,#0d2b4d)}
+.feedback.good{background:linear-gradient(145deg,#104d70,#0b3454);border-color:#42b9ed}
+.feedback.bad{background:linear-gradient(145deg,#60374c,#39263f);border-color:#d47b9a}
+.numeric-answer input{border-color:#3988bd;background:#071a33}
+.play-hud,.game-modal .play-hud{border-color:#3479aa;background:linear-gradient(110deg,#174873,#0d2c4d 70%,#153b62)}
+.play-stage{color:#9cecff}
+.game-progress{border-color:#28628f}
+.game-progress span{background:linear-gradient(90deg,#287ed0,#52d5f2,#b0f2ff);box-shadow:0 0 12px #43c7f2aa}
+.challenge-panel{border-color:#3478a9;background:radial-gradient(ellipse at 90% 0%,#1b659255,transparent 52%),linear-gradient(145deg,#143d63,#0b2949)}
+.challenge-panel .question-text{border-color:#3679a8;background:linear-gradient(145deg,#17436a,#0e2d4d)}
+.game-modal .answer-option:focus-visible,.game-modal .primary-button:focus-visible,.game-modal .ghost-button:focus-visible,.game-modal .round-button:focus-visible{outline-color:#8ceaff}
+@media(max-width:390px){.game-hero{background:radial-gradient(ellipse at 78% 44%,#1b75b8 0,#124c83 28%,transparent 59%),linear-gradient(145deg,#123e70,#0c2c53 58%,#081c39)}}
