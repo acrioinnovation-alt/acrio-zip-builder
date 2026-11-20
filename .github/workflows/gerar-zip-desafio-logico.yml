@@ -24,7 +24,7 @@ jobs:
         run: |
           mkdir -p downloads
           rm -f downloads/desafio-logico-atualizado-2026-11-20.zip
-          cd projetos/desafio-logico/app && zip -qr ../../../downloads/desafio-logico-atualizado-2026-11-20.zip .
+          cd projetos/desafio-logico/app && zip -0 -qr ../../../downloads/desafio-logico-atualizado-2026-11-20.zip .
 
       - name: Salvar ZIP no repositório público
         run: |
