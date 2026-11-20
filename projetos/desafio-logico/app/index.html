@@ -2,77 +2,79 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#071a35">
-  <meta name="description" content="Desafio Lógico — pense, descubra e avance.">
-  <title>Desafio Lógico</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101d3a">
+  <meta name="description" content="Desafio Lógico — ACRIO GAMES">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>Desafio Lógico | ACRIO GAMES</title>
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" id="homeBrand" aria-label="Início do Desafio Lógico">
-        <span class="brand-mark">DL</span>
-        <span><strong>DESAFIO LÓGICO</strong><small>ACRIO GAMES</small></span>
-      </a>
-      <div class="top-stats">
-        <span class="stat-pill"><span aria-hidden="true">🪙</span><b id="coinCount">0</b></span>
-        <button class="icon-button" id="soundToggle" aria-label="Ativar ou desativar som" title="Som">♫</button>
-      </div>
+      <div class="brand-mark">AG</div>
+      <div class="brand-copy"><strong>ACRIO GAMES</strong><span>DESAFIO LÓGICO</span></div>
+      <button class="icon-button" id="settings-open" aria-label="Configurações">⚙</button>
     </header>
 
-    <main id="appMain">
-      <section class="screen active" id="homeScreen">
-        <div class="hero">
-          <div class="hero-copy">
-            <span class="eyebrow">SEU PRÓXIMO DESAFIO COMEÇA AQUI</span>
-            <h1>Treine sua mente.<br><span>Supere seus limites.</span></h1>
-            <p>Resolva enigmas, descubra padrões e conquiste cada nível.</p>
-            <button class="primary-button" id="startButton">COMEÇAR A JOGAR <span>→</span></button>
-          </div>
-          <div class="hero-art" aria-hidden="true">
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="brain-core">✦</div>
-            <span class="float-symbol symbol-one">＋</span><span class="float-symbol symbol-two">?</span>
-            <span class="float-symbol symbol-three">◇</span><span class="float-symbol symbol-four">＝</span>
-          </div>
+    <main>
+      <section class="welcome-panel">
+        <div>
+          <p class="eyebrow" data-i18n="welcomeEyebrow">SEU RACIOCÍNIO, SEU DESAFIO</p>
+          <h1 data-i18n="welcomeTitle">Pense. Descubra. Avance.</h1>
+          <p class="muted" data-i18n="welcomeText">Mil fases de lógica, observação e dedução.</p>
         </div>
-        <div class="home-footer">
-          <div class="progress-summary"><div><span>SEU PROGRESSO</span><strong id="overallProgress">0 de 200 concluídos</strong></div><div class="progress-track"><i id="overallBar"></i></div></div>
-          <p>Um desafio por vez. Cada resposta é uma nova conquista.</p>
-        </div>
+        <div class="brain-art" aria-hidden="true">🧩</div>
       </section>
 
-      <section class="screen game-screen" id="gameScreen">
-        <div class="game-topline">
-          <button class="back-button" id="backPhases">← INÍCIO</button>
-          <div class="game-meta"><span id="gameFamilyName">FAMÍLIA</span><b id="gamePhaseNumber">FASE 001/200</b></div>
-        </div>
-        <div class="game-progress"><i id="gameProgressBar"></i></div>
-        <article class="challenge-card">
-          <div class="challenge-heading"><span class="challenge-level" id="challengeLevel">FÁCIL</span><span class="challenge-number" id="challengeNumber">DESAFIO 01</span></div>
-          <h2 id="challengeTitle">Resolva o desafio</h2>
-          <p class="challenge-instruction" id="challengeInstruction"></p>
-          <div class="puzzle-stage" id="puzzleStage"></div>
-          <div class="answer-area" id="answerArea"></div>
-          <div class="feedback" id="feedback" aria-live="polite"></div>
-          <div class="challenge-actions">
-            <button class="text-button" id="hintButton">💡 DICA</button>
-            <button class="primary-button next-button" id="nextButton" disabled>PRÓXIMO DESAFIO →</button>
-          </div>
-        </article>
+      <section class="stats-grid" aria-label="Seu progresso">
+        <article class="stat-card"><span>❤️</span><div><strong id="lives-value">5</strong><small data-i18n="lives">Vidas</small></div></article>
+        <article class="stat-card"><span>🪙</span><div><strong id="coins-value">0</strong><small data-i18n="coins">Moedas</small></div></article>
+        <article class="stat-card"><span>🏁</span><div><strong id="progress-value">0/1000</strong><small data-i18n="completed">Concluídas</small></div></article>
       </section>
 
-      <section class="screen" id="completeScreen">
-        <div class="complete-symbol">🏆</div>
-        <span class="eyebrow">MISSÃO CONCLUÍDA</span>
-        <h1>Você conseguiu!</h1>
-        <p id="completeMessage">Mais uma etapa vencida.</p>
-        <div class="complete-actions"><button class="primary-button" id="continueButton">CONTINUAR →</button><button class="secondary-button" id="completeHome">VOLTAR AO INÍCIO</button></div>
+      <section class="section-heading">
+        <div><p class="eyebrow" data-i18n="journey">SUA JORNADA</p><h2 data-i18n="mapTitle">Mapa das fases</h2></div>
+        <span class="region-count" id="region-count">1/10</span>
       </section>
+      <nav class="region-tabs" id="region-tabs" aria-label="Regiões"></nav>
+      <section class="map-card">
+        <div class="map-intro"><div><strong id="region-title">Região 1</strong><p id="region-subtitle" class="muted">Fases 1 a 100</p></div><span class="region-emoji" id="region-emoji">🌱</span></div>
+        <div class="phase-grid" id="phase-grid" aria-label="Fases da região"></div>
+        <p class="map-legend"><span>● <span data-i18n="legendDone">Concluída</span></span><span>● <span data-i18n="legendCurrent">Disponível</span></span><span>● <span data-i18n="legendLocked">Bloqueada</span></span></p>
+      </section>
+
+      <section class="daily-card">
+        <div class="daily-icon">☀️</div>
+        <div class="daily-copy"><p class="eyebrow" data-i18n="dailyEyebrow">DESAFIO ESPECIAL</p><h2 data-i18n="dailyTitle">Desafio diário</h2><p class="muted" data-i18n="dailyText">Uma missão por dia. Sem perder vidas.</p></div>
+        <button class="secondary-button" id="daily-open" data-i18n="dailyButton">Ver desafio</button>
+      </section>
+      <p class="footer-note" data-i18n="offlineNote">Seu progresso fica salvo neste aparelho. O jogo foi preparado para funcionar offline.</p>
     </main>
-    <footer class="app-footer"><span>ACRIO GAMES</span><span>DESAFIE SUA LÓGICA</span></footer>
   </div>
+
+  <dialog id="game-dialog" class="modal">
+    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Fechar">✕</button></form>
+    <div id="game-content"></div>
+  </dialog>
+
+  <dialog id="settings-dialog" class="modal settings-modal">
+    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Fechar">✕</button></form>
+    <p class="eyebrow" data-i18n="settingsEyebrow">PERSONALIZE</p><h2 data-i18n="settingsTitle">Configurações</h2>
+    <label class="setting-row"><span data-i18n="language">Idioma</span><select id="language-select"><option value="pt">Português (Brasil)</option><option value="en">English</option><option value="es">Español</option></select></label>
+    <div class="setting-group"><h3 data-i18n="sound">Áudio</h3>
+      <label class="setting-row"><span data-i18n="music">Música de fundo</span><input type="checkbox" id="music-toggle"></label>
+      <label class="setting-row"><span data-i18n="effects">Efeitos sonoros</span><input type="checkbox" id="effects-toggle"></label>
+      <label class="setting-row stacked"><span data-i18n="musicVolume">Volume da música</span><input type="range" id="music-volume" min="0" max="100" value="70"></label>
+      <label class="setting-row stacked"><span data-i18n="effectsVolume">Volume dos efeitos</span><input type="range" id="effects-volume" min="0" max="100" value="80"></label>
+    </div>
+    <div class="setting-group"><h3 data-i18n="accessibility">Acessibilidade</h3>
+      <label class="setting-row"><span data-i18n="textSize">Texto maior</span><input type="checkbox" id="large-text"></label>
+      <label class="setting-row"><span data-i18n="contrast">Alto contraste</span><input type="checkbox" id="high-contrast"></label>
+      <label class="setting-row"><span data-i18n="reduceMotion">Reduzir animações</span><input type="checkbox" id="reduce-motion"></label>
+    </div>
+    <p class="small-note" data-i18n="settingsNote">As preferências são salvas somente neste aparelho. O áudio e os anúncios serão conectados nas próximas etapas.</p>
+  </dialog>
   <script src="app.js"></script>
 </body>
 </html>
