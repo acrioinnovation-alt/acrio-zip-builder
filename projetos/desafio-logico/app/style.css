@@ -99,3 +99,193 @@ body{background:radial-gradient(ellipse at 50% -8%,#3979a5 0,transparent 42%),li
   .quick-card b{font-size:8px}
 }
 @media(prefers-reduced-motion:reduce){.puzzle-illustration{animation:none}}
+
+
+/* Tela de partida imersiva: deixa de parecer um pop-up de site */
+@media(max-width:600px){
+  .game-modal{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    max-width:none;
+    height:100vh;
+    height:100dvh;
+    max-height:none;
+    margin:0;
+    padding:calc(14px + env(safe-area-inset-top)) 16px calc(20px + env(safe-area-inset-bottom));
+    border:0;
+    border-radius:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:
+      radial-gradient(ellipse at 50% 0%,#285579 0%,transparent 48%),
+      linear-gradient(180deg,#102b49 0%,#0a1c34 58%,#07162b 100%);
+    box-shadow:none;
+  }
+  .game-modal::backdrop{
+    background:#061326;
+    backdrop-filter:none;
+  }
+  .game-modal .modal-close-row{
+    position:sticky;
+    top:0;
+    z-index:5;
+    margin:-4px -2px 16px;
+    padding:0 0 10px;
+    background:linear-gradient(180deg,#102b49 72%,transparent);
+  }
+  .game-modal .modal-close-row .round-button{
+    width:44px;
+    height:44px;
+    border-radius:15px;
+    font-size:19px;
+  }
+  .game-modal #game-content{
+    width:min(100%,520px);
+    margin:0 auto;
+    padding:0 0 18px;
+  }
+  .game-modal #game-content h3{
+    font-size:clamp(23px,6vw,29px);
+    line-height:1.15;
+    margin:14px 0;
+  }
+  .game-modal .question-text{
+    font-size:clamp(17px,4.5vw,19px);
+    line-height:1.55;
+    padding:18px;
+    margin:16px 0 20px;
+    border-radius:20px;
+  }
+  .game-modal .answer-list{gap:12px}
+  .game-modal .answer-option{
+    min-height:58px;
+    padding:17px;
+    font-size:15px;
+    border-radius:18px;
+    text-align:left;
+  }
+  .game-modal .numeric-answer input{
+    min-height:58px;
+    font-size:22px;
+  }
+  .game-modal .primary-button,
+  .game-modal .ghost-button{
+    min-height:52px;
+    font-size:13px;
+    border-radius:16px;
+  }
+  .game-modal .action-row{
+    position:sticky;
+    bottom:0;
+    padding:12px 0 max(8px,env(safe-area-inset-bottom));
+    background:linear-gradient(180deg,transparent,#0a1c34 24%);
+  }
+}
+
+
+.play-hud{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin:0 0 18px;
+  padding:10px 12px;
+  border:1px solid #6288aa;
+  border-radius:16px;
+  background:linear-gradient(145deg,#24496b,#122b49);
+  color:#f5f8ff;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 4px 0 #07162b,inset 0 1px #ffffff20;
+}
+.play-stage{
+  color:#a9fff0;
+  letter-spacing:1px;
+  font-size:11px;
+}
+
+
+/* Acabamento da interface de partida mobile */
+.game-modal .play-hud{
+  position:sticky;
+  top:0;
+  z-index:4;
+  min-height:54px;
+  margin-bottom:12px;
+  border-color:#75a4c6;
+  background:linear-gradient(110deg,#285577,#163653 70%,#203f61);
+}
+.game-progress{
+  height:8px;
+  overflow:hidden;
+  margin:0 2px 22px;
+  border:1px solid #527c9e;
+  border-radius:20px;
+  background:#071a30;
+  box-shadow:inset 0 2px 4px #0008;
+}
+.game-progress span{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#61d6c9,#a4f0d0,#ffdc87);
+  box-shadow:0 0 12px #68e4d5aa;
+  transition:width .25s ease;
+}
+.challenge-panel{
+  position:relative;
+  margin:0 0 16px;
+  padding:17px 15px 15px;
+  border:1px solid #5b82a4;
+  border-radius:22px;
+  background:
+    radial-gradient(ellipse at 90% 0%,#39718d55,transparent 52%),
+    linear-gradient(145deg,#1c4263,#102944);
+  box-shadow:0 6px 0 #07182c,inset 0 1px #ffffff20;
+}
+.challenge-panel h3{margin:14px 0 10px}
+.challenge-panel .question-text{
+  margin:0;
+  border-color:#6b94b4;
+  background:linear-gradient(145deg,#244d6d,#153450);
+}
+.game-modal .answer-option:focus-visible,
+.game-modal .primary-button:focus-visible,
+.game-modal .ghost-button:focus-visible,
+.game-modal .round-button:focus-visible{
+  outline:3px solid #ffe29a;
+  outline-offset:3px;
+}
+.game-modal button,
+.game-modal input{touch-action:manipulation}
+@media(max-width:600px){
+  .game-modal .play-hud{top:0}
+  .game-modal .challenge-panel{padding:19px 16px 16px}
+  .game-modal .answer-option{min-height:62px}
+  .game-modal .action-row{gap:10px}
+}
+@media(max-width:360px){
+  .game-modal .play-hud{font-size:11px;padding:9px}
+  .game-modal .play-stage{font-size:10px}
+  .game-modal .action-row{grid-template-columns:1fr}
+}
+
+
+/* Ajustes de tela cheia e áreas seguras do aplicativo instalado */
+@media(max-width:600px){
+  html,body{width:100%;min-height:100%;overscroll-behavior:none}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .game-shell{width:100%;max-width:520px;min-height:100svh;padding-top:0}
+  .game-topbar{
+    top:0;
+    height:calc(68px + env(safe-area-inset-top));
+    padding-top:env(safe-area-inset-top);
+  }
+  .game-hero{margin-top:12px}
+  .ad-banner{padding-bottom:calc(7px + env(safe-area-inset-bottom))}
+}
+@media(display-mode:standalone){
+  body{min-height:100svh}
+  .game-topbar{backdrop-filter:blur(18px)}
+}
