@@ -339,3 +339,61 @@ body{background:radial-gradient(ellipse at 50% -12%,#164d83 0,transparent 43%),l
 .challenge-panel .question-text{border-color:#3679a8;background:linear-gradient(145deg,#17436a,#0e2d4d)}
 .game-modal .answer-option:focus-visible,.game-modal .primary-button:focus-visible,.game-modal .ghost-button:focus-visible,.game-modal .round-button:focus-visible{outline-color:#8ceaff}
 @media(max-width:390px){.game-hero{background:radial-gradient(ellipse at 78% 44%,#1b75b8 0,#124c83 28%,transparent 59%),linear-gradient(145deg,#123e70,#0c2c53 58%,#081c39)}}
+
+
+/* REDESIGN ESTRUTURAL — EXPERIÊNCIA DE JOGO MOBILE */
+body{background:#050f20;padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+.game-shell{width:100%;max-width:520px;padding:0 16px 28px;background:linear-gradient(180deg,#0a1d37 0%,#07162b 48%,#061326 100%);box-shadow:none}
+.game-topbar{height:70px;margin:0 -16px;padding:0 17px;border-bottom:1px solid #28608d66;background:linear-gradient(90deg,#07172d,#0d2b4c)}
+.brand-icon{width:43px;height:43px;border-radius:14px;font-size:13px}
+.mini-stat{min-width:58px;height:39px;border-radius:13px;background:#102c4d;border:1px solid #2e6d9c;box-shadow:inset 0 1px #ffffff18}
+.round-button{width:40px;height:40px;border-radius:13px}
+.game-hero.game-home-screen{display:flex;flex-direction:column;min-height:0;margin:14px 0 18px;padding:16px;border:1px solid #2879ad;border-radius:26px;background:radial-gradient(ellipse at 50% 35%,#155b91 0%,#103b67 43%,#0a2444 100%);box-shadow:0 8px 0 #041225,0 18px 28px #020a18a6,inset 0 1px #a9edff2b}
+.home-screen-top{display:flex;justify-content:space-between;align-items:center;gap:8px;position:relative;z-index:2}
+.game-mode-tag{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:20px;background:#061b34a8;border:1px solid #54b9e477;color:#a8eaff;font-size:8px;font-weight:1000;letter-spacing:1px}
+.game-mode-tag i{width:7px;height:7px;border-radius:50%;background:#56e6d0;box-shadow:0 0 9px #56e6d0}
+.home-level{color:#b9d9f4;font-size:8px;font-weight:900;letter-spacing:.8px;white-space:nowrap}
+.home-level b{color:#65dfff;padding:0 3px}
+.game-home-screen .hero-art{position:relative;top:auto;right:auto;width:100%;height:185px;margin:2px auto -3px;opacity:1}
+.game-home-screen .hero-art .puzzle-illustration{width:190px;height:190px;filter:drop-shadow(0 15px 20px #020c1c88)}
+.game-home-screen .hero-art .orbit-one{width:170px;height:105px}
+.game-home-screen .hero-art .orbit-two{width:130px;height:175px}
+.game-home-screen .hero-copy{max-width:none;text-align:center;z-index:2}
+.game-home-screen .eyebrow{font-size:9px;letter-spacing:1.8px;margin:0 0 10px;color:#82e8ff}
+.game-home-screen h1{font-size:clamp(32px,9vw,43px);line-height:1.02;letter-spacing:-1.4px;margin:0 0 11px}
+.game-home-screen h1 em{color:#9cecff}
+.game-home-screen p{max-width:270px;margin:0 auto 19px;color:#c5def4;font-size:12px;line-height:1.55}
+.game-home-screen .play-button{width:100%;min-height:58px;border-radius:17px;font-size:14px;letter-spacing:1px;background:linear-gradient(180deg,#c5f5ff,#69d9f5 55%,#278bd8);box-shadow:0 6px 0 #15558e,0 12px 20px #03152b99,inset 0 1px #fff}
+.home-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:19px;padding-top:14px;border-top:1px solid #8bdcff38}
+.home-stat{display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;padding:9px 5px;border:1px solid #4388b355;border-radius:13px;background:#061d36a8}
+.home-stat-icon{font-size:18px}
+.home-stat b,.home-stat small{display:block}
+.home-stat b{font-size:11px;color:#fff;white-space:nowrap}
+.home-stat small{margin-top:3px;color:#91c6e9;font-size:7px;font-weight:1000;letter-spacing:1px}
+.quick-actions{gap:10px;margin:0 0 24px}
+.quick-card{min-height:76px;padding:11px;border-radius:17px;background:linear-gradient(145deg,#123d66,#0a2544);border:1px solid #286b9c;box-shadow:0 5px 0 #041326}
+.quick-card b{font-size:9px;line-height:1.3}
+.quick-card small{font-size:8px}
+.quick-icon{width:38px;height:38px;flex-basis:38px;border-radius:12px}
+.map-section{margin:0 -16px;padding:20px 16px 24px;background:linear-gradient(180deg,#07172d,#0b2340 52%,#07172d);border-top:1px solid #28618b55}
+.section-title{align-items:center;margin-bottom:16px}
+.section-title h2{font-size:24px;letter-spacing:-.6px}
+.map-progress{border-radius:10px;background:#0d3a61;border-color:#3289bd;padding:7px 11px}
+.region-tabs{gap:8px;padding:3px 0 15px}
+.region-tab{border-radius:12px;padding:9px 14px;font-size:11px}
+.world-card{border-radius:21px;padding:16px 13px;background:radial-gradient(ellipse at 50% 0%,#164a76,#0b2a4b 65%,#091f39);border-color:#286b9c;box-shadow:0 7px 0 #041326}
+.world-heading{margin-bottom:18px}
+.world-heading h3{font-size:21px}
+.world-emoji{font-size:35px}
+.phase-grid{gap:16px 8px;padding:8px 5px 15px}
+.phase-grid:before{width:4px;opacity:.45}
+.phase-button{width:55px;height:55px;min-height:55px;border-radius:18px;font-size:13px;border-width:2px}
+.phase-button:nth-child(3n+1){transform:translateX(13px)}
+.phase-button:nth-child(3n+2){transform:translateY(5px)}
+.phase-button:nth-child(3n){transform:translateX(-13px)}
+.phase-button.available{border-radius:18px;box-shadow:0 5px 0 #15558b,0 0 18px #39bfff55,inset 0 2px #fff}
+.phase-button.done{border-radius:18px}
+.map-legend{font-size:9px;gap:14px}
+.ad-banner{width:100%;max-width:520px;min-height:62px;background:#050f20f2;border-top:1px solid #24547a;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+@media(min-width:600px){.game-shell{max-width:520px}.game-hero.game-home-screen{margin-top:18px}.phase-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.phase-button:nth-child(n){transform:none}}
+@media(max-width:390px){.game-shell{padding-left:12px;padding-right:12px}.game-topbar{margin-left:-12px;margin-right:-12px}.game-hero.game-home-screen{padding:13px}.game-home-screen .hero-art{height:165px}.game-home-screen .hero-art .puzzle-illustration{width:175px;height:175px}.home-stat{gap:4px;padding:8px 3px}.home-stat-icon{font-size:16px}.home-stat b{font-size:10px}.quick-card{gap:6px;padding:9px 7px}}
