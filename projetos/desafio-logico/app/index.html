@@ -3,64 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#101d3a">
+  <meta name="theme-color" content="#08142c">
   <meta name="description" content="Desafio Lógico — ACRIO GAMES">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
   <title>Desafio Lógico | ACRIO GAMES</title>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="brand-mark">AG</div>
-      <div class="brand-copy"><strong>ACRIO GAMES</strong><span>DESAFIO LÓGICO</span></div>
-      <button class="icon-button" id="settings-open" aria-label="Configurações">⚙</button>
+  <div class="game-shell">
+    <header class="game-topbar">
+      <a class="brand" href="./" aria-label="ACRIO GAMES">
+        <span class="brand-icon">AG</span><span class="brand-name">ACRIO <b>GAMES</b><small>DESAFIO LÓGICO</small></span>
+      </a>
+      <div class="top-actions">
+        <div class="mini-stat"><span>❤️</span><b id="lives-value">5</b></div>
+        <div class="mini-stat"><span>🪙</span><b id="coins-value">0</b></div>
+        <button class="round-button" id="settings-open" aria-label="Configurações">⚙</button>
+      </div>
     </header>
 
     <main>
-      <section class="welcome-panel">
-        <div>
-          <p class="eyebrow" data-i18n="welcomeEyebrow">SEU RACIOCÍNIO, SEU DESAFIO</p>
-          <h1 data-i18n="welcomeTitle">Pense. Descubra. Avance.</h1>
-          <p class="muted" data-i18n="welcomeText">Mil fases de lógica, observação e dedução.</p>
+      <section class="game-hero">
+        <div class="hero-copy">
+          <span class="eyebrow">DESAFIE SUA MENTE</span>
+          <h1>Pense rápido.<br><em>Descubra a resposta.</em></h1>
+          <p>Resolva enigmas, desbloqueie fases e conquiste moedas.</p>
+          <button class="play-button" id="play-now"><span>▶</span> JOGAR AGORA</button>
+          <div class="hero-foot"><span>🏆 <b id="progress-value">0/1000</b> fases concluídas</span><span>⚡ 5 vidas</span><span id="daily-streak">Sequência: 0 dias</span></div>
         </div>
-        <div class="brain-art" aria-hidden="true">🧩</div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="puzzle-piece">🧩</div><span class="float-symbol symbol-a">✦</span><span class="float-symbol symbol-b">?</span><span class="float-symbol symbol-c">✧</span>
+        </div>
       </section>
 
-      <section class="stats-grid" aria-label="Seu progresso">
-        <article class="stat-card"><span>❤️</span><div><strong id="lives-value">5</strong><small data-i18n="lives">Vidas</small></div></article>
-        <article class="stat-card"><span>🪙</span><div><strong id="coins-value">0</strong><small data-i18n="coins">Moedas</small></div></article>
-        <article class="stat-card"><span>🏁</span><div><strong id="progress-value">0/1000</strong><small data-i18n="completed">Concluídas</small></div></article>
+      <section class="quick-actions">
+        <button class="quick-card daily-quick" id="daily-open"><span class="quick-icon">☀️</span><span><b>DESAFIO DIÁRIO</b><small>Uma missão especial por dia</small></span><span class="quick-arrow">›</span></button>
+        <button class="quick-card reward-quick" id="reward-ad-open"><span class="quick-icon">❤️</span><span><b>RECUPERAR VIDA</b><small>Assista a um anúncio de teste</small></span><span class="quick-arrow">›</span></button>
       </section>
 
-      <section class="section-heading">
-        <div><p class="eyebrow" data-i18n="journey">SUA JORNADA</p><h2 data-i18n="mapTitle">Mapa das fases</h2></div>
-        <span class="region-count" id="region-count">1/10</span>
+      <section class="map-section">
+        <div class="section-title"><div><span class="eyebrow">SUA AVENTURA</span><h2>Mapa de fases</h2></div><span class="map-progress" id="region-count">1/10</span></div>
+        <nav class="region-tabs" id="region-tabs" aria-label="Regiões"></nav>
+        <div class="world-card">
+          <div class="world-heading"><div><span class="world-kicker">MUNDO <span id="region-count-label">01</span></span><h3 id="region-title">Região 1</h3><p id="region-subtitle">Fases 1–100</p></div><span class="world-emoji" id="region-emoji">🌱</span></div>
+          <div class="phase-grid" id="phase-grid" aria-label="Fases da região"></div>
+          <div class="map-legend"><span><i class="legend-dot done"></i> Concluída</span><span><i class="legend-dot current"></i> Disponível</span><span><i class="legend-dot locked"></i> Bloqueada</span></div>
+        </div>
       </section>
-      <nav class="region-tabs" id="region-tabs" aria-label="Regiões"></nav>
-      <section class="map-card">
-        <div class="map-intro"><div><strong id="region-title">Região 1</strong><p id="region-subtitle" class="muted">Fases 1 a 100</p></div><span class="region-emoji" id="region-emoji">🌱</span></div>
-        <div class="phase-grid" id="phase-grid" aria-label="Fases da região"></div>
-        <p class="map-legend"><span>● <span data-i18n="legendDone">Concluída</span></span><span>● <span data-i18n="legendCurrent">Disponível</span></span><span>● <span data-i18n="legendLocked">Bloqueada</span></span></p>
-      </section>
-
-      <section class="daily-card">
-        <div class="daily-icon">☀️</div>
-        <div class="daily-copy"><p class="eyebrow" data-i18n="dailyEyebrow">DESAFIO ESPECIAL</p><h2 data-i18n="dailyTitle">Desafio diário</h2><p class="muted" data-i18n="dailyText">Uma missão por dia. Sem perder vidas.</p><p class="muted" id="daily-streak">Sequência: 0 dias</p></div>
-        <button class="secondary-button" id="daily-open" data-i18n="dailyButton">Ver desafio</button>
-      </section>
-      <p class="footer-note" data-i18n="offlineNote">Seu progresso fica salvo neste aparelho. O jogo foi preparado para funcionar offline.</p>
+      <p class="footer-note">ACRIO GAMES · Seu progresso fica salvo neste aparelho.</p>
     </main>
   </div>
 
-  <dialog id="game-dialog" class="modal">
-    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Fechar">✕</button></form>
+  <div class="ad-banner" id="ad-banner"><span class="ad-label">ANÚNCIO · TESTE</span><b>Espaço reservado para banner</b><small>Prévia local — sem publicidade real</small></div>
+
+  <dialog id="game-dialog" class="modal game-modal">
+    <form method="dialog" class="modal-close-row"><button class="round-button" aria-label="Fechar">✕</button></form>
     <div id="game-content"></div>
   </dialog>
 
   <dialog id="settings-dialog" class="modal settings-modal">
-    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Fechar">✕</button></form>
-    <p class="eyebrow" data-i18n="settingsEyebrow">PERSONALIZE</p><h2 data-i18n="settingsTitle">Configurações</h2>
+    <form method="dialog" class="modal-close-row"><button class="round-button" aria-label="Fechar">✕</button></form>
+    <span class="eyebrow">PREFERÊNCIAS</span><h2 data-i18n="settingsTitle">Configurações</h2>
     <label class="setting-row"><span data-i18n="language">Idioma</span><select id="language-select"><option value="pt">Português (Brasil)</option><option value="en">English</option><option value="es">Español</option></select></label>
     <div class="setting-group"><h3 data-i18n="sound">Áudio</h3>
       <label class="setting-row"><span data-i18n="music">Música de fundo</span><input type="checkbox" id="music-toggle"></label>
@@ -73,8 +77,19 @@
       <label class="setting-row"><span data-i18n="contrast">Alto contraste</span><input type="checkbox" id="high-contrast"></label>
       <label class="setting-row"><span data-i18n="reduceMotion">Reduzir animações</span><input type="checkbox" id="reduce-motion"></label>
     </div>
-    <p class="small-note" data-i18n="settingsNote">As preferências são salvas somente neste aparelho. O áudio e os anúncios serão conectados nas próximas etapas.</p>
+    <p class="small-note">Os anúncios desta versão são apenas simulações para testar os botões e o fluxo do jogo. A integração real do AdMob será feita no aplicativo Android.</p>
   </dialog>
+
+  <dialog id="reward-ad-dialog" class="modal ad-modal">
+    <div class="ad-screen"><span class="ad-test-tag">ANÚNCIO RECOMPENSADO · TESTE</span><div class="ad-screen-icon">🎬</div><h2>Vídeo de recompensa</h2><p>Esta é uma simulação de anúncio. Ao concluir, você recebe 1 vida de teste.</p><div class="ad-countdown" id="ad-countdown">Aguarde 5 segundos…</div><button class="play-button" id="ad-claim" disabled>Concluir anúncio de teste</button><button class="text-button" id="ad-cancel">Fechar</button></div>
+  </dialog>
+
+  <dialog id="interstitial-ad-dialog" class="modal ad-modal">
+    <div class="ad-screen"><span class="ad-test-tag">INTERSTICIAL · TESTE</span><div class="ad-screen-icon">⭐</div><h2>Intervalo entre fases</h2><p>Esta tela simula o anúncio exibido entre uma fase concluída e a próxima.</p><button class="play-button" id="interstitial-close">Fechar anúncio de teste</button></div>
+  </dialog>
+
+  <script src="phase-data.js"></script>
   <script src="app.js"></script>
+  <script src="ads-test.js"></script>
 </body>
 </html>
