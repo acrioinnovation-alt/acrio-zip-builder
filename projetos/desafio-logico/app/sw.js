@@ -1,4 +1,5 @@
 const CACHE="desafio-logico-shell-v21";
+// Pacote mobile atualizado em 20/11/2026.
 const ASSETS=["./","./index.html","./style.css","./app.js","./phase-data.js","./ads-test.js","./manifest.webmanifest","./icons/app-icon.svg","./data/phases.json"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))));
