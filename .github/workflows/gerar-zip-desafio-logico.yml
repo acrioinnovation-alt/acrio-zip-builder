@@ -1,0 +1,39 @@
+name: Gerar ZIP do Desafio Lógico
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "projetos/desafio-logico/app/**"
+      - ".github/workflows/gerar-zip-desafio-logico.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Gerar pacote ZIP
+        run: |
+          mkdir -p downloads
+          rm -f downloads/desafio-logico-atualizado-2026-11-20.zip
+          zip -qr downloads/desafio-logico-atualizado-2026-11-20.zip projetos/desafio-logico/app
+
+      - name: Salvar ZIP no repositório público
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/desafio-logico-atualizado-2026-11-20.zip
+          if git diff --cached --quiet; then
+            echo "O ZIP já está atualizado."
+          else
+            git commit -m "Gera ZIP atualizado do Desafio Lógico"
+            git push
+          fi
