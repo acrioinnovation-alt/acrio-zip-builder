@@ -30,7 +30,11 @@ interactionMarkup='<div class="numeric-answer"><input id="numeric-answer" type="
 const options=(c.options||[]).map((option,index)=>'<button class="answer-option" data-answer="'+index+'">'+option+'</button>').join("");
 interactionMarkup='<div class="answer-list">'+options+'</div>';
 }
-showModal('<span class="question-type">'+t("questionType")+'</span><h3>'+c.title+'</h3><p class="question-text">'+c.question+'</p>'+interactionMarkup+'<div id="feedback"></div><div class="action-row"><button class="ghost-button" id="hint-btn">'+t("hint")+' · 5 🪙</button><button class="ghost-button" id="solution-btn">'+t("solution")+' · 15 🪙</button></div>');
+const stageLabel=lang==="en"?"STAGE":lang==="es"?"NIVEL":"FASE";
+const gameHud='<div class="play-hud"><span class="play-stage">'+stageLabel+' '+n+'</span><span>❤️ '+state.progress.lives+'</span><span>🪙 '+state.progress.coins+'</span></div>';
+const phaseInRegion=((n-1)%100)+1;
+const progressPercent=phaseInRegion;
+showModal(gameHud+'<div class="game-progress" role="progressbar" aria-label="'+t("phase")+' '+phaseInRegion+' / 100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+phaseInRegion+'"><span style="width:'+progressPercent+'%"></span></div><section class="challenge-panel"><span class="question-type">'+t("questionType")+'</span><h3>'+c.title+'</h3><p class="question-text">'+c.question+'</p></section>'+interactionMarkup+'<div id="feedback" aria-live="polite"></div><div class="action-row"><button class="ghost-button" id="hint-btn">'+t("hint")+' · 5 🪙</button><button class="ghost-button" id="solution-btn">'+t("solution")+' · 15 🪙</button></div>');
 document.querySelectorAll("[data-answer]").forEach(b=>b.onclick=()=>answer(Number(b.dataset.answer)));
 if(challenge.interaction==="order_items"){document.querySelectorAll("[data-order-item]").forEach(b=>b.onclick=()=>selectOrderItem(Number(b.dataset.orderItem)));$("#order-reset").onclick=resetOrderSelection;}
 if(challenge.interaction==="multi_select"){$("#multi-submit").onclick=submitMultiAnswer;}
