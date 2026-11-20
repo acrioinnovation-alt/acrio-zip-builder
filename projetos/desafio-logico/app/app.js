@@ -9,11 +9,11 @@ es:{welcomeEyebrow:"TU INGENIO, TU DESAFÍO",welcomeTitle:"Piensa. Descubre. Ava
 function t(k){return translations[state.settings.language][k]||translations.pt[k]||k}
 function save(){localStorage.setItem("desafioLogico.save.v1",JSON.stringify(state.progress));localStorage.setItem("desafioLogico.settings.v1",JSON.stringify(state.settings))}
 function load(){try{const p=JSON.parse(localStorage.getItem("desafioLogico.save.v1"));if(p)state.progress={...state.progress,...p}}catch{}try{const s=JSON.parse(localStorage.getItem("desafioLogico.settings.v1"));if(s)state.settings={...state.settings,...s}}catch{}}
-function renderText(){document.documentElement.lang=state.settings.language==="pt"?"pt-BR":state.settings.language;document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));$("#lives-value").textContent=state.progress.lives;$("#coins-value").textContent=state.progress.coins;$("#progress-value").textContent=state.progress.completed.length+"/1000";const streakLabel=state.settings.language==="en"?"Daily streak: ":state.settings.language==="es"?"Racha diaria: ":"Sequência: ";const dayLabel=state.settings.language==="en"?" days":state.settings.language==="es"?" días":" dias";$("#daily-streak").textContent=streakLabel+(Number(state.progress.streak)||0)+dayLabel;document.body.classList.toggle("high-contrast",state.settings.highContrast);document.body.classList.toggle("large-text",state.settings.largeText);document.body.classList.toggle("reduce-motion",state.settings.reduceMotion)}
+function renderText(){document.documentElement.lang=state.settings.language==="pt"?"pt-BR":state.settings.language;document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));$("#lives-value").textContent=state.progress.lives;$("#coins-value").textContent=state.progress.coins;$("#progress-value").textContent=state.progress.completed.length+"/1000";const streakLabel=state.settings.language==="en"?"Daily streak: ":state.settings.language==="es"?"Racha diaria: ":"Sequência: ";const dayLabel=state.settings.language==="en"?" days":state.settings.language==="es"?" días":" dias";const streakElement=$("#daily-streak");if(streakElement)streakElement.textContent=streakLabel+(Number(state.progress.streak)||0)+dayLabel;document.body.classList.toggle("high-contrast",state.settings.highContrast);document.body.classList.toggle("large-text",state.settings.largeText);document.body.classList.toggle("reduce-motion",state.settings.reduceMotion)}
 const regionEmojis=["🌱","🔎","🧠","🧩","🏛️","🗝️","🌌","⚙️","💎","🏆"];
 function renderMap(){const tabs=$("#region-tabs");tabs.innerHTML="";for(let r=0;r<10;r++){const b=document.createElement("button");b.className="region-tab"+(r===state.region?" active":"");b.textContent=regionEmojis[r]+" "+(r+1);b.onclick=()=>{state.region=r;renderMap()};tabs.append(b)}const start=state.region*100+1,end=start+99;$("#region-count").textContent=(state.region+1)+"/10";$("#region-title").textContent=t("region")+" "+(state.region+1)+" "+regionEmojis[state.region];$("#region-subtitle").textContent=t("regionRange")+" "+start+"–"+end;const grid=$("#phase-grid");grid.innerHTML="";for(let n=start;n<=end;n++){const b=document.createElement("button");const done=state.progress.completed.includes(n);const hasContent=Boolean(phaseData[n]);const unlocked=hasContent&&(n===1||state.progress.completed.includes(n-1));b.className="phase-button"+(done?" done":unlocked?" available":"");b.textContent=done?"✓":unlocked?String(n):"🔒";b.disabled=!unlocked;b.setAttribute("aria-label",t("phase")+" "+n+(done?" — "+t("done"):unlocked?" — "+t("current"):" — "+t("locked")));if(unlocked)b.onclick=()=>openPhase(n);grid.append(b)}}
 function showModal(html){$("#game-content").innerHTML=html;$("#game-dialog").showModal()}
-async function loadPhaseData(){try{const response=await fetch("./data/phases.json");if(!response.ok)throw new Error("phase data unavailable");const pack=await response.json();phaseData=Object.fromEntries((pack.phases||[]).map(item=>[item.id,item]));phaseDataReady=true;renderMap();}catch(error){console.warn("Não foi possível carregar os desafios:",error);renderMap()}}
+async function loadPhaseData(){try{let pack=window.DESAFIO_PHASE_PACK;if(!pack){const response=await fetch("./data/phases.json");if(!response.ok)throw new Error("phase data unavailable");pack=await response.json()}phaseData=Object.fromEntries((pack.phases||[]).map(item=>[Number(item.id),item]));phaseDataReady=Object.keys(phaseData).length>0;if(!phaseDataReady)throw new Error("empty phase pack");renderMap();}catch(error){console.error("Falha ao carregar as fases:",error);phaseDataReady=false;renderMap();const play=$("#play-now");if(play)play.disabled=true;}}
 function openPhase(n){
 if(state.progress.lives<=0){showModal("<p>"+t("noLives")+"</p>");return}
 if(!phaseDataReady){showModal("<p>"+t("notReady")+"</p>");return}
@@ -130,3 +130,15 @@ function openDailyChallenge(){
   area.replaceChildren(box);
  });
 }
+
+/* Atalho principal para entrar diretamente na próxima fase liberada. */
+const playNowButton=document.querySelector("#play-now");
+if(playNowButton)playNowButton.addEventListener("click",()=>{
+  const next=Array.from({length:1000},(_,i)=>i+1).find(n=>!state.progress.completed.includes(n)&&Boolean(phaseData[n])&&(n===1||state.progress.completed.includes(n-1)));
+  if(next)openPhase(next);
+  else if(!phaseDataReady)showModal("<p>Carregando os desafios. Tente novamente em alguns segundos.</p>");
+  else showModal("<p>Você concluiu todas as fases disponíveis neste pacote!</p>");
+});
+
+/* Expõe o verificador para a camada de anúncios de teste. */
+window.answer=answer;
